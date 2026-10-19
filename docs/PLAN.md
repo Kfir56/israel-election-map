@@ -178,3 +178,11 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - Ideas not built yet: "which party fits me" quiz, poll trend chart, head-to-head party comparison.
 - `/compare?a=&b=`: two parties side by side (leader, bloc, polls, map position, every topic, top 5 candidates). Shareable link.
 - `/quiz`: 10 statements → your position on the map's two axes → closest parties, with a clear "not a voting recommendation" note.
+
+## 19 Oct (evening): sources, small lists, why-vote, women
+- Positions: `src/data/positions.json` (from `scripts/positions/{a,b}.json`) overrides the IDI text per topic with the party's platform / website / dated 2026 statement; each topic shows source type, label and date. IDI stays as fallback. Scores (-2..2) are stored but NOT used for the map: too coarse (they put Likud with Otzma and RZP below Likud on religion).
+- Map placement (`spectrum`) stays editorial, judged from the sourced positions; MapGuide says so. Yashar/BW no longer overlap.
+- Blue and White withdrew 19 Oct (stays on the ballot): `withdrawn` field, banner on party page and map panel. Abou Shahadeh (joint:3) withdrew 2 Oct.
+- Ballot letters (`letter`) on party pages and list. 24 small lists in `src/data/minor-lists.json`, shown on /parties#minor.
+- /why-vote page (2022 numbers, blank ballot = invalid). Women's representation on /parties#women (`src/data/gender.ts`, 4 unconfirmed).
+- Logos: blocked, the sandbox can't download images (Wikimedia/party sites refused by proxy).
