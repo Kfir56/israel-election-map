@@ -10,6 +10,7 @@ const links = [
   { href: "/", label: "המפה" },
   { href: "/parties", label: "המפלגות" },
   { href: "/topics", label: "הנושאים" },
+  { href: "/quiz", label: "שאלון" },
   { href: "/guide", label: "איך זה עובד" },
   { href: "/predict", label: "החיזוי שלי" },
   { href: "/friends", label: "חברים" },
@@ -42,12 +43,12 @@ export default function NavBar() {
           <span className="rounded bg-sky-500/15 px-1.5 text-xs font-bold text-sky-300">2026</span>
         </Link>
 
-        <div className="hidden flex-1 items-center gap-1 lg:flex">
+        <div className="hidden flex-1 items-center gap-0.5 xl:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`rounded-lg px-3 py-1.5 text-sm transition ${
+              className={`whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm transition ${
                 active(l.href) ? "bg-slate-800 font-semibold text-white" : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"
               }`}
             >
@@ -58,14 +59,14 @@ export default function NavBar() {
 
         <div className="ms-auto flex items-center gap-3">
           {days !== null && days > 0 && (
-            <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 xl:inline">
+            <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 2xl:inline">
               עוד {days} ימים לבחירות
             </span>
           )}
           <AccountMenu />
           <button
             onClick={() => setOpen((o) => !o)}
-            className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 lg:hidden"
+            className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 xl:hidden"
             aria-label="תפריט"
             aria-expanded={open}
           >
@@ -77,7 +78,7 @@ export default function NavBar() {
       </nav>
 
       {open && (
-        <div className="border-t border-slate-800 px-4 py-2 lg:hidden">
+        <div className="border-t border-slate-800 px-4 py-2 xl:hidden">
           {links.map((l) => (
             <Link
               key={l.href}

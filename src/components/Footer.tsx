@@ -31,6 +31,12 @@ export default function Footer() {
           <Link href="/topics" className="hover:text-white">
             הנושאים
           </Link>
+          <Link href="/quiz" className="hover:text-white">
+            איזו מפלגה קרובה אליי
+          </Link>
+          <Link href="/compare" className="hover:text-white">
+            השוואה בין מפלגות
+          </Link>
           <Link href="/guide" className="hover:text-white">
             איך עובדות הבחירות
           </Link>

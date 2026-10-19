@@ -176,3 +176,5 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - `/guide`: how the elections work, from the ballot to the government (6 steps), key terms, and an interactive seat calculator (threshold + Bader-Ofer + surplus agreements, `src/lib/seats.ts`; reproduces the 2022 result exactly).
 - `/topics/<id>`: a page per topic (security, religion, economy, judiciary, draft): the question, background, three main approaches, a party scale (security and religion only, our estimate), every party's position, and key terms. Content in `src/data/topics.ts`.
 - Ideas not built yet: "which party fits me" quiz, poll trend chart, head-to-head party comparison.
+- `/compare?a=&b=`: two parties side by side (leader, bloc, polls, map position, every topic, top 5 candidates). Shareable link.
+- `/quiz`: 10 statements → your position on the map's two axes → closest parties, with a clear "not a voting recommendation" note.

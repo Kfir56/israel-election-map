@@ -60,9 +60,12 @@ export default function Home() {
           <Link href="/parties" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
             כל המפלגות והמועמדים
           </Link>
-          <a href="#positions" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
-            להשוות עמדות
-          </a>
+          <Link href="/quiz" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+            איזו מפלגה קרובה אליי?
+          </Link>
+          <Link href="/compare" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+            להשוות שתי מפלגות
+          </Link>
         </div>
       </header>
 

@@ -50,6 +50,12 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
             </Link>
             {factions.length > 0 && <> · רשימה משותפת של {factions.join(", ")}</>}
           </p>
+          <Link
+            href={`/compare?a=${party.id}&b=${parties.find((p) => p.id !== party.id)!.id}`}
+            className="mt-3 inline-block text-sm text-sky-400 hover:underline"
+          >
+            להשוות את {party.name} למפלגה אחרת ←
+          </Link>
           <p className="mt-4 max-w-3xl text-slate-300">{party.summary}</p>
 
           <div className="mt-6 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
