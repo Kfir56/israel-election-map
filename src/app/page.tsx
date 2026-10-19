@@ -12,8 +12,16 @@ export default function Home() {
       </header>
       <Explorer />
       <footer className="mt-12 border-t border-slate-800 pt-4 text-xs text-slate-500">
-        טיוטה: הנתונים, העמדות והמיקום על המפה הם סיכום עריכתי ראשוני וטרם אומתו מול מצעי המפלגות וועדת הבחירות
-        המרכזית.
+        מקורות: רשימות המועמדים ותיאורי המפלגות מאתר{" "}
+        <a className="underline" href="https://www.idi.org.il/policy/parties-and-elections/elections/2026-1/">
+          המכון הישראלי לדמוקרטיה
+        </a>
+        ; הסקרים מ
+        <a className="underline" href="https://www.skarim.org/polls">
+          ארכיון הסקרים skarim.org
+        </a>{" "}
+        עם קישור לכל סקר; גובה השטח מ־AWS Terrain Tiles. המיקום של המפלגות על המפה (ימין/שמאל, דתי/חילוני) הוא הערכה
+        שלנו ולא נתון רשמי. עודכן ב־19 באוקטובר 2026.
       </footer>
     </main>
   );

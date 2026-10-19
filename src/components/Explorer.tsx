@@ -3,15 +3,10 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import PartyPanel from "@/components/PartyPanel";
-import {
-  type Bloc,
-  type CategoryId,
-  MAJORITY,
-  POLL_SOURCE,
-  blocLabels,
-  categories,
-  parties,
-} from "@/data/parties";
+import PollPicker, { pollLabel } from "@/components/PollPicker";
+import PollsTable from "@/components/PollsTable";
+import { type Bloc, type CategoryId, MAJORITY, blocLabels, categories, parties } from "@/data/parties";
+import { AVERAGE_ID, seatsFor } from "@/data/polls";
 
 const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {
   ssr: false,
@@ -27,15 +22,23 @@ export default function Explorer() {
   const [category, setCategory] = useState<CategoryId>("security");
   const [coalitionMode, setCoalitionMode] = useState(false);
   const [coalition, setCoalition] = useState<string[]>([]);
-  const coalitionSeats = parties.filter((p) => coalition.includes(p.id)).reduce((s, p) => s + p.poll, 0);
+  const [pollId, setPollId] = useState(AVERAGE_ID);
+  const seats = seatsFor(pollId);
+  // Parties below the threshold in this poll can't be in the coalition.
+  const members = coalition.filter((id) => seats[id]);
+  const coalitionSeats = members.reduce((sum, id) => sum + seats[id], 0);
 
   const onPartyClick = (id: string) => {
     if (!coalitionMode) return setSelectedId(id);
-    if (!parties.find((p) => p.id === id)?.poll) return;
+    if (!seats[id]) return;
     setCoalition((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]));
   };
   const selected = parties.find((p) => p.id === selectedId) ?? null;
-  const seats = (b: Bloc) => parties.filter((p) => p.bloc === b).reduce((s, p) => s + p.poll, 0);
+  const blocSeats = (b: Bloc) => parties.filter((p) => p.bloc === b).reduce((sum, p) => sum + (seats[p.id] ?? 0), 0);
+  const pickPoll = (id: string) => {
+    setPollId(id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -44,9 +47,10 @@ export default function Explorer() {
         <div dir="ltr" className="relative h-[60vh] min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 lg:h-[72vh]">
           <IsraelMap3D
             parties={parties}
+            seats={seats}
             selectedId={selectedId}
             focusBloc={focusBloc}
-            coalition={coalition}
+            coalition={members}
             coalitionMode={coalitionMode}
             onPartyClick={onPartyClick}
           />
@@ -74,7 +78,7 @@ export default function Explorer() {
                     {coalitionSeats > 0 && ` · חסרים ${MAJORITY - coalitionSeats}`}
                   </span>
                 )}
-                {coalition.length > 0 && (
+                {members.length > 0 && (
                   <button onClick={() => setCoalition([])} className="mr-3 text-xs text-slate-400 underline">
                     איפוס
                   </button>
@@ -91,14 +95,19 @@ export default function Explorer() {
 
         <aside className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 lg:h-[72vh]">
           {selected ? (
-            <PartyPanel party={selected} onClose={() => setSelectedId(null)} />
+            <PartyPanel
+              party={selected}
+              seats={seats[selected.id] ?? 0}
+              pollLabel={pollLabel(pollId)}
+              onClose={() => setSelectedId(null)}
+            />
           ) : (
             <div className="flex h-full flex-col">
-              <h2 className="text-lg font-bold">מאזן הגושים</h2>
-              <p className="text-xs text-slate-400">לפי {POLL_SOURCE}</p>
+              <PollPicker pollId={pollId} onChange={setPollId} />
+              <h2 className="mt-4 text-lg font-bold">מאזן הגושים</h2>
               <div className="relative mt-3 flex h-4 overflow-hidden rounded-full bg-slate-800">
                 {blocs.map((b) => (
-                  <div key={b} style={{ width: `${(seats(b) / 120) * 100}%`, background: blocColors[b] }} />
+                  <div key={b} style={{ width: `${(blocSeats(b) / 120) * 100}%`, background: blocColors[b] }} />
                 ))}
                 <div className="absolute inset-y-0 w-0.5 bg-white" style={{ right: `${(MAJORITY / 120) * 100}%` }} />
               </div>
@@ -115,7 +124,7 @@ export default function Explorer() {
                       <span className="h-3 w-3 rounded-full" style={{ background: blocColors[b] }} />
                       {blocLabels[b]}
                     </span>
-                    <span className="font-mono">{seats(b)}</span>
+                    <span className="font-mono">{blocSeats(b)}</span>
                   </button>
                 ))}
               </div>
@@ -134,7 +143,7 @@ export default function Explorer() {
                         {p.name}
                         <span className="text-xs text-slate-500">{p.leader}</span>
                       </span>
-                      <span className="font-mono">{p.poll || "—"}</span>
+                      <span className="font-mono">{seats[p.id] || "—"}</span>
                     </button>
                   </li>
                 ))}
@@ -174,10 +183,24 @@ export default function Explorer() {
                 {p.name}
               </div>
               <p className="mt-2 text-sm text-slate-300">
-                {p.positions[category] ?? <span className="text-slate-500">טרם הוזן</span>}
+                {p.positions[category] ?? <span className="text-slate-500">המקור לא מתייחס לנושא</span>}
               </p>
             </button>
           ))}
+        </div>
+        <p className="mt-3 text-xs text-slate-500">
+          מקור העמדות: דפי המפלגות באתר המכון הישראלי לדמוקרטיה, בתמצות שלנו. הקישור לכל מפלגה נמצא בכרטיס שלה.
+        </p>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold">כל הסקרים</h2>
+        <p className="mt-1 text-sm text-slate-400">
+          הסקרים שונים מאוד זה מזה, אז כאן רואים את כולם. ירוק = הכי גבוה בין הסקרים, אדום = הכי נמוך, ״—״ = מתחת
+          לאחוז החסימה. לחצו על סקר כדי להציג אותו במפה.
+        </p>
+        <div className="mt-4">
+          <PollsTable pollId={pollId} onPick={pickPoll} />
         </div>
       </section>
     </>

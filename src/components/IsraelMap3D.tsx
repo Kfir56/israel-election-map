@@ -20,6 +20,7 @@ import {
 import meta from "@/data/terrain-meta.json";
 
 const SEAT_HEIGHT = 0.085;
+const beamHeight = (seats: number) => Math.max(seats, 0.8) * SEAT_HEIGHT;
 const GOLD = "#fbbf24";
 // The Knesset, in Jerusalem: where coalition arcs meet.
 const KNESSET = lonLatToMap(35.205, 31.777);
@@ -133,6 +134,7 @@ function Border({ terrain }: { terrain: Terrain }) {
 
 function Beam({
   party,
+  seats,
   base,
   selected,
   inCoalition,
@@ -141,6 +143,7 @@ function Beam({
   onClick,
 }: {
   party: Party;
+  seats: number;
   base: THREE.Vector3;
   selected: boolean;
   inCoalition: boolean;
@@ -149,15 +152,25 @@ function Beam({
   onClick: () => void;
 }) {
   const [hover, setHover] = useState(false);
+  const core = useRef<THREE.Mesh>(null);
   const glow = useRef<THREE.Mesh>(null);
-  const height = Math.max(party.poll, 0.8) * SEAT_HEIGHT;
+  const top = useRef<THREE.Group>(null);
+  const shown = useRef(0);
+  const target = beamHeight(seats);
   const color = inCoalition ? GOLD : party.color;
   const lit = selected || hover || inCoalition;
 
-  useFrame(({ clock }) => {
-    if (!glow.current) return;
-    const s = 1 + Math.sin(clock.elapsedTime * 2 + base.x * 3) * 0.08 + (lit ? 0.25 : 0);
-    glow.current.scale.set(s, 1, s);
+  // Beams grow from the ground on load and glide to new heights when the
+  // poll changes. Geometry is 1 unit tall and scaled.
+  useFrame(({ clock }, dt) => {
+    shown.current += (target - shown.current) * (1 - Math.exp(-dt * 4));
+    const h = Math.max(shown.current, 0.001);
+    const pulse = 1 + Math.sin(clock.elapsedTime * 2 + base.x * 3) * 0.08 + (lit ? 0.25 : 0);
+    core.current?.scale.set(1, h, 1);
+    core.current?.position.set(0, h / 2, 0);
+    glow.current?.scale.set(pulse, h, pulse);
+    glow.current?.position.set(0, h / 2, 0);
+    top.current?.position.set(0, h, 0);
   });
 
   const handlers = {
@@ -179,8 +192,8 @@ function Beam({
   return (
     <group position={base}>
       {/* Solid core */}
-      <mesh position={[0, height / 2, 0]} {...handlers}>
-        <cylinderGeometry args={[0.07, 0.09, height, 20]} />
+      <mesh ref={core} {...handlers}>
+        <cylinderGeometry args={[0.07, 0.09, 1, 20]} />
         <meshStandardMaterial
           color={color}
           emissive={color}
@@ -191,8 +204,8 @@ function Beam({
         />
       </mesh>
       {/* Soft outer glow */}
-      <mesh ref={glow} position={[0, height / 2, 0]} raycast={() => null}>
-        <cylinderGeometry args={[0.16, 0.2, height, 24, 1, true]} />
+      <mesh ref={glow} raycast={() => null}>
+        <cylinderGeometry args={[0.16, 0.2, 1, 24, 1, true]} />
         <meshBasicMaterial
           color={color}
           transparent
@@ -203,42 +216,38 @@ function Beam({
           toneMapped={false}
         />
       </mesh>
-      {/* Orb on top */}
-      <mesh position={[0, height + 0.08, 0]} {...handlers}>
-        <sphereGeometry args={[lit ? 0.14 : 0.1, 20, 20]} />
-        <meshBasicMaterial color={color} transparent opacity={dimmed ? 0.2 : 1} toneMapped={false} />
-      </mesh>
+      <group ref={top}>
+        {/* Orb on top */}
+        <mesh position={[0, 0.08, 0]} {...handlers}>
+          <sphereGeometry args={[lit ? 0.14 : 0.1, 20, 20]} />
+          <meshBasicMaterial color={color} transparent opacity={dimmed ? 0.2 : 1} toneMapped={false} />
+        </mesh>
+        {(seats >= 8 || lit) && !dimmed && (
+          <Html position={[0, 0.32, 0]} center zIndexRange={[10, 0]}>
+            <button
+              onClick={onClick}
+              dir="rtl"
+              className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[12px] font-semibold shadow-lg transition ${
+                inCoalition ? "text-slate-900" : "text-white"
+              } ${selected ? "ring-2 ring-white" : ""}`}
+              style={{ background: color }}
+            >
+              {coalitionMode && (inCoalition ? "✓ " : "+ ")}
+              {party.name} · {seats || "מתחת לחסימה"}
+            </button>
+          </Html>
+        )}
+      </group>
       {/* Ground ring */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]} raycast={() => null}>
         <ringGeometry args={[0.22, 0.3, 32]} />
         <meshBasicMaterial color={color} transparent opacity={dimmed ? 0.1 : 0.7} toneMapped={false} />
       </mesh>
-      {(party.poll >= 8 || lit) && !dimmed && (
-        <Html position={[0, height + 0.32, 0]} center zIndexRange={[10, 0]}>
-          <button
-            onClick={onClick}
-            dir="rtl"
-            className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[12px] font-semibold shadow-lg transition ${
-              inCoalition ? "text-slate-900" : "text-white"
-            } ${selected ? "ring-2 ring-white" : ""}`}
-            style={{ background: color }}
-          >
-            {coalitionMode && (inCoalition ? "✓ " : "+ ")}
-            {party.name} · {party.poll}
-          </button>
-        </Html>
-      )}
     </group>
   );
 }
 
-function KnessetHub({
-  tops,
-  seats,
-}: {
-  tops: THREE.Vector3[];
-  seats: number;
-}) {
+function KnessetHub({ tops, seats }: { tops: THREE.Vector3[]; seats: number }) {
   const hub = useMemo(() => new THREE.Vector3(KNESSET[0], KNESSET_Y, -KNESSET[1]), []);
   const crown = useRef<THREE.Group>(null);
   const won = seats >= MAJORITY;
@@ -285,7 +294,10 @@ function KnessetHub({
           <meshBasicMaterial color={won ? GOLD : "#e2e8f0"} wireframe toneMapped={false} />
         </mesh>
         <Html center position={[0, 0.75, 0]}>
-          <div dir="rtl" className="whitespace-nowrap rounded-lg bg-slate-950/80 px-2 py-1 text-center text-[12px] text-white">
+          <div
+            dir="rtl"
+            className="whitespace-nowrap rounded-lg bg-slate-950/80 px-2 py-1 text-center text-[12px] text-white"
+          >
             <div className="font-bold" dir="ltr">
               {seats} / {MAJORITY}
             </div>
@@ -303,10 +315,7 @@ function CameraRig({ focus, wide }: { focus: THREE.Vector3 | null; wide: boolean
   const { camera, controls } = useThree() as unknown as { camera: THREE.Camera; controls: OrbitControlsImpl | null };
   const intro = useRef(0);
   const goal = useRef<{ target: THREE.Vector3; position: THREE.Vector3 } | null>(null);
-  const home = useMemo(
-    () => ({ target: new THREE.Vector3(0, 0, 0), position: new THREE.Vector3(0.6, 5.2, 7.2) }),
-    [],
-  );
+  const home = useMemo(() => ({ target: new THREE.Vector3(0, 0, 0), position: new THREE.Vector3(0.6, 5.2, 7.2) }), []);
 
   useEffect(() => {
     camera.position.set(0, 45, 30);
@@ -321,7 +330,7 @@ function CameraRig({ focus, wide }: { focus: THREE.Vector3 | null; wide: boolean
   useEffect(() => {
     if (intro.current < 1) return;
     goal.current = focus
-      ? { target: focus.clone(), position: focus.clone().add(new THREE.Vector3(0.4, 2.8, 4.2)) }
+      ? { target: focus.clone(), position: focus.clone().add(new THREE.Vector3(0.6, 3.6, 5.4)) }
       : wide
         ? coalitionView
         : home;
@@ -350,6 +359,7 @@ function CameraRig({ focus, wide }: { focus: THREE.Vector3 | null; wide: boolean
 
 export default function IsraelMap3D({
   parties,
+  seats,
   selectedId,
   focusBloc,
   coalition,
@@ -357,6 +367,7 @@ export default function IsraelMap3D({
   onPartyClick,
 }: {
   parties: Party[];
+  seats: Record<string, number>;
   selectedId: string | null;
   focusBloc: Party["bloc"] | null;
   coalition: string[];
@@ -380,17 +391,22 @@ export default function IsraelMap3D({
     return out;
   }, [terrain, parties, positions]);
 
-  const coalitionSeats = parties.filter((p) => coalition.includes(p.id)).reduce((s, p) => s + p.poll, 0);
+  const coalitionSeats = coalition.reduce((sum, id) => sum + (seats[id] ?? 0), 0);
   const coalitionTops =
     bases && coalitionMode
       ? parties
           .filter((p) => coalition.includes(p.id))
-          .map((p) => bases[p.id].clone().add(new THREE.Vector3(0, Math.max(p.poll, 0.8) * SEAT_HEIGHT + 0.08, 0)))
+          .map((p) => bases[p.id].clone().add(new THREE.Vector3(0, beamHeight(seats[p.id] ?? 0) + 0.08, 0)))
       : [];
   const focus = selectedId && bases && !coalitionMode ? bases[selectedId] : null;
 
   return (
-    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 45, 30], fov: 42, near: 0.05, far: 200 }} gl={{ antialias: true }}>
+    <Canvas
+      shadows
+      dpr={[1, 2]}
+      camera={{ position: [0, 45, 30], fov: 42, near: 0.05, far: 200 }}
+      gl={{ antialias: true }}
+    >
       <color attach="background" args={["#020617"]} />
       <fog attach="fog" args={["#020617", 16, 42]} />
       <Stars radius={80} depth={40} count={4000} factor={3} fade speed={0.6} />
@@ -407,6 +423,7 @@ export default function IsraelMap3D({
             <Beam
               key={p.id}
               party={p}
+              seats={seats[p.id] ?? 0}
               base={bases[p.id]}
               selected={selectedId === p.id}
               inCoalition={coalitionMode && coalition.includes(p.id)}

@@ -2,6 +2,12 @@
 
 A Hebrew-first site that helps people understand the 26th Knesset election: a minimalist 3D map of Israel with every party on it, what each party says on each topic, and who is on its list. Live results and a free seat prediction game with login come after.
 
+## Update (19 Oct, evening): sourced data
+
+- **Polls** (`src/data/polls.ts`): the 10 most recent polls (13–18 Oct) from the skarim.org archive, each with outlet, pollster, date and a link; several cross-checked against the publisher's article. The map can show any single poll or the average; a table at the bottom shows all polls side by side with the min/max highlighted, because they differ a lot (Likud ranges 18–29).
+- **Candidates**: top 10–20 of every list, from the official lists submitted to the Central Elections Committee as published by IDI (PDF linked per party). Short background notes (past offices) are ours and labeled as such.
+- **Positions**: condensed from each party's IDI page, linked per party. Topics IDI doesn't cover are shown as "המקור לא מתייחס לנושא" rather than guessed. Gaps: Together and the Joint List have no positions on IDI; next step is their own platforms.
+
 ## Update (19 Oct, later): real 3D terrain + coalition game
 
 - The map is now real terrain: elevation from AWS Terrain Tiles (`scripts/make-terrain.mjs` bakes `public/terrain.bin`), ~25x vertical exaggeration so the Galilee, Hermon, Judean hills, Ramon crater, Kinneret and Dead Sea read clearly. Israel is lit and colored (green north, sand Negev, snow on Hermon); neighbouring land is dimmed.

@@ -1,5 +1,6 @@
 import outline from "@/data/israel-outline.json";
 import type { Party } from "@/data/parties";
+import { averageSeats } from "@/data/polls";
 
 export type Point = [number, number];
 export const ring = outline as Point[];
@@ -62,7 +63,8 @@ export function placeParties(parties: Party[]): Record<string, Point> {
   const yLow = -2.2;
   const yHigh = 4.2;
 
-  for (const p of [...parties].sort((a, b) => b.poll - a.poll)) {
+  // Ordered by the poll average, so switching polls doesn't move anything.
+  for (const p of [...parties].sort((a, b) => (averageSeats[b.id] ?? 0) - (averageSeats[a.id] ?? 0))) {
     const target: Point = [
       bounds.minX + p.spectrum.right * (bounds.maxX - bounds.minX),
       yLow + p.spectrum.religious * (yHigh - yLow),
