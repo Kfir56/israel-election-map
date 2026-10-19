@@ -9,6 +9,7 @@ import { ELECTION_DAY } from "@/lib/supabase";
 const links = [
   { href: "/", label: "המפה" },
   { href: "/parties", label: "המפלגות" },
+  { href: "/topics", label: "הנושאים" },
   { href: "/guide", label: "איך זה עובד" },
   { href: "/predict", label: "החיזוי שלי" },
   { href: "/friends", label: "חברים" },

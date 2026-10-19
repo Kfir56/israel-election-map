@@ -10,6 +10,7 @@ import PollsTable from "@/components/PollsTable";
 import { type Bloc, type CategoryId, MAJORITY, blocLabels, categories, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
 import { AVERAGE_ID, seatsFor } from "@/data/polls";
+import { topicHref } from "@/data/topics";
 
 const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {
   ssr: false,
@@ -200,6 +201,9 @@ export default function Explorer() {
             </Link>
           ))}
         </div>
+        <Link href={topicHref(category)} className="mt-4 inline-block rounded-xl border border-sky-500/40 px-4 py-2 text-sm font-semibold text-sky-300 hover:bg-sky-500/10">
+          להסבר המלא על {categories.find((c) => c.id === category)?.label}: הרקע, הגישות והמושגים ←
+        </Link>
         <p className="mt-3 text-xs text-slate-500">
           מקור העמדות: דפי המפלגות באתר המכון הישראלי לדמוקרטיה, בתמצות שלנו. הקישור למקור נמצא בעמוד של כל מפלגה.
         </p>

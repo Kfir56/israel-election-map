@@ -18,7 +18,7 @@ export default function Footer() {
           </p>
           <p>המיקום של המפלגות על המפה הוא הערכה שלנו ולא נתון רשמי. האתר לא קשור לאף מפלגה. עודכן ב־19 באוקטובר 2026.</p>
         </div>
-        <nav className="flex gap-6 sm:flex-col sm:gap-1.5">
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 sm:flex-col sm:gap-1.5">
           <Link href="/" className="hover:text-white">
             המפה
           </Link>
@@ -27,6 +27,9 @@ export default function Footer() {
           </Link>
           <Link href="/#polls" className="hover:text-white">
             הסקרים
+          </Link>
+          <Link href="/topics" className="hover:text-white">
+            הנושאים
           </Link>
           <Link href="/guide" className="hover:text-white">
             איך עובדות הבחירות

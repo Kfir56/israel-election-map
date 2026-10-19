@@ -5,6 +5,7 @@ import { blocLabels, categories, parties } from "@/data/parties";
 import { partyHistory } from "@/data/party-history";
 import { bioFor, personHref, partyHref } from "@/data/people";
 import { averageSeats, formatDate, partyRange, polls } from "@/data/polls";
+import { topicHref } from "@/data/topics";
 
 const link = "text-sky-400 underline";
 const INCUMBENT = /כנסת ה־25|ממשלה ה־37/;
@@ -71,7 +72,12 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
             const others = parties.filter((p) => p.id !== party.id && p.positions[c.id]);
             return (
               <div key={c.id} className="rounded-xl border border-slate-800 p-4">
-                <div className="text-sm font-semibold text-sky-400">{c.label}</div>
+                <div className="flex items-baseline justify-between gap-2">
+                  <div className="text-sm font-semibold text-sky-400">{c.label}</div>
+                  <Link href={topicHref(c.id)} className="text-xs text-slate-500 hover:text-sky-300">
+                    על הנושא ←
+                  </Link>
+                </div>
                 <p className="mt-1.5">
                   {party.positions[c.id] ?? <span className="text-slate-500">המקור לא מתייחס לנושא</span>}
                 </p>
