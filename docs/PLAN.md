@@ -1,6 +1,34 @@
 # Israel Election Map 2026: Plan
 
-A real-time 3D map of the 26th Knesset election, hosted on Vercel, with user login and a free seat prediction game.
+A Hebrew-first site that helps people understand the 26th Knesset election: a minimalist 3D map of Israel with every party on it, what each party says on each topic, and who is on its list. Live results and a free seat prediction game with login come after.
+
+## Update (19 Oct): explainer first
+
+Kfir's direction: Hebrew first, and the political map comes first. It does not need to be a real geographic map; a stylized 3D Israel shape is the stage, and the parties sit on it.
+
+**What v1 does (built, in this repo):**
+- Stylized 3D Israel shape (Natural Earth outline, extruded, glowing edges), rotatable.
+- One pillar per party. Height = seats in the latest poll. Position = where the party sits: left↔right across the map (left wing on screen left), secular (south) ↔ religious (north). The narrow middle of the country pushes parties north or south, never sideways, so left/right stays honest.
+- Click a party (on the map or the list) for its page: leader, bloc, poll vs. outgoing Knesset, short summary, positions per category, and its candidate list.
+- "What each party says" section: pick a category (security, religion and state, economy, judiciary, Haredi draft) and see every party's stance side by side.
+- Bloc balance bar against the 61-seat line; click a bloc to highlight its parties.
+- Full RTL Hebrew UI (Heebo font), works on phones.
+
+**Content still to do (the biggest job):**
+- Positions are short editorial drafts, and many are "טרם הוזן". Each needs a source link (party platform, interviews, Knesset votes) before it is marked verified.
+- Candidate lists are partial (from Wikipedia) and need checking against the CEC's official lists, plus each candidate's current job (minister, MK, former general, etc.).
+- Poll numbers: one poll (Kantar for Kan 11, 6 Sep). Next: an average of recent polls.
+- The left/right and secular/religious placements are editorial judgments and should be explained on the site.
+
+**Next features for the explainer:**
+1. Candidate cards: photo, role, background, link to their Knesset page.
+2. Search ("who is X, which party?").
+3. Compare two parties side by side.
+4. "Which party matches me" quiz built from the same category data.
+5. Source link under every position.
+6. Move content into Supabase with a small admin page so it can be edited without code.
+
+The sections below are the original plan for live results and the prediction game, which now come after the explainer.
 
 ## The deadline that shapes everything
 
@@ -78,6 +106,9 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 
 ## Phases
 
+### Phase 0: Political explainer (v1 built; content in progress)
+- See the update at the top
+
 ### Phase 1: Prediction game (target: live by 24 Oct)
 - Supabase project, tables, row-level security
 - Login (Google + magic link)
@@ -100,7 +131,7 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - Hebrew / English toggle and right-to-left layout
 
 ## Open decisions for you
-1. **Language**: Hebrew first, English first, or both from day one? (Default: Hebrew UI with English toggle.)
+1. ~~Language~~: decided, Hebrew first.
 2. **Map unit**: localities (simpler, ~1,200 shapes) or statistical areas (finer, heavier)? (Default: localities.)
 3. **Domain name**, if any.
 4. **Supabase**: create a new project under your account? There's a Supabase connector in this project that can do it.
