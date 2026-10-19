@@ -1,11 +1,13 @@
 // Biographies of candidates, keyed "partyId:pos". Written by us in Hebrew
-// from each person's English Wikipedia article (collected 19 Oct 2026);
-// the raw batches live in scripts/bios/ and are merged into bios.json.
+// from each person's Wikipedia article (collected 19 Oct 2026): English by
+// default, Hebrew when `lang` is "he"; the raw batches live in scripts/bios/
+// and are merged into bios.json.
 import raw from "@/data/bios.json";
 import { parties, type Candidate, type Party } from "@/data/parties";
 
 export type Bio = {
   wiki: string;
+  lang?: "he";
   born: string;
   summary: string;
   education: string[];
@@ -21,7 +23,7 @@ export function bioFor(partyId: string, pos: number): Bio | undefined {
 }
 
 export function wikiUrl(bio: Bio) {
-  return `https://en.wikipedia.org/wiki/${bio.wiki}`;
+  return `https://${bio.lang ?? "en"}.wikipedia.org/wiki/${bio.wiki}`;
 }
 
 export function findCandidate(partyId: string, pos: number): { party: Party; candidate: Candidate } | undefined {

@@ -102,9 +102,9 @@ export default async function PersonPage({ params }: { params: Params }) {
           <p className="mt-6 text-xs text-slate-500">
             מקור: הערך על {candidate.name} ב
             <a href={wikiUrl(bio)} target="_blank" rel="noreferrer" className={link}>
-              ויקיפדיה האנגלית
+              {bio.lang === "he" ? "ויקיפדיה העברית" : "ויקיפדיה האנגלית"}
             </a>
-            , בתרגום ובתמצות שלנו (נאסף ב־19 באוקטובר 2026).
+            , {bio.lang === "he" ? "בתמצות שלנו" : "בתרגום ובתמצות שלנו"} (נאסף ב־19 באוקטובר 2026).
           </p>
         </>
       ) : (
