@@ -1,28 +1,91 @@
+import Link from "next/link";
 import Explorer from "@/components/Explorer";
+import { MAJORITY, parties } from "@/data/parties";
+import { averageSeats, polls } from "@/data/polls";
+
+const faq: { q: string; a: string }[] = [
+  {
+    q: "מה זה מנדט?",
+    a: "בכנסת יש 120 מושבים, וכל מושב נקרא מנדט. המנדטים מתחלקים בין הרשימות שעברו את אחוז החסימה, לפי אחוז הקולות שכל אחת קיבלה.",
+  },
+  {
+    q: "מה זה אחוז החסימה?",
+    a: "רשימה צריכה לפחות 3.25% מהקולות הכשרים כדי להיכנס לכנסת. רשימה שלא עוברת מקבלת אפס מנדטים, ורשימה שעוברת מקבלת לפחות 4. בסקרים, ״—״ מסמן רשימה מתחת לחסימה.",
+  },
+  {
+    q: "למה צריך 61?",
+    a: "ממשלה צריכה את אמון רוב חברי הכנסת, כלומר 61 מתוך 120. לכן ראש הממשלה צריך להרכיב קואליציה של מפלגות שיחד יש להן לפחות 61 מנדטים.",
+  },
+  {
+    q: "מה הם הגושים במפה?",
+    a: "״מפלגות הקואליציה היוצאת״ הן המפלגות שהקימו את הממשלה ה־37: הליכוד, ש״ס, יהדות התורה, עוצמה יהודית והציונות הדתית. ״המפלגות הערביות״ הן הרשימה המשותפת ורע״מ, וכל השאר באופוזיציה. זו חלוקה לפי העבר, ולא הבטחה למי ישב עם מי אחרי הבחירות.",
+  },
+  {
+    q: "למה הסקרים כל כך שונים?",
+    a: "כל מכון סוקר מדגם אחר של כמה מאות אנשים, בשיטה אחרת. בכל סקר יש טעות של כמה מנדטים לכל מפלגה, ולכן אנחנו מציגים את כל הסקרים עם קישור למקור, את הממוצע שלהם ואת הטווח בין הנמוך לגבוה.",
+  },
+  {
+    q: "המשחק של החיזויים הוא על כסף?",
+    a: "לא. הימורים על כסף אסורים בישראל, והמשחק כאן הוא בנקודות בלבד: חוזים כמה מנדטים כל רשימה תקבל ומשווים עם החברים.",
+  },
+];
 
 export default function Home() {
+  const ordered = [...parties].sort((a, b) => (averageSeats[b.id] ?? 0) - (averageSeats[a.id] ?? 0));
+  const leader = ordered[0];
+  const coalition = parties.filter((p) => p.bloc === "coalition").reduce((s, p) => s + (averageSeats[p.id] ?? 0), 0);
+
   return (
     <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
-      <header className="mb-5">
-        <h1 className="text-3xl font-extrabold sm:text-4xl">המפה הפוליטית 2026</h1>
-        <p className="mt-1 text-slate-400">
-          הבחירות לכנסת ה־26, 27 באוקטובר 2026. כל עמוד הוא מפלגה: גובה העמוד הוא מספר המנדטים בסקר, והמיקום
-          מראה איפה היא עומדת בין ימין לשמאל ובין דתי לחילוני.
+      <header className="mb-6">
+        <h1 className="text-3xl font-extrabold sm:text-4xl">מי נגד מי בבחירות 2026?</h1>
+        <p className="mt-2 max-w-3xl text-slate-300">
+          הבחירות לכנסת ה־26 ב־27 באוקטובר. כאן אפשר לראות את כל המפלגות על מפה אחת, להבין מה כל אחת חושבת ומי ברשימה שלה,
+          להשוות בין הסקרים ולחזות את התוצאות עם החברים.
         </p>
+        <div className="mt-4 flex flex-wrap gap-2 text-sm">
+          <Stat>
+            הגדולה בממוצע הסקרים: <b style={{ color: leader.color }}>{leader.name}</b> ({averageSeats[leader.id]})
+          </Stat>
+          <Stat>
+            הקואליציה היוצאת: <b className={coalition >= MAJORITY ? "text-emerald-300" : "text-rose-300"}>{coalition}</b> מתוך {MAJORITY}{" "}
+            הדרושים
+          </Stat>
+          <Stat>ממוצע של {polls.length} סקרים אחרונים</Stat>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href="/predict" className="rounded-xl bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400">
+            לחזות את התוצאות
+          </Link>
+          <Link href="/parties" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+            כל המפלגות והמועמדים
+          </Link>
+          <a href="#positions" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+            להשוות עמדות
+          </a>
+        </div>
       </header>
+
       <Explorer />
-      <footer className="mt-12 border-t border-slate-800 pt-4 text-xs text-slate-500">
-        מקורות: רשימות המועמדים ותיאורי המפלגות מאתר{" "}
-        <a className="underline" href="https://www.idi.org.il/policy/parties-and-elections/elections/2026-1/">
-          המכון הישראלי לדמוקרטיה
-        </a>
-        ; הסקרים מ
-        <a className="underline" href="https://www.skarim.org/polls">
-          ארכיון הסקרים skarim.org
-        </a>{" "}
-        עם קישור לכל סקר; גובה השטח מ־AWS Terrain Tiles. המיקום של המפלגות על המפה (ימין/שמאל, דתי/חילוני) הוא הערכה
-        שלנו ולא נתון רשמי. עודכן ב־19 באוקטובר 2026.
-      </footer>
+
+      <section id="faq" className="mt-12 scroll-mt-20">
+        <h2 className="text-2xl font-bold">מושגים בקצרה</h2>
+        <div className="mt-4 grid gap-2 md:grid-cols-2">
+          {faq.map((f) => (
+            <details key={f.q} className="group rounded-xl border border-slate-800 bg-slate-900/40 p-4 open:bg-slate-900/70">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
+                {f.q}
+                <span className="text-slate-500 transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-2 text-sm text-slate-300">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
     </main>
   );
+}
+
+function Stat({ children }: { children: React.ReactNode }) {
+  return <span className="rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1.5 text-slate-300">{children}</span>;
 }

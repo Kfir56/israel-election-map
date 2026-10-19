@@ -167,3 +167,7 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - Pages: navbar on every page, `/login` (Google or email), `/predict`, `/friends` (search, follow, invite link), `/dashboard` (friends only), `/parties`.
 - Needs Kfir in the Supabase dashboard: Site URL + redirect URL, turn off "Confirm email" (built-in mailer only reaches team members), and a Google OAuth client for the Google button.
 - Next: scoring after the official results.
+
+## Update 19 Oct 2026: making the map understandable
+- "How to read the map" guide above the map (4 steps, can be hidden; remembered per visitor), and axis chips on the map itself (left/right, more religious/more secular).
+- New home intro with key numbers and buttons, a "terms in short" FAQ (seat, threshold, 61, blocs, why polls differ, no money), a site-wide footer with sources, and candidate search on /parties.

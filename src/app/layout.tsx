@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import { AuthProvider } from "@/components/auth/AuthProvider";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <AuthProvider>
           <NavBar />
           {children}
+          <Footer />
         </AuthProvider>
       </body>
     </html>

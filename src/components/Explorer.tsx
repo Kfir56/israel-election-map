@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
+import MapGuide from "@/components/MapGuide";
 import PartyPanel from "@/components/PartyPanel";
 import PollPicker, { pollLabel } from "@/components/PollPicker";
 import PollsTable from "@/components/PollsTable";
@@ -16,6 +17,7 @@ const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {
 });
 
 const blocs: Bloc[] = ["coalition", "opposition", "arab"];
+const chip = "rounded-full bg-slate-950/60 px-2.5 py-1 backdrop-blur-sm";
 const blocColors: Record<Bloc, string> = { coalition: "#2563eb", opposition: "#14b8a6", arab: "#9f1239" };
 
 export default function Explorer() {
@@ -44,6 +46,7 @@ export default function Explorer() {
 
   return (
     <>
+      <MapGuide />
       <section className="grid gap-4 lg:grid-cols-[1fr_380px]">
         {/* LTR so the 3D labels and the left/right axis line up with the screen. */}
         <div dir="ltr" className="relative h-[60vh] min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 lg:h-[72vh]">
@@ -88,10 +91,18 @@ export default function Explorer() {
               </div>
             )}
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-between p-3 text-xs text-slate-300 [text-shadow:0_1px_2px_#000]">
-            <span>← שמאל</span>
-            <span dir="rtl" className="hidden sm:inline">גררו לסיבוב · גלגלת לזום · צפון: דתי · דרום: חילוני</span>
-            <span>ימין →</span>
+          {/* Axis labels, so the map explains itself even without the guide. */}
+          <div dir="rtl" className="pointer-events-none absolute inset-0 text-xs font-semibold text-slate-100 [text-shadow:0_1px_3px_#000]">
+            <span className={`${chip} absolute left-3 top-3 sm:left-1/2 sm:-translate-x-1/2`}>↑ דתי יותר</span>
+            <span className={`${chip} absolute bottom-10 left-1/2 -translate-x-1/2`}>↓ חילוני יותר</span>
+            <span className={`${chip} absolute bottom-3 left-3`}>← שמאל</span>
+            <span className={`${chip} absolute bottom-3 right-3`}>ימין →</span>
+            <span className="absolute bottom-3 left-1/2 hidden -translate-x-1/2 text-[11px] font-normal text-slate-300 sm:inline">
+              גררו לסיבוב · גלגלת לזום · לחצו על עמוד לפרטים
+            </span>
+            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] font-normal text-slate-300 sm:hidden">
+              גררו לסיבוב · צביטה לזום
+            </span>
           </div>
         </div>
 
@@ -155,8 +166,9 @@ export default function Explorer() {
         </aside>
       </section>
 
-      <section className="mt-10">
+      <section id="positions" className="mt-10 scroll-mt-20">
         <h2 className="text-2xl font-bold">מה כל מפלגה אומרת</h2>
+        <p className="mt-1 text-sm text-slate-400">בחרו נושא ותראו בבת אחת מה כל המפלגות אומרות עליו.</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {categories.map((c) => (
             <button
@@ -193,7 +205,7 @@ export default function Explorer() {
         </p>
       </section>
 
-      <section className="mt-12">
+      <section id="polls" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold">כל הסקרים</h2>
         <p className="mt-1 text-sm text-slate-400">
           הסקרים שונים מאוד זה מזה, אז כאן רואים את כולם. ירוק = הכי גבוה בין הסקרים, אדום = הכי נמוך, ״—״ = מתחת

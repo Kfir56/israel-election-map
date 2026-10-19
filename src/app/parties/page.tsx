@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CandidateSearch from "@/components/CandidateSearch";
 import { blocLabels, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
 import { averageSeats, partyRange, polls } from "@/data/polls";
@@ -13,6 +14,9 @@ export default function PartiesPage() {
       <p className="mt-1 text-slate-400">
         {parties.length} הרשימות שמופיעות בסקרים, לפי ממוצע {polls.length} הסקרים האחרונים. לחצו על רשימה לכל העמדות והמועמדים.
       </p>
+      <div className="mt-5 max-w-xl">
+        <CandidateSearch />
+      </div>
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {ordered.map((p) => {
           const r = partyRange(p.id);
@@ -33,6 +37,7 @@ export default function PartiesPage() {
                     <div className="text-3xl font-extrabold" style={{ color: p.color }}>
                       {averageSeats[p.id] || "—"}
                     </div>
+                    {(averageSeats[p.id] ?? 0) < 4 && <div className="text-[10px] text-amber-300">מתחת לחסימה ברוב הסקרים</div>}
                     <div dir="ltr" className="text-xs text-slate-500">
                       {r.min === r.max ? r.max : `${r.min}–${r.max}`}
                     </div>
