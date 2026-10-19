@@ -1,5 +1,7 @@
 // Builds src/data/israel-outline.json from Natural Earth (world-atlas 50m).
-// Output: one ring of [x, y] points, scaled so the shape is ~10 units tall.
+// Output: one ring of [x, y] points, scaled so the shape is ~10 units tall,
+// plus the lon/lat -> map transform (src/data/map-transform.json) so the
+// terrain lines up with the outline.
 import { readFileSync, writeFileSync } from "node:fs";
 import { feature } from "topojson-client";
 
@@ -20,4 +22,6 @@ const scale = 10 / (Math.max(...ys) - Math.min(...ys));
 const out = pts.map(([x, y]) => [+((x - cx) * scale).toFixed(3), +((y - cy) * scale).toFixed(3)]);
 
 writeFileSync("src/data/israel-outline.json", JSON.stringify(out));
+writeFileSync("src/data/map-transform.json", JSON.stringify({ k, cx, cy, scale }));
+writeFileSync("scripts/israel-lonlat.json", JSON.stringify(ring));
 console.log(`points: ${out.length}`);

@@ -2,6 +2,14 @@
 
 A Hebrew-first site that helps people understand the 26th Knesset election: a minimalist 3D map of Israel with every party on it, what each party says on each topic, and who is on its list. Live results and a free seat prediction game with login come after.
 
+## Update (19 Oct, later): real 3D terrain + coalition game
+
+- The map is now real terrain: elevation from AWS Terrain Tiles (`scripts/make-terrain.mjs` bakes `public/terrain.bin`), ~25x vertical exaggeration so the Galilee, Hermon, Judean hills, Ramon crater, Kinneret and Dead Sea read clearly. Israel is lit and colored (green north, sand Negev, snow on Hermon); neighbouring land is dimmed.
+- Free camera: drag to rotate, scroll/pinch to zoom, right-drag to pan. Fly-in from space on load; clicking a party glides the camera to it.
+- Parties are glowing light beams standing on the terrain (height = poll seats).
+- **Gimmick: "👑 נסו להרכיב קואליציה"**. Click parties to add them to a coalition; gold arcs fly from each party to a floating Knesset ring above Jerusalem that fills toward 61. At 61+ the ring spins gold, sparkles burst and the HUD shows "🎉 יש ממשלה!".
+- More gimmick ideas for later: share your coalition as an image, "political earthquake" button that animates poll swings, night-of-election mode where beams grow live with results.
+
 ## Update (19 Oct): explainer first
 
 Kfir's direction: Hebrew first, and the political map comes first. It does not need to be a real geographic map; a stylized 3D Israel shape is the stage, and the parties sit on it.

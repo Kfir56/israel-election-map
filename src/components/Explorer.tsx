@@ -25,6 +25,15 @@ export default function Explorer() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [focusBloc, setFocusBloc] = useState<Bloc | null>(null);
   const [category, setCategory] = useState<CategoryId>("security");
+  const [coalitionMode, setCoalitionMode] = useState(false);
+  const [coalition, setCoalition] = useState<string[]>([]);
+  const coalitionSeats = parties.filter((p) => coalition.includes(p.id)).reduce((s, p) => s + p.poll, 0);
+
+  const onPartyClick = (id: string) => {
+    if (!coalitionMode) return setSelectedId(id);
+    if (!parties.find((p) => p.id === id)?.poll) return;
+    setCoalition((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]));
+  };
   const selected = parties.find((p) => p.id === selectedId) ?? null;
   const seats = (b: Bloc) => parties.filter((p) => p.bloc === b).reduce((s, p) => s + p.poll, 0);
 
@@ -37,11 +46,45 @@ export default function Explorer() {
             parties={parties}
             selectedId={selectedId}
             focusBloc={focusBloc}
-            onSelect={setSelectedId}
+            coalition={coalition}
+            coalitionMode={coalitionMode}
+            onPartyClick={onPartyClick}
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-between p-3 text-xs text-slate-400">
+          <div dir="rtl" className="absolute inset-x-0 top-0 flex flex-wrap items-start justify-between gap-2 p-3">
+            <button
+              onClick={() => {
+                setCoalitionMode(!coalitionMode);
+                setSelectedId(null);
+              }}
+              className={`rounded-full px-4 py-2 text-sm font-bold shadow-lg transition ${
+                coalitionMode
+                  ? "bg-amber-400 text-slate-900"
+                  : "bg-gradient-to-l from-amber-400 to-pink-500 text-white hover:scale-105"
+              }`}
+            >
+              {coalitionMode ? "יציאה ממצב קואליציה" : "👑 נסו להרכיב קואליציה"}
+            </button>
+            {coalitionMode && (
+              <div className="rounded-xl bg-slate-950/80 px-3 py-2 text-sm text-white backdrop-blur">
+                {coalitionSeats >= MAJORITY ? (
+                  <span className="font-bold text-amber-300">🎉 יש ממשלה! {coalitionSeats} מנדטים</span>
+                ) : (
+                  <span>
+                    לחצו על מפלגות כדי לצרף אותן · <b>{coalitionSeats}</b>/{MAJORITY}
+                    {coalitionSeats > 0 && ` · חסרים ${MAJORITY - coalitionSeats}`}
+                  </span>
+                )}
+                {coalition.length > 0 && (
+                  <button onClick={() => setCoalition([])} className="mr-3 text-xs text-slate-400 underline">
+                    איפוס
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-between p-3 text-xs text-slate-300 [text-shadow:0_1px_2px_#000]">
             <span>← שמאל</span>
-            <span dir="rtl">צפון: דתי · דרום: חילוני</span>
+            <span dir="rtl" className="hidden sm:inline">גררו לסיבוב · גלגלת לזום · צפון: דתי · דרום: חילוני</span>
             <span>ימין →</span>
           </div>
         </div>
@@ -83,7 +126,7 @@ export default function Explorer() {
                 {parties.map((p) => (
                   <li key={p.id}>
                     <button
-                      onClick={() => setSelectedId(p.id)}
+                      onClick={() => onPartyClick(p.id)}
                       className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm hover:bg-slate-800"
                     >
                       <span className="flex items-center gap-2">
