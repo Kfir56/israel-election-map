@@ -88,8 +88,8 @@ export default async function PersonPage({ params }: { params: Params }) {
                   <li key={i} className="relative mb-4">
                     <span className="absolute -right-[25px] top-1.5 h-2.5 w-2.5 rounded-full" style={{ background: party.color }} />
                     {r.years && (
-                      <div dir="ltr" className="text-right font-mono text-sm text-slate-400">
-                        {r.years}
+                      <div dir="ltr" className="text-right text-sm tabular-nums text-slate-400">
+                        {r.years.replace(/–(?=,|$)/g, "–היום")}
                       </div>
                     )}
                     <div>{r.title}</div>
