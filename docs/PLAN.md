@@ -157,7 +157,7 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 
 ## Update 19 Oct 2026: party and candidate pages
 - `/party/<id>`: full page per party: stats, all positions (with what every other party says on the same topic), full list linked to candidates, milestones, every poll.
-- `/party/<id>/<pos>`: page per candidate: background, education, service, previous roles timeline, parties. 138 candidates have full bios (from English Wikipedia, or Hebrew Wikipedia when the bio has `lang: "he"`; `src/data/bios.json`, raw batches in `scripts/bios/`); ongoing roles end in "–" in the data and render as "–היום"; the rest show their list place and note.
+- `/party/<id>/<pos>`: page per candidate: background, education, service, previous roles timeline, parties. 164 candidates have bios (from English Wikipedia, Hebrew Wikipedia when `lang: "he"`, or news reports listed in `sources` for people with no article; former ministers also get a "בתפקידים בממשלה" section of notable steps and criticism from `src/data/records.json`, condensed from Hebrew Wikipedia; `src/data/bios.json`, raw batches in `scripts/bios/`); ongoing roles end in "–" in the data and render as "–היום"; the rest show their list place and note.
 - Next: bios for the rest of the lists; positions for ביחד and the Joint List from their own platforms.
 
 ## Update 19 Oct 2026: accounts, predictions and friends

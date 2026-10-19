@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { parties } from "@/data/parties";
-import { bioFor, findCandidate, partyHref, personHref, wikiUrl } from "@/data/people";
+import { bioFor, findCandidate, partyHref, personHref, recordFor, wikiUrl, type RecordItem } from "@/data/people";
 
 const link = "text-sky-400 underline";
 
@@ -24,6 +24,7 @@ export default async function PersonPage({ params }: { params: Params }) {
   if (!found) notFound();
   const { party, candidate } = found;
   const bio = bioFor(party.id, candidate.pos);
+  const record = recordFor(party.id, candidate.pos);
   const idx = party.candidates.indexOf(candidate);
   const prev = party.candidates[idx - 1];
   const next = party.candidates[idx + 1];
@@ -99,12 +100,46 @@ export default async function PersonPage({ params }: { params: Params }) {
             </section>
           )}
 
+          {record && (
+            <section className="mt-8">
+              <h2 className="mb-1 text-2xl font-bold">בתפקידים בממשלה</h2>
+              <p className="mb-4 text-sm text-slate-400">
+                צעדים בולטים והביקורת עליהם, כפי שהם מתוארים ב
+                <a href={wikiUrl(record.wiki, "he")} target="_blank" rel="noreferrer" className={link}>
+                  ערך בוויקיפדיה העברית
+                </a>
+                , בתמצות שלנו.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {record.plus.length > 0 && <RecordList title="צעדים בולטים" items={record.plus} tone="text-emerald-400" />}
+                {record.minus.length > 0 && <RecordList title="ביקורת ומחלוקות" items={record.minus} tone="text-rose-400" />}
+              </div>
+            </section>
+          )}
+
           <p className="mt-6 text-xs text-slate-500">
-            מקור: הערך על {candidate.name} ב
-            <a href={wikiUrl(bio)} target="_blank" rel="noreferrer" className={link}>
-              {bio.lang === "he" ? "ויקיפדיה העברית" : "ויקיפדיה האנגלית"}
-            </a>
-            , {bio.lang === "he" ? "בתמצות שלנו" : "בתרגום ובתמצות שלנו"} (נאסף ב־19 באוקטובר 2026).
+            {bio.wiki ? (
+              <>
+                מקור: הערך על {candidate.name} ב
+                <a href={wikiUrl(bio.wiki, bio.lang)} target="_blank" rel="noreferrer" className={link}>
+                  {bio.lang === "he" ? "ויקיפדיה העברית" : "ויקיפדיה האנגלית"}
+                </a>
+                , {bio.lang === "he" ? "בתמצות שלנו" : "בתרגום ובתמצות שלנו"} (נאסף ב־19 באוקטובר 2026).
+              </>
+            ) : (
+              <>
+                אין ערך בוויקיפדיה על {candidate.name}. מקורות:{" "}
+                {bio.sources?.map((s, i) => (
+                  <span key={s.url}>
+                    {i > 0 && ", "}
+                    <a href={s.url} target="_blank" rel="noreferrer" className={link}>
+                      {s.label}
+                    </a>
+                  </span>
+                ))}
+                , בתמצות שלנו (נאסף ב־19 באוקטובר 2026).
+              </>
+            )}
           </p>
         </>
       ) : (
@@ -132,6 +167,26 @@ export default async function PersonPage({ params }: { params: Params }) {
         )}
       </nav>
     </main>
+  );
+}
+
+function RecordList({ title, items, tone }: { title: string; items: RecordItem[]; tone: string }) {
+  return (
+    <div className="rounded-xl border border-slate-800 p-4">
+      <h3 className={`mb-2 font-semibold ${tone}`}>{title}</h3>
+      <ul className="space-y-2">
+        {items.map((r, i) => (
+          <li key={i}>
+            {r.years && (
+              <span dir="ltr" className="ml-2 text-sm tabular-nums text-slate-400">
+                {r.years.replace(/–$/, "–היום")}
+              </span>
+            )}
+            {r.text}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
