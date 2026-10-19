@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BallotLetter from "@/components/BallotLetter";
 import CandidateSearch from "@/components/CandidateSearch";
+import WomenRepresentation from "@/components/WomenRepresentation";
 import { blocLabels, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
 import { averageSeats, partyRange, polls } from "@/data/polls";
@@ -54,6 +55,7 @@ export default function PartiesPage() {
           );
         })}
       </div>
+      <WomenRepresentation />
     </main>
   );
 }
