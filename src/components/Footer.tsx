@@ -28,8 +28,8 @@ export default function Footer() {
           <Link href="/#polls" className="hover:text-white">
             הסקרים
           </Link>
-          <Link href="/#faq" className="hover:text-white">
-            מושגים
+          <Link href="/guide" className="hover:text-white">
+            איך עובדות הבחירות
           </Link>
           <Link href="/predict" className="hover:text-white">
             החיזוי שלי

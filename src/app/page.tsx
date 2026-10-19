@@ -14,7 +14,7 @@ const faq: { q: string; a: string }[] = [
   },
   {
     q: "למה צריך 61?",
-    a: "ממשלה צריכה את אמון רוב חברי הכנסת, כלומר 61 מתוך 120. לכן ראש הממשלה צריך להרכיב קואליציה של מפלגות שיחד יש להן לפחות 61 מנדטים.",
+    a: "61 הם רוב של 120 חברי הכנסת. כדי שממשלה תקום ותשרוד בהצבעות, ראש הממשלה צריך קואליציה של מפלגות שיחד יש להן לפחות 61 מנדטים. (טכנית מספיק שיותר חברי כנסת יתמכו מאשר יתנגדו, אבל ממשלת מיעוט כזו כמעט לא מחזיקה.)",
   },
   {
     q: "מה הם הגושים במפה?",
@@ -69,7 +69,12 @@ export default function Home() {
       <Explorer />
 
       <section id="faq" className="mt-12 scroll-mt-20">
-        <h2 className="text-2xl font-bold">מושגים בקצרה</h2>
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-2xl font-bold">מושגים בקצרה</h2>
+          <Link href="/guide" className="text-sm text-sky-400 hover:underline">
+            להסבר המלא: איך עובדות הבחירות, עם מחשבון מנדטים ←
+          </Link>
+        </div>
         <div className="mt-4 grid gap-2 md:grid-cols-2">
           {faq.map((f) => (
             <details key={f.q} className="group rounded-xl border border-slate-800 bg-slate-900/40 p-4 open:bg-slate-900/70">

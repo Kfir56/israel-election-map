@@ -171,3 +171,6 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 ## Update 19 Oct 2026: making the map understandable
 - "How to read the map" guide above the map (4 steps, can be hidden; remembered per visitor), and axis chips on the map itself (left/right, more religious/more secular).
 - New home intro with key numbers and buttons, a "terms in short" FAQ (seat, threshold, 61, blocs, why polls differ, no money), a site-wide footer with sources, and candidate search on /parties.
+
+## Update 19 Oct 2026: elections guide
+- `/guide`: how the elections work, from the ballot to the government (6 steps), key terms, and an interactive seat calculator (threshold + Bader-Ofer + surplus agreements, `src/lib/seats.ts`; reproduces the 2022 result exactly).

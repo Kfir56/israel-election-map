@@ -9,6 +9,7 @@ import { ELECTION_DAY } from "@/lib/supabase";
 const links = [
   { href: "/", label: "המפה" },
   { href: "/parties", label: "המפלגות" },
+  { href: "/guide", label: "איך זה עובד" },
   { href: "/predict", label: "החיזוי שלי" },
   { href: "/friends", label: "חברים" },
   { href: "/dashboard", label: "הלוח של החברים" },
@@ -40,7 +41,7 @@ export default function NavBar() {
           <span className="rounded bg-sky-500/15 px-1.5 text-xs font-bold text-sky-300">2026</span>
         </Link>
 
-        <div className="hidden flex-1 items-center gap-1 md:flex">
+        <div className="hidden flex-1 items-center gap-1 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -56,14 +57,14 @@ export default function NavBar() {
 
         <div className="ms-auto flex items-center gap-3">
           {days !== null && days > 0 && (
-            <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 lg:inline">
+            <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 xl:inline">
               עוד {days} ימים לבחירות
             </span>
           )}
           <AccountMenu />
           <button
             onClick={() => setOpen((o) => !o)}
-            className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 md:hidden"
+            className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 lg:hidden"
             aria-label="תפריט"
             aria-expanded={open}
           >
@@ -75,7 +76,7 @@ export default function NavBar() {
       </nav>
 
       {open && (
-        <div className="border-t border-slate-800 px-4 py-2 md:hidden">
+        <div className="border-t border-slate-800 px-4 py-2 lg:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
