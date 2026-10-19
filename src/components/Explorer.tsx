@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { partyHref } from "@/data/people";
+
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import PartyPanel from "@/components/PartyPanel";
@@ -170,12 +173,9 @@ export default function Explorer() {
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {parties.map((p) => (
-            <button
+            <Link
               key={p.id}
-              onClick={() => {
-                setSelectedId(p.id);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              href={partyHref(p.id)}
               className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 text-right hover:border-slate-600"
             >
               <div className="flex items-center gap-2 font-semibold">
@@ -185,11 +185,12 @@ export default function Explorer() {
               <p className="mt-2 text-sm text-slate-300">
                 {p.positions[category] ?? <span className="text-slate-500">המקור לא מתייחס לנושא</span>}
               </p>
-            </button>
+              <div className="mt-2 text-xs text-sky-400">לכל העמדות והרשימה ←</div>
+            </Link>
           ))}
         </div>
         <p className="mt-3 text-xs text-slate-500">
-          מקור העמדות: דפי המפלגות באתר המכון הישראלי לדמוקרטיה, בתמצות שלנו. הקישור לכל מפלגה נמצא בכרטיס שלה.
+          מקור העמדות: דפי המפלגות באתר המכון הישראלי לדמוקרטיה, בתמצות שלנו. הקישור למקור נמצא בעמוד של כל מפלגה.
         </p>
       </section>
 
