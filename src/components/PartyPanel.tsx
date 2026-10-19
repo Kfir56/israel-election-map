@@ -33,6 +33,7 @@ export default function PartyPanel({
           <p className="mt-1 text-sm text-slate-400">
             בראשות {party.leader} · {blocLabels[party.bloc]}
           </p>
+          {party.withdrawn && <p className="mt-1 text-sm font-semibold text-rose-300">פרשה מהמרוץ ב־19 באוקטובר, אבל תופיע בקלפי</p>}
         </div>
         <button onClick={onClose} className="rounded-full px-2 text-2xl text-slate-400 hover:text-white" aria-label="סגירה">
           ×

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BallotLetter from "@/components/BallotLetter";
 import CandidateSearch from "@/components/CandidateSearch";
+import MinorLists from "@/components/MinorLists";
 import WomenRepresentation from "@/components/WomenRepresentation";
 import { blocLabels, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
@@ -14,7 +15,11 @@ export default function PartiesPage() {
     <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
       <h1 className="text-3xl font-extrabold">המפלגות</h1>
       <p className="mt-1 text-slate-400">
-        {parties.length} הרשימות שמופיעות בסקרים, לפי ממוצע {polls.length} הסקרים האחרונים. לחצו על רשימה לכל העמדות והמועמדים.
+        {parties.length} הרשימות שמופיעות בסקרים, לפי ממוצע {polls.length} הסקרים האחרונים. לחצו על רשימה לכל העמדות והמועמדים.{" "}
+        <a href="#minor" className="text-sky-400 hover:underline">
+          ועוד 24 רשימות קטנות
+        </a>
+        .
       </p>
       <div className="mt-5 max-w-xl">
         <CandidateSearch />
@@ -42,7 +47,8 @@ export default function PartiesPage() {
                     <div className="text-3xl font-extrabold" style={{ color: p.color }}>
                       {averageSeats[p.id] || "—"}
                     </div>
-                    {(averageSeats[p.id] ?? 0) < 4 && <div className="text-[10px] text-amber-300">מתחת לחסימה ברוב הסקרים</div>}
+                    {p.withdrawn && <div className="text-[10px] font-bold text-rose-300">פרשה מהמרוץ</div>}
+                    {!p.withdrawn && (averageSeats[p.id] ?? 0) < 4 && <div className="text-[10px] text-amber-300">מתחת לחסימה ברוב הסקרים</div>}
                     <div dir="ltr" className="text-xs text-slate-500">
                       {r.min === r.max ? r.max : `${r.min}–${r.max}`}
                     </div>
@@ -56,6 +62,7 @@ export default function PartiesPage() {
         })}
       </div>
       <WomenRepresentation />
+      <MinorLists />
     </main>
   );
 }

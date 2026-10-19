@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BallotLetter from "@/components/BallotLetter";
-import { blocLabels, categories, parties } from "@/data/parties";
+import { blocLabels, categories, formatSourceDate, parties, positionSources, sourceTypeLabels } from "@/data/parties";
 import { partyHistory } from "@/data/party-history";
 import { bioFor, personHref, partyHref } from "@/data/people";
 import { averageSeats, formatDate, partyRange, polls } from "@/data/polls";
@@ -63,6 +63,14 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
           >
             להשוות את {party.name} למפלגה אחרת ←
           </Link>
+          {party.withdrawn && (
+            <div className="mt-4 rounded-xl border border-rose-500/40 bg-rose-500/10 p-3 text-sm text-rose-100">
+              <b>המפלגה פרשה מהמרוץ.</b> {party.withdrawn.text}{" "}
+              <a href={party.withdrawn.source} target="_blank" rel="noreferrer" className="underline">
+                מקור, {formatSourceDate(party.withdrawn.date)}
+              </a>
+            </div>
+          )}
           <p className="mt-4 max-w-3xl text-slate-300">{party.summary}</p>
 
           <div className="mt-6 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
@@ -83,6 +91,7 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
         <div className="grid gap-3 sm:grid-cols-2">
           {categories.map((c) => {
             const others = parties.filter((p) => p.id !== party.id && p.positions[c.id]);
+            const src = positionSources[party.id]?.[c.id];
             return (
               <div key={c.id} className="rounded-xl border border-slate-800 p-4">
                 <div className="flex items-baseline justify-between gap-2">
@@ -92,8 +101,20 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
                   </Link>
                 </div>
                 <p className="mt-1.5">
-                  {party.positions[c.id] ?? <span className="text-slate-500">המקור לא מתייחס לנושא</span>}
+                  {party.positions[c.id] ?? <span className="text-slate-500">לא מצאנו התייחסות של המפלגה לנושא</span>}
                 </p>
+                {src && (
+                  <a
+                    href={src.source}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1.5 inline-flex flex-wrap items-center gap-1.5 text-xs text-slate-500 hover:text-sky-300"
+                  >
+                    <span className="rounded bg-slate-800 px-1.5 py-0.5 text-slate-300">{sourceTypeLabels[src.sourceType]}</span>
+                    {src.sourceLabel} · {src.sourceType === "idi" ? "נבדק ב־" : ""}
+                    {formatSourceDate(src.date)}
+                  </a>
+                )}
                 {others.length > 0 && (
                   <details className="mt-3 text-sm">
                     <summary className="cursor-pointer text-slate-400 hover:text-sky-300">
@@ -116,16 +137,25 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
           })}
         </div>
         <p className="mt-3 text-xs text-slate-500">
-          מקור: דף המפלגה ב
+          לכל נושא מופיע המקור והתאריך שלו: מצע המפלגה, האתר שלה או הצהרה מתועדת מ־2026. איפה שלא מצאנו מקור חדש יותר,
+          השארנו את הסיכום של{" "}
           <a href={party.idiPage} target="_blank" rel="noreferrer" className={link}>
             המכון הישראלי לדמוקרטיה
           </a>
-          , בתמצות שלנו.
+          . הניסוח בתמצות שלנו.
           {party.platform && (
             <>
               {" "}
               <a href={party.platform} target="_blank" rel="noreferrer" className={link}>
                 המצע המלא
+              </a>
+            </>
+          )}
+          {party.website && (
+            <>
+              {" "}
+              <a href={party.website} target="_blank" rel="noreferrer" className={link}>
+                אתר המפלגה
               </a>
             </>
           )}

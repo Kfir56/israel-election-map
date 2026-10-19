@@ -10,7 +10,8 @@
 //   condensed. Topics IDI doesn't cover are left out rather than guessed.
 // - `letter`: ballot letters from the CEC, as reported by ynet on 27 Sep 2026
 //   (https://www.ynet.co.il/news/elections2026/article/sjmed8uqgx).
-// - `spectrum`: our own rough placement for the map, not a source claim.
+// - `spectrum`: our own placement for the map, judged from the sourced
+//   security and religion-and-state positions below; not a source claim.
 // - Seat numbers live in polls.ts.
 
 export type Bloc = "coalition" | "opposition" | "arab";
@@ -44,6 +45,9 @@ export type Party = {
   positions: Partial<Record<CategoryId, string>>;
   idiPage: string;
   platform?: string;
+  website?: string;
+  /** Set when the list pulled out of the race after the ballots were fixed. */
+  withdrawn?: { text: string; source: string; date: string };
   listSource: string;
   candidates: Candidate[];
 };
@@ -70,7 +74,7 @@ export const parties: Party[] = [
     leader: "גדי איזנקוט",
     color: "#0ea5e9",
     bloc: "opposition",
-    spectrum: { right: 0.45, religious: 0.3 },
+    spectrum: { right: 0.55, religious: 0.3 },
     summary: "מפלגה חדשה בראשות הרמטכ״ל לשעבר גדי איזנקוט, רצה יחד עם מפלגת יסודות ישראל של חילי טרופר.",
     positions: {
       security: "חיזוק הביטחון הלאומי, ומיצוב ישראל כמעצמה אזורית שחותרת להסכמי שלום ושיתוף פעולה עם מדינות האזור.",
@@ -156,7 +160,7 @@ export const parties: Party[] = [
     color: "#14b8a6",
     bloc: "opposition",
     seats25: 24,
-    spectrum: { right: 0.55, religious: 0.3 },
+    spectrum: { right: 0.62, religious: 0.25 },
     summary: "רשימה משותפת של מפלגת בנט 2026 ושל יש עתיד בראשות יאיר לפיד.",
     positions: {},
     idiPage: `${IDI}/beyachad/`,
@@ -387,7 +391,7 @@ export const parties: Party[] = [
     candidates: [
       { pos: 1, name: "יוסף ג׳בארין", faction: "חד״ש", note: "ח״כ לשעבר" },
       { pos: 2, name: "אחמד טיבי", faction: "תע״ל", note: "ח״כ בכנסת ה־25" },
-      { pos: 3, name: "סאמי אבו שחאדה", faction: "בל״ד", note: "ח״כ לשעבר" },
+      { pos: 3, name: "סאמי אבו שחאדה", faction: "בל״ד", note: "ח״כ לשעבר. פרש מההתמודדות ב־2 באוקטובר, על רקע הליך לפסילתו בבג״ץ" },
       { pos: 4, name: "פאתן ג׳טאס", faction: "חד״ש" },
       { pos: 5, name: "בכר עואודה", faction: "בל״ד" },
       { pos: 6, name: "עופר כסיף", faction: "חד״ש", note: "ח״כ בכנסת ה־25" },
@@ -479,7 +483,7 @@ export const parties: Party[] = [
     leader: "יועז הנדל וירון זליכה",
     color: "#64748b",
     bloc: "opposition",
-    spectrum: { right: 0.65, religious: 0.3 },
+    spectrum: { right: 0.7, religious: 0.3 },
     summary:
       "מפלגת המילואימניקים של השר לשעבר יועז הנדל (הוקמה ב־2025), ברשימה משותפת עם המפלגה הכלכלית החדשה של ירון זליכה.",
     positions: {
@@ -541,11 +545,16 @@ export const parties: Party[] = [
     color: "#60a5fa",
     bloc: "opposition",
     seats25: 8,
-    spectrum: { right: 0.45, religious: 0.3 },
+    spectrum: { right: 0.42, religious: 0.38 },
     summary:
       "מפלגת מרכז שנוסדה כדי לגשר על פערים בחברה הישראלית; IDI מתאר אותה כמתונה ופייסנית בנושאי דת ומדינה. בכל הסקרים כאן היא מתחת לאחוז החסימה.",
     positions: {
       religion: "גישה מתונה ופייסנית ויחס אמפתי לציבור הדתי והחרדי.",
+    },
+    withdrawn: {
+      text: "ב־19 באוקטובר הודיע בני גנץ שכחול לבן לא תתמודד בבחירות, אחרי שבסקרים היא לא עברה את אחוז החסימה. הפתק יופיע בקלפי כי כבר מאוחר להסיר אותו, אבל המפלגה לא מתמודדת, וקול אליה לא יכניס אותה לכנסת.",
+      source: "https://www.timesofisrael.com/blue-and-whites-benny-gantz-pulls-out-of-race-sealing-precipitous-political-fall",
+      date: "2026-10-19",
     },
     idiPage: `${IDI}/blue-white/`,
     listSource: `${LIST}/32327/כחול-לבן.pdf`,
@@ -563,3 +572,47 @@ export const parties: Party[] = [
     ],
   },
 ];
+
+// Positions from each party's own platform, website or recent on-record
+// statements, with the date of the source (collected 19 Oct 2026). Where we
+// found nothing newer, the IDI summary above stays and is cited as IDI.
+import positionData from "@/data/positions.json";
+
+export type PositionSource = {
+  text: string;
+  source: string;
+  sourceType: "platform" | "website" | "statement" | "idi";
+  sourceLabel: string;
+  date: string;
+};
+
+type PositionFile = Record<
+  string,
+  { website: string | null; platform: string | null; topics: Partial<Record<CategoryId, PositionSource>> }
+>;
+
+export const positionSources: Record<string, Partial<Record<CategoryId, PositionSource>>> = {};
+
+for (const party of parties) {
+  const data = (positionData as unknown as PositionFile)[party.id];
+  if (!data) continue;
+  positionSources[party.id] = data.topics;
+  for (const [topic, src] of Object.entries(data.topics) as [CategoryId, PositionSource][]) {
+    party.positions[topic] = src.text;
+  }
+  if (data.platform) party.platform = data.platform;
+  if (data.website) party.website = data.website;
+}
+
+export const sourceTypeLabels: Record<PositionSource["sourceType"], string> = {
+  platform: "מצע",
+  website: "אתר המפלגה",
+  statement: "הצהרה",
+  idi: "סיכום IDI",
+};
+
+/** "2026-08-22" → "22.8.2026"; "2026-07" → "7.2026". */
+export function formatSourceDate(date: string): string {
+  const [y, m, d] = date.split("-");
+  return d ? `${Number(d)}.${Number(m)}.${y}` : `${Number(m)}.${y}`;
+}
