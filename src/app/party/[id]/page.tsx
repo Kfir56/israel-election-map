@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import BallotLetter from "@/components/BallotLetter";
 import { blocLabels, categories, parties } from "@/data/parties";
 import { partyHistory } from "@/data/party-history";
 import { bioFor, personHref, partyHref } from "@/data/people";
@@ -42,7 +43,13 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
         <div className="h-2" style={{ background: party.color }} />
         <div className="p-5 sm:p-7">
           <div className="text-xs text-slate-400">{blocLabels[party.bloc]}</div>
-          <h1 className="mt-1 text-4xl font-extrabold sm:text-5xl">{party.name}</h1>
+          <div className="mt-1 flex items-center gap-4">
+            <h1 className="text-4xl font-extrabold sm:text-5xl">{party.name}</h1>
+            <div className="flex flex-col items-center gap-0.5">
+              <BallotLetter letter={party.letter} />
+              <span className="text-[10px] text-slate-500">הפתק בקלפי</span>
+            </div>
+          </div>
           <p className="mt-2 text-slate-300">
             בראשות{" "}
             <Link href={personHref(party.id, 1)} className="font-semibold hover:text-sky-300">

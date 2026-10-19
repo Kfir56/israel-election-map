@@ -8,6 +8,8 @@
 //   It is not part of the official list.
 // - `positions` and `summary`: what IDI's party page says (`idiPage`),
 //   condensed. Topics IDI doesn't cover are left out rather than guessed.
+// - `letter`: ballot letters from the CEC, as reported by ynet on 27 Sep 2026
+//   (https://www.ynet.co.il/news/elections2026/article/sjmed8uqgx).
 // - `spectrum`: our own rough placement for the map, not a source claim.
 // - Seat numbers live in polls.ts.
 
@@ -29,6 +31,8 @@ export type Party = {
   id: string;
   name: string;
   nameEn: string;
+  /** Letters printed on the ballot, as approved by the Central Elections Committee. */
+  letter: string;
   leader: string;
   color: string;
   bloc: Bloc;
@@ -62,6 +66,7 @@ export const parties: Party[] = [
     id: "yashar",
     name: "ישר!",
     nameEn: "Yashar",
+    letter: "דרך",
     leader: "גדי איזנקוט",
     color: "#0ea5e9",
     bloc: "opposition",
@@ -103,6 +108,7 @@ export const parties: Party[] = [
     id: "likud",
     name: "הליכוד",
     nameEn: "Likud",
+    letter: "מחל",
     leader: "בנימין נתניהו",
     color: "#1d4ed8",
     bloc: "coalition",
@@ -145,6 +151,7 @@ export const parties: Party[] = [
     id: "together",
     name: "ביחד",
     nameEn: "Together",
+    letter: "רק",
     leader: "נפתלי בנט",
     color: "#14b8a6",
     bloc: "opposition",
@@ -181,6 +188,7 @@ export const parties: Party[] = [
     id: "dems",
     name: "הדמוקרטים",
     nameEn: "The Democrats",
+    letter: "אמת",
     leader: "יאיר גולן",
     color: "#dc2626",
     bloc: "opposition",
@@ -223,6 +231,7 @@ export const parties: Party[] = [
     id: "utj",
     name: "יהדות התורה",
     nameEn: "United Torah Judaism",
+    letter: "ג",
     leader: "יעקב אשר",
     color: "#404040",
     bloc: "coalition",
@@ -258,6 +267,7 @@ export const parties: Party[] = [
     id: "otzma",
     name: "עוצמה יהודית",
     nameEn: "Otzma Yehudit",
+    letter: "ב",
     leader: "איתמר בן גביר",
     color: "#f59e0b",
     bloc: "coalition",
@@ -293,6 +303,7 @@ export const parties: Party[] = [
     id: "shas",
     name: "ש״ס",
     nameEn: "Shas",
+    letter: "שס",
     leader: "אריה דרעי",
     color: "#171717",
     bloc: "coalition",
@@ -327,6 +338,7 @@ export const parties: Party[] = [
     id: "yb",
     name: "ישראל ביתנו",
     nameEn: "Yisrael Beiteinu",
+    letter: "ל",
     leader: "אביגדור ליברמן",
     color: "#16a34a",
     bloc: "opposition",
@@ -362,6 +374,7 @@ export const parties: Party[] = [
     id: "joint",
     name: "הרשימה המשותפת",
     nameEn: "Joint List",
+    letter: "ודם",
     leader: "יוסף ג׳בארין",
     color: "#9f1239",
     bloc: "arab",
@@ -393,6 +406,7 @@ export const parties: Party[] = [
     id: "rzp",
     name: "הציונות הדתית וזהות",
     nameEn: "Religious Zionism–Zehut",
+    letter: "ט",
     leader: "בצלאל סמוטריץ׳",
     color: "#b45309",
     bloc: "coalition",
@@ -430,6 +444,7 @@ export const parties: Party[] = [
     id: "raam",
     name: "רע״מ",
     nameEn: "Ra'am",
+    letter: "עם",
     leader: "מנסור עבאס",
     color: "#15803d",
     bloc: "arab",
@@ -460,6 +475,7 @@ export const parties: Party[] = [
     id: "reservists",
     name: "המילואימניקים והכלכלית",
     nameEn: "Reservists and the Economic Party",
+    letter: "די",
     leader: "יועז הנדל וירון זליכה",
     color: "#64748b",
     bloc: "opposition",
@@ -490,6 +506,7 @@ export const parties: Party[] = [
     id: "amcha",
     name: "עמך ישראל",
     nameEn: "Amcha Yisrael",
+    letter: "ך",
     leader: "עופר וינטר",
     color: "#7c3aed",
     bloc: "opposition",
@@ -519,6 +536,7 @@ export const parties: Party[] = [
     id: "bw",
     name: "כחול לבן",
     nameEn: "Blue and White",
+    letter: "כן",
     leader: "בני גנץ",
     color: "#60a5fa",
     bloc: "opposition",

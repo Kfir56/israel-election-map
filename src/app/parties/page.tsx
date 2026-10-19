@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BallotLetter from "@/components/BallotLetter";
 import CandidateSearch from "@/components/CandidateSearch";
 import { blocLabels, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
@@ -29,9 +30,12 @@ export default function PartiesPage() {
               <div className="h-1.5" style={{ background: p.color }} />
               <div className="p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <div className="text-xl font-bold group-hover:text-sky-300">{p.name}</div>
-                    <div className="text-sm text-slate-400">{p.leader}</div>
+                  <div className="flex items-center gap-3">
+                    <BallotLetter letter={p.letter} size="sm" />
+                    <div>
+                      <div className="text-xl font-bold group-hover:text-sky-300">{p.name}</div>
+                      <div className="text-sm text-slate-400">{p.leader}</div>
+                    </div>
                   </div>
                   <div className="text-left">
                     <div className="text-3xl font-extrabold" style={{ color: p.color }}>

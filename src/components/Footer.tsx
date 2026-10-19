@@ -40,6 +40,9 @@ export default function Footer() {
           <Link href="/guide" className="hover:text-white">
             איך עובדות הבחירות
           </Link>
+          <Link href="/why-vote" className="hover:text-white">
+            למה להצביע
+          </Link>
           <Link href="/predict" className="hover:text-white">
             החיזוי שלי
           </Link>
