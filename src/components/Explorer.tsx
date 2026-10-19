@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import { partyHref } from "@/data/people";
-
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useState } from "react";
 import PartyPanel from "@/components/PartyPanel";
 import PollPicker, { pollLabel } from "@/components/PollPicker";
 import PollsTable from "@/components/PollsTable";
 import { type Bloc, type CategoryId, MAJORITY, blocLabels, categories, parties } from "@/data/parties";
+import { partyHref } from "@/data/people";
 import { AVERAGE_ID, seatsFor } from "@/data/polls";
 
 const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {

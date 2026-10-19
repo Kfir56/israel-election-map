@@ -159,3 +159,11 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - `/party/<id>`: full page per party: stats, all positions (with what every other party says on the same topic), full list linked to candidates, milestones, every poll.
 - `/party/<id>/<pos>`: page per candidate: background, education, service, previous roles timeline, parties. 56 top candidates have full bios (from English Wikipedia, `src/data/bios.json`, raw batches in `scripts/bios/`); the rest show their list place and note.
 - Next: bios for the rest of the lists; positions for ביחד and the Joint List from their own platforms.
+
+## Update 19 Oct 2026: accounts, predictions and friends
+- Backend: Supabase project `israel-election-map` (wfxotfqfgwtmhsnnobut, eu-central-1, free plan). Tables `profiles`, `follows`, `predictions`, all with row level security. Schema in `supabase/migrations/`.
+- Friends = two people who follow each other. Predictions are visible only to their owner and that person's friends; strangers see nothing (tested in SQL).
+- Predictions lock when polls open (27 Oct 07:00 Israel time), enforced in the database; totals can't exceed 120.
+- Pages: navbar on every page, `/login` (Google or email), `/predict`, `/friends` (search, follow, invite link), `/dashboard` (friends only), `/parties`.
+- Needs Kfir in the Supabase dashboard: Site URL + redirect URL, turn off "Confirm email" (built-in mailer only reaches team members), and a Google OAuth client for the Google button.
+- Next: scoring after the official results.
