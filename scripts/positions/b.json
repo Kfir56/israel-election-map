@@ -1,0 +1,332 @@
+{
+  "utj": {
+    "website": null,
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "רואה בחוץ וביטחון חלק מרכזי מעיסוקה, אך מחליטה גם לפי שיקולים תורניים.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": null,
+        "scoreWhy": "המקור אינו מציין עמדה מדינית-ביטחונית מוגדרת."
+      },
+      "religion": {
+        "text": "שימור האופי הדתי של המדינה; מאז 1977 נוטה לתמוך במחנה הימין.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 2,
+        "scoreWhy": "שימור האופי הדתי של המדינה."
+      },
+      "judiciary": {
+        "text": "לטענת המפלגה בית המשפט העליון צבר כוח מופרז, ויש לבחון מחדש את סמכויותיו ולהגדיר אותן בבירור.",
+        "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+        "sourceType": "statement",
+        "sourceLabel": "עמדת המפלגה, ynet",
+        "date": "2026-09-22",
+        "score": 1,
+        "scoreWhy": "תומכת בצמצום והגדרה מחדש של סמכויות בית המשפט העליון, ללא תוכנית מפורטת."
+      },
+      "draft": {
+        "text": "היו״ר יעקב אשר: ״יהדות התורה לא תיכנס לממשלה שלא תעביר בפועל את החוק להסדרת מעמד בני הישיבות.״",
+        "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+        "sourceType": "statement",
+        "sourceLabel": "הצהרת יעקב אשר, טיימס אוף ישראל",
+        "date": "2026-10-12",
+        "score": 2,
+        "scoreWhy": "מתנה כניסה לממשלה בחוק המסדיר את מעמד בני הישיבות."
+      }
+    }
+  },
+  "otzma": {
+    "website": null,
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "עידוד הגירה מרצון של פלסטינים, פירוק הרשות הפלסטינית מנשקה ושינוי הוראות הפתיחה באש וקוד האתיקה של צה״ל. הציגה תוכנית להגירת כ־1.86 מיליון תושבי עזה בתוך שבע שנים.",
+        "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+        "sourceType": "statement",
+        "sourceLabel": "דרישות המפלגה בכנס עיתונאים, טיימס אוף ישראל",
+        "date": "2026-09-22",
+        "score": 2,
+        "scoreWhy": "הגירת פלסטינים, פירוק הרשות מנשקה והקלה במגבלות על הצבא."
+      },
+      "religion": {
+        "text": "בביקור בהר הבית בתשעה באב אמר בן גביר: ״יהודים מתפללים ומרגישים שהם בעלי הבית של המקום הזה.״",
+        "source": "https://www.jpost.com/israel-news/article-903472",
+        "sourceType": "statement",
+        "sourceLabel": "דברי בן גביר בהר הבית, ג׳רוזלם פוסט",
+        "date": "2026-07-23",
+        "score": 1,
+        "scoreWhy": "תומך בתפילת יהודים בהר הבית; המקור אינו עוסק בחקיקה דתית."
+      },
+      "economy": {
+        "text": "בין דרישותיה הקואליציוניות: העלאת שכר החיילים ומתן קרקע בחינם ללוחמים.",
+        "source": "https://www.jpost.com/israel-election-2026/article-909411",
+        "sourceType": "statement",
+        "sourceLabel": "דרישות המפלגה, ג׳רוזלם פוסט",
+        "date": "2026-09-23",
+        "score": null,
+        "scoreWhy": "המקור אינו מציג עמדה כלכלית כללית."
+      },
+      "judiciary": {
+        "text": "פיטורי היועמ״שית מיד עם הקמת הממשלה, שימוע בכנסת ורוב של שני שלישים בוועדת החוקה למינוי שופטי העליון, וצמצום סמכויות בג״ץ.",
+        "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+        "sourceType": "statement",
+        "sourceLabel": "המצע המשפטי של טלי גוטליב, טיימס אוף ישראל",
+        "date": "2026-09-22",
+        "score": 2,
+        "scoreWhy": "פיטורי היועמ״שית, מינוי שופטים בידי הכנסת וצמצום סמכויות בג״ץ."
+      },
+      "draft": {
+        "text": "בן גביר: ״הוכחנו שאפשר לשלב חרדים בשירות משמעותי״, באמצעות מסלולים ייעודיים במשטרה ובמשמר הגבול.",
+        "source": "https://www.ynetnews.com/article/sjph72wyzx",
+        "sourceType": "statement",
+        "sourceLabel": "דברי בן גביר, ynet",
+        "date": "2026-09-16",
+        "score": -1,
+        "scoreWhy": "תומך בשילוב חרדים בשירות במסלולים ייעודיים, בלי להזכיר סנקציות."
+      }
+    }
+  },
+  "shas": {
+    "website": null,
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "תומכת בהסדרי שלום עם מדינות ערב ומתנגדת לחלוקת ירושלים; בהצבעות מפתח הפגינה קו ניצי ימני.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 1,
+        "scoreWhy": "תומכת בהסדרי שלום אך מתנגדת לחלוקת ירושלים ומצביעה בקו ימני."
+      },
+      "economy": {
+        "text": "״קידום הצדק החברתי״.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": -1,
+        "scoreWhy": "מדגישה צדק חברתי."
+      },
+      "judiciary": {
+        "text": "לא הציגה מצע משפטי מפורט. דרעי אמר שבכוונתו ״לתקן מהיסוד את מערכת המשפט ולהחזיר את הכוח לעם ולנבחריו״.",
+        "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+        "sourceType": "statement",
+        "sourceLabel": "דברי דרעי, ynet",
+        "date": "2026-09-22",
+        "score": 2,
+        "scoreWhy": "קורא לתיקון יסודי של מערכת המשפט והעברת כוח לנבחרים."
+      },
+      "draft": {
+        "text": "דרעי: ״לא תקום ממשלה בישראל בתמיכת ש״ס או בהשתתפותה בלי שיוסדר מעמד בני הישיבות.״",
+        "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+        "sourceType": "statement",
+        "sourceLabel": "ראיון של דרעי לכיכר השבת, דרך טיימס אוף ישראל",
+        "date": "2026-10-14",
+        "score": 2,
+        "scoreWhy": "מתנה השתתפות בממשלה בהסדרת מעמד בני הישיבות."
+      }
+    }
+  },
+  "joint": {
+    "website": "https://jointlist.org.il/he/",
+    "platform": "https://jointlist.org.il/he/platform/",
+    "topics": {
+      "security": {
+        "text": "סיום הכיבוש ועצירת המלחמה, והקמת מדינה פלסטינית ריבונית בגבולות 4 ביוני 1967 ובירתה ירושלים המזרחית, לצד ישראל. מתנגדת לסיפוח ולהרחבת ההתנחלויות.",
+        "source": "https://jointlist.org.il/he/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": -2,
+        "scoreWhy": "סיום הכיבוש, מדינה פלסטינית בגבולות 67 והתנגדות להתנחלויות."
+      },
+      "religion": {
+        "text": "ביטול חוק הלאום ובסיס חוקתי של אזרחות שווה לכל האזרחים, כולל הפרדת הדת מהמדינה.",
+        "source": "https://jointlist.org.il/he/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": -2,
+        "scoreWhy": "תומכת בהפרדת הדת מהמדינה ובביטול חוק הלאום."
+      },
+      "economy": {
+        "text": "העלאת שכר המינימום ל־70% לפחות מהשכר הממוצע, מיסוי פרוגרסיבי והתנגדות להפרטת חינוך, בריאות ודיור. העברת תקציבים ממלחמה והתנחלויות לשירותים חברתיים.",
+        "source": "https://jointlist.org.il/he/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": -2,
+        "scoreWhy": "מיסוי פרוגרסיבי, העלאת שכר מינימום והתנגדות להפרטה."
+      },
+      "judiciary": {
+        "text": "תומכת ברפורמות שיחזקו הגנות דמוקרטיות, בעיקר למיעוטים, ובמנגנון מינוי שופטים מאוזן ששומר על עצמאות השפיטה; ״מערכת המשפט צריכה להגן על זכויות כל האזרחים ללא יוצא מן הכלל״.",
+        "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+        "sourceType": "statement",
+        "sourceLabel": "עמדת המפלגה, ynet",
+        "date": "2026-09-22",
+        "score": -2,
+        "scoreWhy": "שמירה על עצמאות השפיטה ובלמים על כוח הממשלה."
+      },
+      "draft": {
+        "text": "דוחה את כל צורות גיוס החובה, כולל תוכניות שירות אזרחי, ותומכת בהתנדבות חופשית לקהילה.",
+        "source": "https://jointlist.org.il/he/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": null,
+        "scoreWhy": "מתנגדת לכל גיוס חובה (גם של חרדים) מתוך עמדה כללית, ולא מתוך תמיכה בפטור לבני ישיבות; לא ממוקם על הציר."
+      }
+    }
+  },
+  "rzp": {
+    "website": "https://zionutdatit.org.il/",
+    "platform": "https://zionutdatit.org.il/%D7%9E%D7%A6%D7%A2-%D7%94%D7%9E%D7%A4%D7%9C%D7%92%D7%94/",
+    "topics": {
+      "security": {
+        "text": "סמוטריץ׳ קרא להחיל ריבונות ביהודה ושומרון ״לפני הבחירות״ והצהיר: ״במשמרת שלי לא תקום מדינה פלסטינית. נקודה.״",
+        "source": "https://www.timesofisrael.com/liveblog_entry/smotrich-signs-deal-to-advance-6000-apartments-in-settlement-calls-for-west-bank-annexation-before-election/",
+        "sourceType": "statement",
+        "sourceLabel": "דברי סמוטריץ׳, טיימס אוף ישראל",
+        "date": "2026-06-14",
+        "score": 2,
+        "scoreWhy": "ריבונות ביהודה ושומרון והתנגדות מוחלטת למדינה פלסטינית."
+      },
+      "religion": {
+        "text": "חיזוק החינוך היהודי בבתי הספר ואת הזהות והאופי היהודי של המדינה.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 1,
+        "scoreWhy": "חיזוק הזהות והאופי היהודי של המדינה."
+      },
+      "economy": {
+        "text": "הרחבת השוק החופשי ועידוד יוזמה פרטית.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 2,
+        "scoreWhy": "הרחבת השוק החופשי."
+      },
+      "judiciary": {
+        "text": "סמוטריץ׳: ״הבחירות הן על מערכת המשפט.״ התוכנית: פסקת התגברות ברוב 61, פיצול תפקיד היועמ״ש והפיכת הייעוץ למשרת אמון, הגבלת צווי ביניים וזכות העמידה. מימושה תנאי לכניסה לקואליציה.",
+        "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+        "sourceType": "statement",
+        "sourceLabel": "דברי סמוטריץ׳ ותוכנית המפלגה, ynet",
+        "date": "2026-09-22",
+        "score": 2,
+        "scoreWhy": "פסקת התגברות, יועמ״ש כמשרת אמון והגבלת בית המשפט."
+      },
+      "draft": {
+        "text": "תעגן בחוק יסוד את מעמד משרתי צה״ל והמילואים (״מי שמשרת מקבל הכול״); הרחבת מעגל המשרתים תכלול גם גיוס חרדים. לא התייחסה לסנקציות על משתמטים.",
+        "source": "https://www.ynetnews.com/article/sjph72wyzx",
+        "sourceType": "statement",
+        "sourceLabel": "הודעת המפלגה, ynet",
+        "date": "2026-09-16",
+        "score": -1,
+        "scoreWhy": "תומכת בהרחבת השירות גם לחרדים ובתגמול למשרתים, בלי סנקציות."
+      }
+    }
+  },
+  "raam": {
+    "website": null,
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "מנסור עבאס חזר על תמיכתו ב״הכרה במדינה הפלסטינית לצד מדינת ישראל״.",
+        "source": "https://www.jpost.com/israel-election-2026/article-906636",
+        "sourceType": "statement",
+        "sourceLabel": "דברי מנסור עבאס, ג׳רוזלם פוסט",
+        "date": "2026-08-26",
+        "score": -1,
+        "scoreWhy": "תומך בהכרה במדינה פלסטינית לצד ישראל; המקור אינו מפרט מעבר לכך."
+      },
+      "economy": {
+        "text": "פיתוח אזורי תעשייה סמוך ליישובים ערביים.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/raam/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": null,
+        "scoreWhy": "המקור אינו מציין עמדה על ציר שוק חופשי–רווחה."
+      },
+      "judiciary": {
+        "text": "המפלגה לא הציגה עמדה עדכנית. עבאס: ״לאף רשות שלטונית לא צריך להיות כוח מוחלט״; הציע לצרף לוועדה לבחירת שופטים נציגי אופוזיציה ונציגי החברה הערבית.",
+        "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+        "sourceType": "statement",
+        "sourceLabel": "עמדת המפלגה ודברי עבאס, ynet",
+        "date": "2026-09-22",
+        "score": null,
+        "scoreWhy": "המפלגה סירבה להציג עמדה עדכנית."
+      },
+      "draft": {
+        "text": "מתנגדת לחוק שיחייב צעירים ערבים לשרת; סירבה להתייחס לגיוס חרדים.",
+        "source": "https://www.ynetnews.com/article/sjph72wyzx",
+        "sourceType": "statement",
+        "sourceLabel": "עמדת המפלגה, ynet",
+        "date": "2026-09-16",
+        "score": null,
+        "scoreWhy": "לא הביעה עמדה על גיוס חרדים."
+      }
+    }
+  },
+  "amcha": {
+    "website": "https://amchaisrael.co.il/",
+    "platform": "https://amchaisrael.co.il/foundations",
+    "topics": {
+      "security": {
+        "text": "״הכרעה מהירה, גביית מחיר טריטוריאלי מהאויב״ במקום סבבי לחימה, ותוכנית הגירה מרצון לתושבי עזה המבקשים לעזוב, בהסכמות בינלאומיות. חיזוק ההתיישבות במרחבי הגבול.",
+        "source": "https://amchaisrael.co.il/foundations",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": 2,
+        "scoreWhy": "הכרעה צבאית, מחיר טריטוריאלי והגירה מרצון מעזה."
+      },
+      "religion": {
+        "text": "מדינה ״יהודית, ציונית וריבונית״ שבה היהדות היא ״משפחה ולא שדה קרב״; חינוך לערכים יהודיים ולציונות, ואי־תקצוב בתי ספר המעבירים תכנים אנטי־ציוניים.",
+        "source": "https://amchaisrael.co.il/foundations",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": 1,
+        "scoreWhy": "מדגישה זהות וחינוך יהודיים, בלי הצעות לחקיקה דתית."
+      },
+      "economy": {
+        "text": "שוק חופשי, פירוק מונופולים והסרת חסמי יבוא ורגולציה להוזלת יוקר המחיה; הטבות מס לעסקים המעסיקים משרתים.",
+        "source": "https://amchaisrael.co.il/foundations",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": 2,
+        "scoreWhy": "שוק חופשי, פירוק מונופולים והסרת רגולציה."
+      },
+      "judiciary": {
+        "text": "פיצול תפקיד היועמ״ש לתובע כללי עצמאי וליועץ משפטי לממשלה, והקמת ״ערכאת ערעור עליונה״ על החלטות בג״ץ.",
+        "source": "https://amchaisrael.co.il/foundations",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": 1,
+        "scoreWhy": "שינויים מבניים במערכת המשפט, מתונים מתוכניות ההתגברות."
+      },
+      "draft": {
+        "text": "שירות חובה כללי: צבאי למי שמתאים ולאומי למי שאינו יכול לשרת, עם תגמול מדורג. יישמרו מסלולים ל״מצוינות תורנית״ לפי פרמטרים אובייקטיביים למכסות לומדי תורה.",
+        "source": "https://amchaisrael.co.il/foundations",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10-19",
+        "score": -1,
+        "scoreWhy": "שירות חובה לכולם, עם מכסה מוגדרת ללומדי תורה."
+      }
+    }
+  }
+}

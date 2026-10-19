@@ -1,0 +1,323 @@
+{
+  "likud": {
+    "website": "https://www.likud.org.il",
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "נתניהו: \"כל עוד אני ראש הממשלה, לא תקום מדינה פלסטינית שנשלטת על ידי איראן – לא בעזה ולא ביהודה ושומרון\".",
+        "source": "https://www.ynet.co.il/news/article/s1w4c8wwze",
+        "sourceType": "statement",
+        "sourceLabel": "הצהרת נתניהו, ynet",
+        "date": "2026-08-22",
+        "score": 2,
+        "scoreWhy": "שולל הקמת מדינה פלסטינית בעזה וביהודה ושומרון."
+      },
+      "religion": {
+        "text": "החוקה של המפלגה שואפת להנחיל ערכי מסורת ישראל בחינוך ובחיי המדינה.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 1,
+        "scoreWhy": "מבקשת לחזק את ערכי המסורת היהודית בחינוך ובמדינה."
+      },
+      "economy": {
+        "text": "משק חופשי ותחרותי והקטנת מעורבות הממשלה במשק.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 2,
+        "scoreWhy": "תומכת בשוק חופשי ובצמצום מעורבות הממשלה."
+      },
+      "judiciary": {
+        "text": "שר המשפטים יריב לוין (מס׳ 4 ברשימה): \"אם הימין ינצח בבחירות, יהיו שופטים אחרים בבית המשפט העליון בקדנציה הבאה\" ותהיה \"מערכת משפט אחרת\".",
+        "source": "http://www.jpost.com/israel-news/article-911597",
+        "sourceType": "statement",
+        "sourceLabel": "דברי יריב לוין בכנס, ג׳רוזלם פוסט",
+        "date": "2026-10-13",
+        "score": 2,
+        "scoreWhy": "מבטיח לשנות מן היסוד את הרכב בית המשפט העליון ואת מערכת המשפט."
+      },
+      "draft": {
+        "text": "נתניהו: \"לא ויתרנו על חוק הגיוס\" – הצעת החוק של הקואליציה הוקפאה זמנית בגלל המלחמה.",
+        "source": "https://www.ynet.co.il/news/article/bybnfceqbl",
+        "sourceType": "statement",
+        "sourceLabel": "תשובת נתניהו לשאלת ynet",
+        "date": "2026-03-12",
+        "score": 1,
+        "scoreWhy": "תומך בהצעת חוק הגיוס של הקואליציה ולא הציג מתווה של גיוס לכולם."
+      }
+    }
+  },
+  "yashar": {
+    "website": "https://yasharwitheisenkot.com",
+    "platform": "https://yasharwitheisenkot.com/principles/",
+    "topics": {
+      "security": {
+        "text": "איזנקוט: \"אין מדינה פלסטינית, ובממשלה שנקים לא תקום מדינה פלסטינית\". לפי מטרות המפלגה, ישראל צריכה לחתור להסכמי שלום ושיתוף פעולה אזורי מתוך עוצמה.",
+        "source": "https://maariv.co.il/news/politics/article-1358508",
+        "sourceType": "statement",
+        "sourceLabel": "הצהרת איזנקוט, מעריב",
+        "date": "2026-08-22",
+        "score": 1,
+        "scoreWhy": "שולל מדינה פלסטינית ובמקביל תומך בהסכמי שלום אזוריים."
+      },
+      "religion": {
+        "text": "ישראל כמדינה יהודית ודמוקרטית ברוח מגילת העצמאות.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yashar/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 0,
+        "scoreWhy": "המקור אינו מפרט עמדה בסוגיות דת ומדינה מעבר לעיקרון הכללי."
+      },
+      "economy": {
+        "text": "להוריד את יוקר המחיה באמצעות פתיחת היבוא, הסרת חסמים ופירוק מונופולים, ולשנות את המיסוי כך ש\"העבודה תשתלם תמיד יותר מקצבה\" ומי שעובד ומשרת יתוגמל.",
+        "source": "https://yasharwitheisenkot.com/principles/economics/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה – כלכלה",
+        "date": "2026-07-19",
+        "score": 1,
+        "scoreWhy": "מדגיש תחרות, פתיחת יבוא והפחתת רגולציה."
+      },
+      "judiciary": {
+        "text": "חוקה עם חוק יסוד: החקיקה, כנסת ריבונית, ממשלה שמשילה ומערכת משפט חזקה ועצמאית.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yashar/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": -1,
+        "scoreWhy": "תומכת בחוקה ובמערכת משפט חזקה ועצמאית, לצד הסדרת היחסים בין הרשויות."
+      },
+      "draft": {
+        "text": "חוק \"שירות לכל\": כל אזרח ואזרחית ישרתו בצה״ל או בשירות אזרחי. דחייה ללומדי תורה ולמצטיינים רק במסגרת מכסה של עד 3% מכל מחזור; למשתמטים – שלילת הטבות ודין פלילי.",
+        "source": "https://yasharwitheisenkot.com/principles/service-for-all/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה – שירות לכל",
+        "date": "2026-07-19",
+        "score": -2,
+        "scoreWhy": "חובת שירות לכולם עם סנקציות כלכליות ופליליות."
+      }
+    }
+  },
+  "together": {
+    "website": "https://be-yahad.org.il",
+    "platform": "https://be-yahad.org.il/plans/",
+    "topics": {
+      "security": {
+        "text": "לא לזוז מ\"הקו הצהוב\" בעזה עד שחמאס יתפרק מנשקו, למנוע מאיראן גרעין, ולחזק את הסכמי אברהם ואת הברית עם הכוחות המתונים באזור.",
+        "source": "https://be-yahad.org.il/plans/natsec/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע הרשימה – ביטחון לאומי",
+        "date": "2026-10-07",
+        "score": 1,
+        "scoreWhy": "קו תקיף בעזה ומול איראן לצד חיזוק בריתות אזוריות."
+      },
+      "religion": {
+        "text": "חוק ברית זוגיות אזרחית, תחבורה ציבורית בשבת לפי החלטת כל רשות מקומית, גיור בידי רבני הקהילה וסיום הבלעדיות של הרבנות הראשית (בלי לבטל אותה).",
+        "source": "https://be-yahad.org.il/plans/religionandstate/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע הרשימה – דת ומדינה",
+        "date": "2026-09-23",
+        "score": -1,
+        "scoreWhy": "מרחיב חלופות אזרחיות ומבטל את בלעדיות הרבנות, תוך שמירה על הרבנות."
+      },
+      "economy": {
+        "text": "להוריד את מחירי המזון ב־30% תוך שלוש שנים באמצעות פירוק מונופולים, הסרת חסמי יבוא וצמצום רגולציה.",
+        "source": "https://be-yahad.org.il/plans/yokermichya/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע הרשימה – יוקר המחיה",
+        "date": "2026-09-23",
+        "score": 1,
+        "scoreWhy": "מבקש להוריד מחירים באמצעות תחרות ופתיחת השוק."
+      },
+      "judiciary": {
+        "text": "לכונן חוקה על בסיס עקרונות מגילת העצמאות, להסדיר את הביקורת השיפוטית וחוקי היסוד \"תוך חתירה להסכמות רחבות\", ולהגביל את כהונת ראש הממשלה ל־8 שנים.",
+        "source": "https://be-yahad.org.il/plans/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע הרשימה – תיקון הממשל",
+        "date": "2026-07",
+        "score": 0,
+        "scoreWhy": "מציע הסדרה בהסכמה רחבה, בלי כיוון מוגדר של חיזוק או צמצום סמכויות בית המשפט."
+      },
+      "draft": {
+        "text": "\"חוק המשרתים\": כולם מתגייסים לצה״ל או לשירות אזרחי, בלי פטורים; ביטול קצבאות אברכים וההטבות למי שלא משרת והעברת הכסף למשרתים.",
+        "source": "https://be-yahad.org.il/plans/meshartim/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע הרשימה – חוק המשרתים",
+        "date": "2026-09-22",
+        "score": -2,
+        "scoreWhy": "גיוס לכולם בלי פטורים, עם סנקציות כלכליות."
+      }
+    }
+  },
+  "dems": {
+    "website": "https://yes.democrats.org.il/",
+    "platform": null,
+    "topics": {
+      "security": {
+        "text": "יאיר גולן: \"אנחנו צריכים להכריע בסוגיה אחת – סיפוח או היפרדות\"; לדבריו יש ליצור שלטון חלופי לחמאס בעזה ולהילחם בטרור הפלסטיני והיהודי.",
+        "source": "https://www.mako.co.il/news-politics/2026_q4/Article-35e804495aef0a1027.htm",
+        "sourceType": "statement",
+        "sourceLabel": "ראיון של גולן ב\"פגוש את העיתונות\", N12",
+        "date": "2026-10-03",
+        "score": -2,
+        "scoreWhy": "תומך בהיפרדות מהפלסטינים ומתנגד לסיפוח."
+      },
+      "religion": {
+        "text": "גולן: הקואליציה הבאה צריכה להיות כזו \"שמבינה הפרדת דת ממדינה\".",
+        "source": "https://www.mako.co.il/news-politics/2026_q4/Article-35e804495aef0a1027.htm",
+        "sourceType": "statement",
+        "sourceLabel": "ראיון של גולן ב\"פגוש את העיתונות\", N12",
+        "date": "2026-10-03",
+        "score": -2,
+        "scoreWhy": "קורא להפרדת דת ממדינה."
+      },
+      "economy": {
+        "text": "מאבק ביוקר המחיה, שיפור שירותי הרווחה ושיקום השירות הציבורי.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": -1,
+        "scoreWhy": "מדגישה הרחבת שירותי רווחה ושירות ציבורי."
+      },
+      "judiciary": {
+        "text": "קידום חוק יסוד: החקיקה וחיזוק \"שומרי הסף\".",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": -2,
+        "scoreWhy": "מבקשת לחזק את שומרי הסף."
+      },
+      "draft": {
+        "text": "\"חובת השירות למדינה צריכה לחול על כלל האזרחים, במסגרת ממלכתית ושוויונית\"; המדינה צריכה להפסיק לתמרץ אי־שירות.",
+        "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+        "sourceType": "statement",
+        "sourceLabel": "תשובת המפלגה לפניית ynet",
+        "date": "2026-09-16",
+        "score": -2,
+        "scoreWhy": "חובת שירות לכל האזרחים והפסקת התמריצים למי שלא משרת."
+      }
+    }
+  },
+  "bw": {
+    "website": null,
+    "platform": null,
+    "topics": {
+      "religion": {
+        "text": "גישה מתונה ופייסנית ויחס אמפתי לציבור הדתי והחרדי.",
+        "source": "https://www.idi.org.il/policy/parties-and-elections/parties/blue-white/",
+        "sourceType": "idi",
+        "sourceLabel": "המכון הישראלי לדמוקרטיה",
+        "date": "2026-10-19",
+        "score": 0,
+        "scoreWhy": "המקור מתאר גישה מתונה בלי עמדה מוגדרת לכיוון כלשהו."
+      },
+      "draft": {
+        "text": "\"מתווה שירות לכל\": כל צעיר וצעירה ישרתו את המדינה; סנקציות כלכליות והטבות קודם כל למשרתים, ו\"פטור\" רק למצטיינים במסגרת מכסות.",
+        "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+        "sourceType": "statement",
+        "sourceLabel": "תשובת המפלגה לפניית ynet",
+        "date": "2026-09-16",
+        "score": -2,
+        "scoreWhy": "שירות לכולם עם סנקציות כלכליות ואכיפה פלילית."
+      }
+    }
+  },
+  "yb": {
+    "website": "https://beytenu.org.il",
+    "platform": "https://beytenu.org.il/party-platform/",
+    "topics": {
+      "security": {
+        "text": "הפסקת האחריות הישראלית על רצועת עזה, כולל סגירת המעברים וניתוק אספקת מים, חשמל ודלק. לדברי המפלגה, אין טעם בהסדר עם הפלסטינים בלבד.",
+        "source": "https://beytenu.org.il/party-platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10",
+        "score": 2,
+        "scoreWhy": "קו תקיף בעזה ושלילת הסדר עם הפלסטינים בלבד."
+      },
+      "religion": {
+        "text": "נישואים וגירושים אזרחיים, העברת הסמכות על תחבורה ציבורית ועסקים בשבת לרשויות המקומיות, וגיור בידי רבני ערים.",
+        "source": "https://beytenu.org.il/party-platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10",
+        "score": -2,
+        "scoreWhy": "תומכת בנישואים ובגירושים אזרחיים ובצמצום סמכויות הממסד הדתי."
+      },
+      "economy": {
+        "text": "הפחתת רגולציה, צמצום משרדי הממשלה והמגזר הציבורי ופירוק מונופולים, לצד השלמת הכנסה לגמלאים עד גובה שכר המינימום.",
+        "source": "https://beytenu.org.il/party-platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10",
+        "score": 1,
+        "scoreWhy": "מדגישה הפחתת רגולציה וצמצום המגזר הציבורי, לצד תמיכה בגמלאים."
+      },
+      "judiciary": {
+        "text": "כינון חוקה והקמת בית משפט לחוקה; התנגדות ל\"חוק הצרפתי\" ולפסקת ההתגברות.",
+        "source": "https://beytenu.org.il/party-platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10",
+        "score": 0,
+        "scoreWhy": "מציעה בית משפט לחוקה ובמקביל מתנגדת לפסקת ההתגברות."
+      },
+      "draft": {
+        "text": "חוק גיוס חובה לכל אזרח בגיל 18 ללא הבדל דת או מוצא, ומערך נפרד לחרדים ולבני מיעוטים במסגרת פיקוד העורף.",
+        "source": "https://beytenu.org.il/party-platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המפלגה",
+        "date": "2026-10",
+        "score": -2,
+        "scoreWhy": "חובת שירות לכולם בלי פטורים."
+      }
+    }
+  },
+  "reservists": {
+    "website": "https://www.themiluimnikim.org.il",
+    "platform": "https://www.themiluimnikim.org.il/platform/",
+    "topics": {
+      "security": {
+        "text": "לפעול נגד הקמת מדינה פלסטינית, לחזק את ההתיישבות ביהודה ושומרון ו\"ריבונות דרך מעשים\" בשטחי C.",
+        "source": "https://www.themiluimnikim.org.il/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המילואימניקים",
+        "date": "2026-03",
+        "score": 2,
+        "scoreWhy": "מתנגדת למדינה פלסטינית ותומכת בחיזוק ההתיישבות."
+      },
+      "economy": {
+        "text": "\"עידוד תחרות ושוק חופשי\": הטבות מס לחברות שמעסיקות בפריפריה, הסרת חסמים לעסקים ופירוק ריכוזיות.",
+        "source": "https://www.themiluimnikim.org.il/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המילואימניקים",
+        "date": "2026-03",
+        "score": 1,
+        "scoreWhy": "מבססת את מדיניותה על שוק חופשי ותחרות."
+      },
+      "judiciary": {
+        "text": "תיקונים במערכת המשפט \"תחת הסכמות רחבות\": ביקורת חיצונית ובלתי תלויה על מערכת המשפט, פיצול תפקידי היועמ״ש וחוק יסוד: החקיקה.",
+        "source": "https://www.themiluimnikim.org.il/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המילואימניקים",
+        "date": "2026-03",
+        "score": 1,
+        "scoreWhy": "מציעה שינויים במערכת המשפט ובתפקיד היועמ״ש, בהסכמה רחבה."
+      },
+      "draft": {
+        "text": "\"מי שלא ישרת – לא יקבל כלום מהמדינה\": שלילת הזכות לבחור ולהיבחר ושלילת רישיון נהיגה, לצד מסגרות שירות מותאמות לחרדים.",
+        "source": "https://www.themiluimnikim.org.il/platform/",
+        "sourceType": "platform",
+        "sourceLabel": "מצע המילואימניקים",
+        "date": "2026-03",
+        "score": -2,
+        "scoreWhy": "שירות לכולם עם סנקציות כבדות על מי שלא משרת."
+      }
+    }
+  }
+}
