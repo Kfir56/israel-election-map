@@ -1,0 +1,270 @@
+{
+ "s1": {
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך בהקמת מדינה פלסטינית עצמאית בגבולות 4 ביוני 1967 ובירתה ירושלים המזרחית, לצד ישראל.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": 2,
+   "why": "תומכת בפתרון שתי המדינות, עם מדינה פלסטינית לצד ישראל בהסכמה בין הצדדים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  }
+ },
+ "s2": {
+  "joint": {
+   "v": -2,
+   "why": "דורשת סיום הכיבוש ופינוי כל ההתנחלויות, ושוללת כל ״הסדרה״ או סיפוח.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  },
+  "raam": {
+   "v": -2,
+   "why": "אינה תומכת בהחלת ריבונות ביהודה ושומרון ומעדיפה הסדר מוסכם.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  }
+ },
+ "s3": {
+  "joint": {
+   "v": 2,
+   "why": "תומכת בהקמת ועדת חקירה ממלכתית לפי הדין הקיים, בראשות שופט עליון, ובהרחבת המנדט שלה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14915209",
+   "date": "2026-10-04"
+  },
+  "raam": {
+   "v": 1,
+   "why": "תומכת ב״חקירה מקיפה, עצמאית ובלתי תלויה״ של 7 באוקטובר, אך לא דווקא ועדה ממלכתית.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14915209",
+   "date": "2026-10-04"
+  }
+ },
+ "s4": {
+  "joint": null,
+  "raam": null
+ },
+ "s5": {
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת לכל התנחלות ודורשת סיום הכיבוש ומדינה פלסטינית; התיישבות בעזה סותרת עמדה זו.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": {
+   "v": -2,
+   "why": "תומכת בסיום הכיבוש ופינוי התנחלויות ובמדינה פלסטינית; התיישבות בעזה סותרת עמדה זו.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/raam/",
+   "date": "2026-10-19",
+   "inferred": true
+  }
+ },
+ "r1": {
+  "joint": {
+   "v": 2,
+   "why": "תומכת בהפעלת תחבורה ציבורית עירונית ובין־עירונית בשבת, כולל לנתב״ג ולבתי חולים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14883243",
+   "date": "2026-08-31"
+  },
+  "raam": null
+ },
+ "r2": {
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש הפרדת הדת מהמדינה וחופש מצפון, שמשמעם אפשרות לנישואים אזרחיים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "r3": {
+  "joint": null,
+  "raam": null
+ },
+ "r4": {
+  "joint": {
+   "v": -2,
+   "why": "המצע דורש הפרדת הדת מהמדינה, בניגוד למונופול של הרבנות על כשרות וגיור.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "r5": {
+  "joint": null,
+  "raam": {
+   "v": -2,
+   "why": "מפלגה אסלאמית שמרנית; דרשה חופש הצבעה נגד הצעות חוק בעד להט״ב כתנאי לכניסה לקואליציה.",
+   "source": "https://www.ynet.co.il/news/article/BJaZYhaNd",
+   "date": "2021-03-28",
+   "inferred": true
+  }
+ },
+ "r6": {
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש לבטל את חוק הלאום ולעגן חוקתית אזרחות שווה לכל האזרחים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": 2,
+   "why": "״תומכים בתיקון חוק יסוד הלאום כך שיעוגן בו במפורש עיקרון השוויון לכל אזרחי המדינה״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14920395",
+   "date": "2026-10-08"
+  }
+ },
+ "e1": {
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש פיקוח הדוק על מחירי מזון, תרופות, חשמל ומים, וחשיפת עלויות ורווחי חברות.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "e2": {
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך במיסוי פרוגרסיבי שיטיל יותר על בעלי הכנסות גבוהות, תאגידים ובנקים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "e3": {
+  "joint": null,
+  "raam": null
+ },
+ "e4": {
+  "joint": {
+   "v": 2,
+   "why": "מתנה תמיכה בממשלה בתוכנית ממומנת למיגור הפשיעה, ודורשת שוויון מלא בתקציבי הרשויות הערביות.",
+   "source": "https://www.jpost.com/israel-election-2026/article-911417",
+   "date": "2026-10-10"
+  },
+  "raam": {
+   "v": 2,
+   "why": "מציבה את המאבק בפשיעה בחברה הערבית בראש סדר העדיפויות ומבקשת את תיק המאבק בפשיעה.",
+   "source": "https://www.ynetnews.com/article/bydawe7ugx",
+   "date": "2026-08-31"
+  }
+ },
+ "e5": {
+  "joint": null,
+  "raam": {
+   "v": -1,
+   "why": "אסטרטגיית המפלגה מבוססת על השגת תקציבים ייעודיים לחברה הערבית, כמו בהסכם הקואליציוני ב־2021.",
+   "source": "https://en.globes.co.il/en/article-1001374021",
+   "date": "2021-06",
+   "inferred": true
+  }
+ },
+ "e6": {
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך בהרחבת הדיור הציבורי במחירים נגישים ובשכירות מסובסדת לטווח ארוך.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "j1": {
+  "joint": {
+   "v": 2,
+   "why": "מצדדת בבלמים על כוח הממשלה וקובעת ש״מערכת המשפט צריכה להגן על זכויות כל האזרחים״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": {
+   "v": 1,
+   "why": "הצביעה נגד ביטול עילת הסבירות; עבאס: ״לאף רשות שלטונית לא צריך להיות כוח מוחלט״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  }
+ },
+ "j2": {
+  "joint": {
+   "v": -2,
+   "why": "דורשת ״מנגנון מאוזן שישמור על עצמאות מערכת המשפט״ במינוי שופטים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "j3": {
+  "joint": null,
+  "raam": null
+ },
+ "j4": {
+  "joint": null,
+  "raam": null
+ },
+ "j5": {
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת למהפכה המשפטית ותומכת בבלמים שימנעו ריכוז כוח בידי הממשלה והכנסת.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": {
+   "v": -1,
+   "why": "התנגדה לצעדי 2023 שהעבירו כוח מבית המשפט לממשלה ולכנסת; עבאס דורש איזון בין הרשויות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  }
+ },
+ "j6": {
+  "joint": null,
+  "raam": null
+ },
+ "d1": {
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת לגיוס חרדים ולכל צורה של גיוס חובה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  },
+  "raam": null
+ },
+ "d2": {
+  "joint": {
+   "v": -2,
+   "why": "״אין להטיל סנקציות על אדם שבוחר שלא להתגייס״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  },
+  "raam": null
+ },
+ "d3": {
+  "joint": {
+   "v": -2,
+   "why": "המצע דוחה את כל צורות גיוס החובה, כולל שירות ״אזרחי״, ותומך בהתנדבות חופשית.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": -1,
+   "why": "מתנגדת לחוק שיחייב צעירים ערבים בשירות צבאי או אזרחי, אך תומכת בשירות אזרחי וולונטרי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  }
+ },
+ "d4": {
+  "joint": null,
+  "raam": null
+ },
+ "d5": {
+  "joint": null,
+  "raam": null
+ }
+}

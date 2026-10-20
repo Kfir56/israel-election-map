@@ -1,0 +1,607 @@
+{
+ "s1": {
+  "yashar": {
+   "v": -1,
+   "why": "איזנקוט: \"בממשלה שנקים לא תקום מדינה פלסטינית\"; המפלגה: מדינה פלסטינית אינה על סדר היום.",
+   "source": "https://maariv.co.il/news/politics/article-1358508",
+   "date": "2026-08-22"
+  },
+  "together": {
+   "v": -2,
+   "why": "\"אנחנו מתנגדים למדינה פלסטינית ולהעברת שטחים\".",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "dems": {
+   "v": 1,
+   "why": "תומכת בהיפרדות במסגרת מהלך אזורי עם ארה\"ב ומדינות ערביות מתונות, בליווי ערבויות ביטחוניות.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "yb": {
+   "v": -2,
+   "why": "המפלגה: ניסוי אוסלו נכשל, ויש לחשוב על ביטול ההסכמים ופירוק הרשות הפלסטינית.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30",
+   "inferred": true
+  },
+  "reservists": {
+   "v": -2,
+   "why": "\"נפעל כדי למנוע מדינה פלסטינית בצירים הדיפלומטיים והמדיניים\".",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  }
+ },
+ "s2": {
+  "yashar": {
+   "v": -1,
+   "why": "מתנגדת למהלכי ריבונות שיסכנו את הרוב היהודי, לצד חיזוק גושי ההתיישבות.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "together": {
+   "v": 1,
+   "why": "רואה בשטחי C חלק ריבוני עתידי של ישראל, והעיתוי נתון לשיקול דעת.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "dems": {
+   "v": -2,
+   "why": "המפלגה קוראת ל\"עצירת תהליך הסיפוח\".",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 2,
+   "why": "\"אנחנו תומכים בהחלת ריבונות ישראלית על שטחי C\".",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "reservists": {
+   "v": 1,
+   "why": "תומכת ב\"ריבונות דרך מעשים\", כולל החלת חוק ישראלי בבקעת הירדן ובגושים.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  }
+ },
+ "s3": {
+  "yashar": {
+   "v": 2,
+   "why": "איזנקוט הציג טיוטת החלטה להקמת ועדת חקירה ממלכתית בישיבתה הראשונה של הממשלה הבאה.",
+   "source": "https://www.srugim.co.il/101007784-איזנקוט-הציג-את-מתווה-ועדת-החקירה-שיקים",
+   "date": "2026-08-05"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"נקים ועדת חקירה ממלכתית כדי למנוע את השבעה באוקטובר הבא\".",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07"
+  },
+  "dems": null,
+  "yb": {
+   "v": 2,
+   "why": "החלטתה הראשונה בממשלה תהיה הקמת ועדת חקירה ממלכתית למחדלי 7 באוקטובר.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": {
+   "v": 0,
+   "why": "\"הגיע הזמן לחקור\", אבל לדבריה \"המילה ממלכתית הפכה לתירוץ כדי לא לחקור\".",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  }
+ },
+ "s4": {
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "מתחייבת להביא נורמליזציה עם סעודיה, בלי לפרט ויתורים לפלסטינים.",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07"
+  },
+  "dems": null,
+  "yb": null,
+  "reservists": null
+ },
+ "s5": {
+  "yashar": {
+   "v": -1,
+   "why": "איזנקוט מתח ביקורת על כנס חידוש ההתיישבות בעזה כאירוע מפלג שחסר קונצנזוס.",
+   "source": "https://www.walla.co.il/news/politics/3639688",
+   "date": "2024-01-29",
+   "inferred": true
+  },
+  "together": {
+   "v": -1,
+   "why": "\"אין לנו עניין לנהל את עזה\"; לפיד תקף את כנס חידוש ההתיישבות בעזה.",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07",
+   "inferred": true
+  },
+  "dems": {
+   "v": -2,
+   "why": "מתנגדת לחידוש ההתיישבות בעזה; גולן כינה זאת \"רעיון מטורף\".",
+   "source": "https://jewishvirtuallibrary.org/israel-political-parties-the-democrats",
+   "date": "2026-07"
+  },
+  "yb": {
+   "v": -2,
+   "why": "ליברמן: \"מתנגד להתיישבות יהודית בעזה\".",
+   "source": "https://www.walla.co.il/news/politics/3639828",
+   "date": "2024-01-29"
+  },
+  "reservists": null
+ },
+ "r1": {
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "כל רשות מקומית תחליט בעצמה על תחבורה ציבורית בשבת.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 2,
+   "why": "תומכת בתחבורה ציבורית בשבת במתכונת מצומצמת ביישובים חילוניים.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 1,
+   "why": "תחבורה ציבורית בשבת לפי החלטת הרשויות המקומיות.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "r2": {
+  "yashar": {
+   "v": 1,
+   "why": "המצע מציע מיסוד זוגיות אזרחית לכל זוג, אך אינו מזכיר נישואים אזרחיים במפורש.",
+   "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 1,
+   "why": "מסלול אזרחי מלא לרישום זוגיות במשרד הפנים, בלי לקרוא לו נישואים אזרחיים.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 2,
+   "why": "המפלגה תומכת ב\"קידום נישואים אזרחיים\".",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 2,
+   "why": "המצע תומך בנישואים ובגירושים אזרחיים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "r3": {
+  "yashar": {
+   "v": 2,
+   "why": "לימודי ליבה (כולל אנגלית ומתמטיקה) כתנאי למימון ציבורי מלא, וקיצוץ משמעותי למוסדות שלא יעמדו בכך.",
+   "source": "https://yasharwitheisenkot.com/principles/education/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"מימון ציבורי יינתן רק למוסדות המלמדים 100% לימודי ליבה\".",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 1,
+   "why": "גולן מתח ביקורת חריפה על היעדר לימודי חול בבתי הספר החרדיים.",
+   "source": "https://www.maariv.co.il/journalists/opinions/Article-960953",
+   "date": "2022-11-25",
+   "inferred": true
+  },
+  "yb": {
+   "v": 2,
+   "why": "לימודי ליבה כולל מתמטיקה ואנגלית חובה; מוסדות שלא ילמדו אותם \"לא יתוקצבו\".",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "r4": {
+  "yashar": null,
+  "together": {
+   "v": -2,
+   "why": "מבקשת לסיים את מונופול הרבנות: הכרה בכשרות בינלאומית וגיור בידי רבני הקהילה.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": -2,
+   "why": "תומכת בהכרה בגיור שלא רק של הרבנות, ומתנגדת להכתבה של הממסד הדתי.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": -2,
+   "why": "רפורמת כשרות, ביטול המועצות הדתיות וגיור בידי רבני ערים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "r5": {
+  "yashar": {
+   "v": 1,
+   "why": "תומכת בזוגיות אזרחית הפתוחה לזוגות חד־מיניים ובשוויון ברישום הורות, בלי להזכיר נישואים.",
+   "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 1,
+   "why": "ברית זוגיות אזרחית עם מלוא הזכויות לזוגות חד־מיניים והסרת חסמים באימוץ, בלי נישואים.",
+   "source": "https://be-yahad.org.il/plans/pride/",
+   "date": "2026-09"
+  },
+  "dems": {
+   "v": 2,
+   "why": "גולן תומך בנישואים חד־מיניים ובביטול מונופול המדינה על הנישואים.",
+   "source": "https://www.maariv.co.il/journalists/opinions/Article-960953",
+   "date": "2022-11-25"
+  },
+  "yb": null,
+  "reservists": null
+ },
+ "r6": {
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "תומכת בשינוי חוק הלאום ברוח מגילת העצמאות.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 1,
+   "why": "המצע מציע לתקן את חוק הלאום ברוח מגילת העצמאות.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "e1": {
+  "yashar": null,
+  "together": {
+   "v": -1,
+   "why": "\"לא נדרשות עוד ועדות, עוד פיקוח\"; מוריד מחירים דרך תחרות ופירוק מונופולים.",
+   "source": "https://be-yahad.org.il/plans/yokermichya/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 1,
+   "why": "המפלגה מדגישה מאבק ביוקר המחיה ושיפור שירותי הרווחה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "yb": {
+   "v": -1,
+   "why": "המצע מעדיף הפחתת רגולציה ופירוק מונופולים, ולא פיקוח ישיר על מחירים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10",
+   "inferred": true
+  },
+  "reservists": {
+   "v": -1,
+   "why": "המצע מבוסס על \"עידוד תחרות ושוק חופשי\" ופירוק גופים דומיננטיים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03",
+   "inferred": true
+  }
+ },
+ "e2": {
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": {
+   "v": -1,
+   "why": "מציעה הטבות מס משמעותיות לחברות טכנולוגיה שמעסיקות בפריפריה, ולא העלאת מסים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03",
+   "inferred": true
+  }
+ },
+ "e3": {
+  "yashar": {
+   "v": 1,
+   "why": "תבטל חסמי יבוא ותקנים ייחודיים ותפתח ליבוא מקביל, תוך שימור החקלאות הישראלית.",
+   "source": "https://yasharwitheisenkot.com/principles/economics/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "הסרת חסמי יבוא וביטול הדרגתי של המכסים, כולל על מוצרי חקלאות.",
+   "source": "https://be-yahad.org.il/plans/yokermichya/",
+   "date": "2026-09-23"
+  },
+  "dems": null,
+  "yb": {
+   "v": 1,
+   "why": "המצע תומך בהגברת התחרות בתחום היבוא ובהסדרת היבוא המקביל.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "e4": {
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": null
+ },
+ "e5": {
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": null
+ },
+ "e6": {
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "100 אלף דירות לשכירות ארוכה, 40% מהן במסלול מסובסד ומפוקח; אין הגבלה על שכר הדירה.",
+   "source": "https://be-yahad.org.il/plans/housing/",
+   "date": "2026-09"
+  },
+  "dems": {
+   "v": 1,
+   "why": "המפלגה תומכת בהרחבת הדיור בר־ההשגה.",
+   "source": "https://jewishvirtuallibrary.org/israel-political-parties-the-democrats",
+   "date": "2026-07"
+  },
+  "yb": null,
+  "reservists": null
+ },
+ "j1": {
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "בית המשפט יוכל לבטל חוק בהרכב מורחב וברוב מיוחד, ללא פסקת התגברות.",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": null,
+  "reservists": null
+ },
+ "j2": {
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "\"נבטל את החוק לשינוי הוועדה לבחירת שופטים, שיוצר פוליטיזציה\".",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": null,
+  "reservists": null
+ },
+ "j3": {
+  "yashar": {
+   "v": -1,
+   "why": "המצע מבקש להסדיר את אי־התלות המקצועית של היועמ\"ש ושומרי הסף.",
+   "source": "https://yasharwitheisenkot.com/principles/government-and-public-service/",
+   "date": "2026-07-19",
+   "inferred": true
+  },
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "גולן נתן גיבוי מלא ליועמ\"שית מול ניסיונות הממשלה לפטר אותה.",
+   "source": "https://www.jpost.com/israel-election-2026/article-910100",
+   "date": "2026-10-01"
+  },
+  "yb": null,
+  "reservists": null
+ },
+ "j4": {
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "גולן: מי שעומד נגדו כתב אישום לא יכול לכהן כראש ממשלה או כשר.",
+   "source": "https://www.jpost.com/israel-election-2026/article-910100",
+   "date": "2026-10-01"
+  },
+  "yb": {
+   "v": 2,
+   "why": "מי שעומד נגדו כתב אישום לא יוכל להתמודד לנשיאות או להרכיב ממשלה.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "j5": {
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "מציעה ביקורת שיפוטית ברוב מיוחד \"ללא פסקת התגברות\".",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": {
+   "v": -2,
+   "why": "המצע מתנגד לפסקת ההתגברות ול\"חוק הצרפתי\".",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null
+ },
+ "j6": {
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": null
+ },
+ "d1": {
+  "yashar": {
+   "v": 2,
+   "why": "חוק \"שירות לכולם\": דחייה ללומדי תורה רק במכסה של עד 3% מכל מחזור.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"כל אזרח... יתגייס לצה״ל או יעשה שירות לאומי אזרחי... ללא פטורים\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": 2,
+   "why": "\"חובת השירות למדינה צריכה לחול על כלל האזרחים, במסגרת ממלכתית ושוויונית\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "חובת שירות לכל בן 18, \"בלי פטורים, בלי מכסות ובלי קומבינות\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "חוק גיוס לכולם, כולל מערך ישיבות בקו העימות.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  }
+ },
+ "d2": {
+  "yashar": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הטבות אזרחיות וכלכליות, כולל הנחה בארנונה, ויעמוד לדין.",
+   "source": "https://yasharwitheisenkot.com/principles/service-for-all/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "ביטול קצבאות האברכים, ההנחות בארנונה וסבסוד המעונות למי שלא משרת.",
+   "source": "https://be-yahad.org.il/plans/meshartim/",
+   "date": "2026-09-22"
+  },
+  "dems": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הטבות כמו מעונות יום, צהרונים והנחות בארנונה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "למשתמטים: שלילת הנחות בארנונה, סבסוד מעונות, הטבות מס ומשרות ציבוריות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הנחות בארנונה, סבסוד מעונות ורישיון נהיגה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  }
+ },
+ "d3": {
+  "yashar": {
+   "v": 2,
+   "why": "מסלול אזרחי חובה למי שלא משרת בצה\"ל, כולל גיוס צעירים ערבים לשירות אזרחי.",
+   "source": "https://yasharwitheisenkot.com/principles/homeland-security/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "שירות בצה\"ל או שירות לאומי אזרחי לכל אזרח, גם לאזרחים הערבים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": 2,
+   "why": "שירות לכל האזרחים; מי שלא יגויס לצה\"ל יופנה לשירות לאומי־אזרחי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "חובת שירות לכל בן 18, כולל מוסלמים ונוצרים, בצה\"ל או בשירות אזרחי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "כל האזרחים ישובצו לצבא או לשירות לאומי, עם מסלולים נוספים לחברה הערבית.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  }
+ },
+ "d4": {
+  "yashar": {
+   "v": -2,
+   "why": "המנגנון היחיד לדחיית שירות הוא מכסה של עד 3% למצטיינים, ובהם לומדי תורה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "together": {
+   "v": -2,
+   "why": "מתנגדת לכל פטור, מכסה או יעד; \"מי שלא מתגייס לא יקבל שקל מהמדינה\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": -2,
+   "why": "חובת שירות לכלל האזרחים ושלילת מימון ממוסדות שמעודדים השתמטות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": -2,
+   "why": "מתנגדת לכל פטור ומציעה לבטל את הקצבאות לתלמידי ישיבות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": -1,
+   "why": "רק פטורים רפואיים; המצע מאפשר פטור זמני ל\"עילויים בתורה\" שיעברו מבחן.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  }
+ },
+ "d5": {
+  "yashar": {
+   "v": 2,
+   "why": "מתחייבת להשקיע 20 מיליארד ש\"ח במשרתי המילואים ולהעלות את שכר משרתי הסדיר.",
+   "source": "https://yasharwitheisenkot.com/principles/reservists-honour-and-compensation/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"הטבות חסרות תקדים\" למשרתים, כמו מיליון ש\"ח לדירה ראשונה לכל משרת מילואים.",
+   "source": "https://be-yahad.org.il/plans/meshartim/",
+   "date": "2026-09-22"
+  },
+  "dems": {
+   "v": 1,
+   "why": "\"המדינה תתגמל שירות ולא השתמטות\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": null,
+  "reservists": {
+   "v": 2,
+   "why": "פיצוי למעסיקי מילואימניקים וסבסוד שכר דירה וביטוח בתקופת המילואים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  }
+ }
+}

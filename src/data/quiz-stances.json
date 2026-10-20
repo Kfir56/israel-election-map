@@ -1,0 +1,1514 @@
+{
+ "s1": {
+  "likud": {
+   "v": -2,
+   "why": "נתניהו: \"לא תקום מדינה פלסטינית\" לא בעזה ולא ביהודה ושומרון.",
+   "source": "https://www.ynet.co.il/news/article/s1w4c8wwze",
+   "date": "2026-08-22"
+  },
+  "otzma": {
+   "v": -2,
+   "why": "דורשת פירוק הרשות הפלסטינית מנשקה ועידוד הגירה של פלסטינים.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -2,
+   "why": "סמוטריץ': \"במשמרת שלי לא תקום מדינה פלסטינית. נקודה.\"",
+   "source": "https://www.timesofisrael.com/liveblog_entry/smotrich-signs-deal-to-advance-6000-apartments-in-settlement-calls-for-west-bank-annexation-before-election/",
+   "date": "2026-06-14"
+  },
+  "shas": {
+   "v": -1,
+   "why": "מתנגדת לחלוקת ירושלים; בהצבעות מפתח הפגינה קו ניצי ימני.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "utj": null,
+  "amcha": {
+   "v": -2,
+   "why": "וינטר: \"אין עם פלסטיני\".",
+   "source": "https://jewishinsider.com/2026/10/amcha-yisrael-leader-ofer-winter-israeli-elections/",
+   "date": "2026-10"
+  },
+  "yashar": {
+   "v": -1,
+   "why": "איזנקוט: \"בממשלה שנקים לא תקום מדינה פלסטינית\"; המפלגה: מדינה פלסטינית אינה על סדר היום.",
+   "source": "https://maariv.co.il/news/politics/article-1358508",
+   "date": "2026-08-22"
+  },
+  "together": {
+   "v": -2,
+   "why": "\"אנחנו מתנגדים למדינה פלסטינית ולהעברת שטחים\".",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "dems": {
+   "v": 1,
+   "why": "תומכת בהיפרדות במסגרת מהלך אזורי עם ארה\"ב ומדינות ערביות מתונות, בליווי ערבויות ביטחוניות.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "yb": {
+   "v": -2,
+   "why": "המפלגה: ניסוי אוסלו נכשל, ויש לחשוב על ביטול ההסכמים ופירוק הרשות הפלסטינית.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30",
+   "inferred": true
+  },
+  "reservists": {
+   "v": -2,
+   "why": "\"נפעל כדי למנוע מדינה פלסטינית בצירים הדיפלומטיים והמדיניים\".",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  },
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך בהקמת מדינה פלסטינית עצמאית בגבולות 4 ביוני 1967 ובירתה ירושלים המזרחית, לצד ישראל.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": 2,
+   "why": "תומכת בפתרון שתי המדינות, עם מדינה פלסטינית לצד ישראל בהסכמה בין הצדדים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  }
+ },
+ "s2": {
+  "likud": {
+   "v": 1,
+   "why": "חברי הליכוד הצביעו בעד הצעה הצהרתית להחלת ריבונות ביהודה ושומרון (ח\"כ אילוז בין היוזמים).",
+   "source": "https://www.timesofisrael.com/knesset-votes-71-13-for-non-binding-motion-calling-to-annex-west-bank/",
+   "date": "2025-07-23"
+  },
+  "otzma": {
+   "v": 2,
+   "why": "רואה בארץ ישראל כולה שטח ריבוני; בן גביר: \"עזה שלנו\".",
+   "source": "https://krdo.com/news/2026/07/20/israels-far-right-openly-boasts-of-resettling-gaza-as-election-looms/",
+   "date": "2026-07-20",
+   "inferred": true
+  },
+  "rzp": {
+   "v": 2,
+   "why": "סמוטריץ' קרא להחיל ריבונות ביהודה ושומרון לפני הבחירות.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/smotrich-signs-deal-to-advance-6000-apartments-in-settlement-calls-for-west-bank-annexation-before-election/",
+   "date": "2026-06-14"
+  },
+  "shas": {
+   "v": 1,
+   "why": "המפלגות החרדיות הצביעו בעד הצעה הצהרתית להחלת ריבונות ביהודה ושומרון.",
+   "source": "https://www.timesofisrael.com/knesset-votes-71-13-for-non-binding-motion-calling-to-annex-west-bank/",
+   "date": "2025-07-23"
+  },
+  "utj": {
+   "v": 1,
+   "why": "המפלגות החרדיות הצביעו בעד הצעה הצהרתית להחלת ריבונות ביהודה ושומרון.",
+   "source": "https://www.timesofisrael.com/knesset-votes-71-13-for-non-binding-motion-calling-to-annex-west-bank/",
+   "date": "2025-07-23"
+  },
+  "amcha": null,
+  "yashar": {
+   "v": -1,
+   "why": "מתנגדת למהלכי ריבונות שיסכנו את הרוב היהודי, לצד חיזוק גושי ההתיישבות.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "together": {
+   "v": 1,
+   "why": "רואה בשטחי C חלק ריבוני עתידי של ישראל, והעיתוי נתון לשיקול דעת.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "dems": {
+   "v": -2,
+   "why": "המפלגה קוראת ל\"עצירת תהליך הסיפוח\".",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 2,
+   "why": "\"אנחנו תומכים בהחלת ריבונות ישראלית על שטחי C\".",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "reservists": {
+   "v": 1,
+   "why": "תומכת ב\"ריבונות דרך מעשים\", כולל החלת חוק ישראלי בבקעת הירדן ובגושים.",
+   "source": "https://www.ynetnews.com/article/h1dpvu9cgl",
+   "date": "2026-09-30"
+  },
+  "joint": {
+   "v": -2,
+   "why": "דורשת סיום הכיבוש ופינוי כל ההתנחלויות, ושוללת כל ״הסדרה״ או סיפוח.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  },
+  "raam": {
+   "v": -2,
+   "why": "אינה תומכת בהחלת ריבונות ביהודה ושומרון ומעדיפה הסדר מוסכם.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+   "date": "2026-09-28"
+  }
+ },
+ "s3": {
+  "likud": {
+   "v": -2,
+   "why": "נתניהו דחה ועדת חקירה ממלכתית, והממשלה החליטה על ועדת חקירה ממשלתית במקומה.",
+   "source": "https://www.timesofisrael.com/levin-to-lead-ben-gvir-smotrich-and-others-in-delineating-governments-oct-7-probe/",
+   "date": "2025-11-18"
+  },
+  "otzma": {
+   "v": -1,
+   "why": "בן גביר הוא חבר בצוות השרים שמגדיר את ועדת החקירה הממשלתית, שהוקמה במקום ועדה ממלכתית.",
+   "source": "https://www.timesofisrael.com/levin-to-lead-ben-gvir-smotrich-and-others-in-delineating-governments-oct-7-probe/",
+   "date": "2025-11-18",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -1,
+   "why": "סמוטריץ' הוא חבר בצוות השרים שמגדיר את ועדת החקירה הממשלתית, שהוקמה במקום ועדה ממלכתית.",
+   "source": "https://www.timesofisrael.com/levin-to-lead-ben-gvir-smotrich-and-others-in-delineating-governments-oct-7-probe/",
+   "date": "2025-11-18",
+   "inferred": true
+  },
+  "shas": {
+   "v": -1,
+   "why": "הצביעה נגד הקמת ועדת חקירה ממלכתית.",
+   "source": "https://www.thejc.com/news/israel/knesset-rejects-october-7-state-inquiry-o7nvmhw6",
+   "date": "2025-10-23"
+  },
+  "utj": {
+   "v": -1,
+   "why": "הצביעה נגד הקמת ועדת חקירה ממלכתית.",
+   "source": "https://www.thejc.com/news/israel/knesset-rejects-october-7-state-inquiry-o7nvmhw6",
+   "date": "2025-10-23"
+  },
+  "amcha": {
+   "v": 1,
+   "why": "מתחייבת לוועדת חקירה עצמאית לטבח 7 באוקטובר, עם כל הסמכויות של ועדה ממלכתית.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19"
+  },
+  "yashar": {
+   "v": 2,
+   "why": "איזנקוט הציג טיוטת החלטה להקמת ועדת חקירה ממלכתית בישיבתה הראשונה של הממשלה הבאה.",
+   "source": "https://www.srugim.co.il/101007784-איזנקוט-הציג-את-מתווה-ועדת-החקירה-שיקים",
+   "date": "2026-08-05"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"נקים ועדת חקירה ממלכתית כדי למנוע את השבעה באוקטובר הבא\".",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07"
+  },
+  "dems": null,
+  "yb": {
+   "v": 2,
+   "why": "החלטתה הראשונה בממשלה תהיה הקמת ועדת חקירה ממלכתית למחדלי 7 באוקטובר.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": {
+   "v": 0,
+   "why": "\"הגיע הזמן לחקור\", אבל לדבריה \"המילה ממלכתית הפכה לתירוץ כדי לא לחקור\".",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  },
+  "joint": {
+   "v": 2,
+   "why": "תומכת בהקמת ועדת חקירה ממלכתית לפי הדין הקיים, בראשות שופט עליון, ובהרחבת המנדט שלה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14915209",
+   "date": "2026-10-04"
+  },
+  "raam": {
+   "v": 1,
+   "why": "תומכת ב״חקירה מקיפה, עצמאית ובלתי תלויה״ של 7 באוקטובר, אך לא דווקא ועדה ממלכתית.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14915209",
+   "date": "2026-10-04"
+  }
+ },
+ "s4": {
+  "likud": null,
+  "otzma": {
+   "v": -1,
+   "why": "שרים מהימין תקפו את נתניהו על דרישת סעודיה להתקדם למדינה פלסטינית.",
+   "source": "https://themedialine.org/headlines/president-trump-links-possible-f-35-sale-to-saudi-arabia-with-normalization-push-stirring-tension-inside-netanyahus-coalition",
+   "date": "2025-11-16",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -2,
+   "why": "סמוטריץ' דחה נורמליזציה בתמורה למדינה פלסטינית: \"לא תודה, תמשיכו לרכוב על גמלים\".",
+   "source": "https://www.timesofisrael.com/smotrich-on-saudi-normalization-no-thank-you-keep-riding-camels/",
+   "date": "2025-10-23"
+  },
+  "shas": null,
+  "utj": null,
+  "amcha": null,
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "מתחייבת להביא נורמליזציה עם סעודיה, בלי לפרט ויתורים לפלסטינים.",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07"
+  },
+  "dems": null,
+  "yb": null,
+  "reservists": null,
+  "joint": null,
+  "raam": null
+ },
+ "s5": {
+  "likud": null,
+  "otzma": {
+   "v": 2,
+   "why": "בן גביר: \"תהיה התיישבות יהודית בכל רחבי עזה\".",
+   "source": "https://krdo.com/news/2026/07/20/israels-far-right-openly-boasts-of-resettling-gaza-as-election-looms/",
+   "date": "2026-07-20"
+  },
+  "rzp": {
+   "v": 2,
+   "why": "סמוטריץ': עזה \"חלק בלתי נפרד מארץ ישראל\"; תוכניות לשלושה יישובים מחכות לאישור.",
+   "source": "https://krdo.com/news/2026/07/20/israels-far-right-openly-boasts-of-resettling-gaza-as-election-looms/",
+   "date": "2026-07-20"
+  },
+  "shas": null,
+  "utj": null,
+  "amcha": null,
+  "yashar": {
+   "v": -1,
+   "why": "איזנקוט מתח ביקורת על כנס חידוש ההתיישבות בעזה כאירוע מפלג שחסר קונצנזוס.",
+   "source": "https://www.walla.co.il/news/politics/3639688",
+   "date": "2024-01-29",
+   "inferred": true
+  },
+  "together": {
+   "v": -1,
+   "why": "\"אין לנו עניין לנהל את עזה\"; לפיד תקף את כנס חידוש ההתיישבות בעזה.",
+   "source": "https://be-yahad.org.il/plans/natsec/",
+   "date": "2026-10-07",
+   "inferred": true
+  },
+  "dems": {
+   "v": -2,
+   "why": "מתנגדת לחידוש ההתיישבות בעזה; גולן כינה זאת \"רעיון מטורף\".",
+   "source": "https://jewishvirtuallibrary.org/israel-political-parties-the-democrats",
+   "date": "2026-07"
+  },
+  "yb": {
+   "v": -2,
+   "why": "ליברמן: \"מתנגד להתיישבות יהודית בעזה\".",
+   "source": "https://www.walla.co.il/news/politics/3639828",
+   "date": "2024-01-29"
+  },
+  "reservists": null,
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת לכל התנחלות ודורשת סיום הכיבוש ומדינה פלסטינית; התיישבות בעזה סותרת עמדה זו.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": {
+   "v": -2,
+   "why": "תומכת בסיום הכיבוש ופינוי התנחלויות ובמדינה פלסטינית; התיישבות בעזה סותרת עמדה זו.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/raam/",
+   "date": "2026-10-19",
+   "inferred": true
+  }
+ },
+ "r1": {
+  "likud": {
+   "v": -1,
+   "why": "הקואליציה בראשות הליכוד דחתה הצעת חוק לתחבורה ציבורית בשבת.",
+   "source": "https://www.jns.org/knesset-rejects-bill-to-allow-public-transit-on-shabbat/",
+   "date": "2025-11-19",
+   "inferred": true
+  },
+  "otzma": null,
+  "rzp": {
+   "v": -2,
+   "why": "מפלגה דתית שמבקשת לחזק את האופי היהודי של המדינה; הקואליציה דחתה תחבורה בשבת.",
+   "source": "https://www.jns.org/knesset-rejects-bill-to-allow-public-transit-on-shabbat/",
+   "date": "2025-11-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": -2,
+   "why": "מפלגה חרדית; הקואליציה דחתה הצעת חוק לתחבורה ציבורית בשבת בהתנגדות המפלגות הדתיות.",
+   "source": "https://www.jns.org/knesset-rejects-bill-to-allow-public-transit-on-shabbat/",
+   "date": "2025-11-19",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "מפלגה חרדית; הקואליציה דחתה הצעת חוק לתחבורה ציבורית בשבת בהתנגדות המפלגות הדתיות.",
+   "source": "https://www.jns.org/knesset-rejects-bill-to-allow-public-transit-on-shabbat/",
+   "date": "2025-11-19",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "כל רשות מקומית תחליט בעצמה על תחבורה ציבורית בשבת.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 2,
+   "why": "תומכת בתחבורה ציבורית בשבת במתכונת מצומצמת ביישובים חילוניים.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 1,
+   "why": "תחבורה ציבורית בשבת לפי החלטת הרשויות המקומיות.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "תומכת בהפעלת תחבורה ציבורית עירונית ובין־עירונית בשבת, כולל לנתב״ג ולבתי חולים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14883243",
+   "date": "2026-08-31"
+  },
+  "raam": null
+ },
+ "r2": {
+  "likud": null,
+  "otzma": null,
+  "rzp": {
+   "v": -2,
+   "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה, כולל בדיני אישות.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": -2,
+   "why": "מפלגה חרדית שמבקשת לשמר את האופי הדתי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "מבקשת לשמר את האופי הדתי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": {
+   "v": 1,
+   "why": "המצע מציע מיסוד זוגיות אזרחית לכל זוג, אך אינו מזכיר נישואים אזרחיים במפורש.",
+   "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 1,
+   "why": "מסלול אזרחי מלא לרישום זוגיות במשרד הפנים, בלי לקרוא לו נישואים אזרחיים.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 2,
+   "why": "המפלגה תומכת ב\"קידום נישואים אזרחיים\".",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 2,
+   "why": "המצע תומך בנישואים ובגירושים אזרחיים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש הפרדת הדת מהמדינה וחופש מצפון, שמשמעם אפשרות לנישואים אזרחיים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "r3": {
+  "likud": null,
+  "otzma": null,
+  "rzp": null,
+  "shas": {
+   "v": -2,
+   "why": "כמו יהדות התורה, תומכת במימון מוסדות חרדיים גם בלי לימודי ליבה.",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "דרשה מימון לבתי ספר חרדיים גם אם הם לא עומדים בדרישות לימודי הליבה.",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07"
+  },
+  "amcha": {
+   "v": 1,
+   "why": "מצע: ליבה איכותית לכל ילד, ואי־תקצוב בתי ספר שמעבירים תכנים אנטי־ציוניים.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "yashar": {
+   "v": 2,
+   "why": "לימודי ליבה (כולל אנגלית ומתמטיקה) כתנאי למימון ציבורי מלא, וקיצוץ משמעותי למוסדות שלא יעמדו בכך.",
+   "source": "https://yasharwitheisenkot.com/principles/education/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"מימון ציבורי יינתן רק למוסדות המלמדים 100% לימודי ליבה\".",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 1,
+   "why": "גולן מתח ביקורת חריפה על היעדר לימודי חול בבתי הספר החרדיים.",
+   "source": "https://www.maariv.co.il/journalists/opinions/Article-960953",
+   "date": "2022-11-25",
+   "inferred": true
+  },
+  "yb": {
+   "v": 2,
+   "why": "לימודי ליבה כולל מתמטיקה ואנגלית חובה; מוסדות שלא ילמדו אותם \"לא יתוקצבו\".",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": null,
+  "raam": null
+ },
+ "r4": {
+  "likud": null,
+  "otzma": null,
+  "rzp": {
+   "v": 1,
+   "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה ואת מוסדות הדת.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": 2,
+   "why": "כמו יהדות התורה, דורשת לשמר את המונופול הדתי על כשרות וגיור.",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07",
+   "inferred": true
+  },
+  "utj": {
+   "v": 2,
+   "why": "דרשה לשמר את המונופול החרדי בענייני דת כמו גיור והכותל.",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07"
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": {
+   "v": -2,
+   "why": "מבקשת לסיים את מונופול הרבנות: הכרה בכשרות בינלאומית וגיור בידי רבני הקהילה.",
+   "source": "https://be-yahad.org.il/plans/religionandstate/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": -2,
+   "why": "תומכת בהכרה בגיור שלא רק של הרבנות, ומתנגדת להכתבה של הממסד הדתי.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": -2,
+   "why": "רפורמת כשרות, ביטול המועצות הדתיות וגיור בידי רבני ערים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": {
+   "v": -2,
+   "why": "המצע דורש הפרדת הדת מהמדינה, בניגוד למונופול של הרבנות על כשרות וגיור.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "r5": {
+  "likud": null,
+  "otzma": null,
+  "rzp": {
+   "v": -2,
+   "why": "מפלגה דתית שמבקשת לחזק את הזהות והאופי היהודי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": -2,
+   "why": "מפלגה חרדית שמבקשת לשמר את האופי הדתי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "מבקשת לשמר את האופי הדתי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": {
+   "v": 1,
+   "why": "תומכת בזוגיות אזרחית הפתוחה לזוגות חד־מיניים ובשוויון ברישום הורות, בלי להזכיר נישואים.",
+   "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 1,
+   "why": "ברית זוגיות אזרחית עם מלוא הזכויות לזוגות חד־מיניים והסרת חסמים באימוץ, בלי נישואים.",
+   "source": "https://be-yahad.org.il/plans/pride/",
+   "date": "2026-09"
+  },
+  "dems": {
+   "v": 2,
+   "why": "גולן תומך בנישואים חד־מיניים ובביטול מונופול המדינה על הנישואים.",
+   "source": "https://www.maariv.co.il/journalists/opinions/Article-960953",
+   "date": "2022-11-25"
+  },
+  "yb": null,
+  "reservists": null,
+  "joint": null,
+  "raam": {
+   "v": -2,
+   "why": "מפלגה אסלאמית שמרנית; דרשה חופש הצבעה נגד הצעות חוק בעד להט״ב כתנאי לכניסה לקואליציה.",
+   "source": "https://www.ynet.co.il/news/article/BJaZYhaNd",
+   "date": "2021-03-28",
+   "inferred": true
+  }
+ },
+ "r6": {
+  "likud": {
+   "v": -2,
+   "why": "הליכוד יזם את חוק הלאום, והקואליציה הצביעה נגד הוספת עקרון השוויון אליו.",
+   "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
+   "date": "2020-07-29",
+   "inferred": true
+  },
+  "otzma": {
+   "v": -2,
+   "why": "תומכת בחיזוק האופי היהודי והלאומי של המדינה.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -2,
+   "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": -1,
+   "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
+   "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
+   "date": "2020-07-29",
+   "inferred": true
+  },
+  "utj": {
+   "v": -1,
+   "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
+   "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
+   "date": "2020-07-29",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "תומכת בשינוי חוק הלאום ברוח מגילת העצמאות.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19"
+  },
+  "yb": {
+   "v": 1,
+   "why": "המצע מציע לתקן את חוק הלאום ברוח מגילת העצמאות.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש לבטל את חוק הלאום ולעגן חוקתית אזרחות שווה לכל האזרחים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": 2,
+   "why": "״תומכים בתיקון חוק יסוד הלאום כך שיעוגן בו במפורש עיקרון השוויון לכל אזרחי המדינה״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14920395",
+   "date": "2026-10-08"
+  }
+ },
+ "e1": {
+  "likud": {
+   "v": -1,
+   "why": "דוגלת במשק חופשי ובצמצום מעורבות הממשלה במשק.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "otzma": null,
+  "rzp": {
+   "v": -1,
+   "why": "דוגלת בהרחבת השוק החופשי ובעידוד יוזמה פרטית.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "shas": {
+   "v": 1,
+   "why": "שמה במרכז את \"קידום הצדק החברתי\".",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "utj": null,
+  "amcha": {
+   "v": -1,
+   "why": "מציעה להוזיל את יוקר המחיה בפירוק מונופולים ובתחרות, לא בפיקוח.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "yashar": null,
+  "together": {
+   "v": -1,
+   "why": "\"לא נדרשות עוד ועדות, עוד פיקוח\"; מוריד מחירים דרך תחרות ופירוק מונופולים.",
+   "source": "https://be-yahad.org.il/plans/yokermichya/",
+   "date": "2026-09-23"
+  },
+  "dems": {
+   "v": 1,
+   "why": "המפלגה מדגישה מאבק ביוקר המחיה ושיפור שירותי הרווחה.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "yb": {
+   "v": -1,
+   "why": "המצע מעדיף הפחתת רגולציה ופירוק מונופולים, ולא פיקוח ישיר על מחירים.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10",
+   "inferred": true
+  },
+  "reservists": {
+   "v": -1,
+   "why": "המצע מבוסס על \"עידוד תחרות ושוק חופשי\" ופירוק גופים דומיננטיים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03",
+   "inferred": true
+  },
+  "joint": {
+   "v": 2,
+   "why": "המצע דורש פיקוח הדוק על מחירי מזון, תרופות, חשמל ומים, וחשיפת עלויות ורווחי חברות.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "e2": {
+  "likud": {
+   "v": -1,
+   "why": "דוגלת במשק חופשי ובצמצום מעורבות הממשלה במשק.",
+   "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "otzma": null,
+  "rzp": null,
+  "shas": null,
+  "utj": null,
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": {
+   "v": -1,
+   "why": "מציעה הטבות מס משמעותיות לחברות טכנולוגיה שמעסיקות בפריפריה, ולא העלאת מסים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03",
+   "inferred": true
+  },
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך במיסוי פרוגרסיבי שיטיל יותר על בעלי הכנסות גבוהות, תאגידים ובנקים.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "e3": {
+  "likud": {
+   "v": 2,
+   "why": "שר האוצר ברקת (ליכוד) הוביל את רפורמת \"מה שטוב לאירופה טוב לישראל\" לפתיחת היבוא.",
+   "source": "https://ynetnews.com/article/bkjc600jaa",
+   "date": "2024-03-01"
+  },
+  "otzma": null,
+  "rzp": {
+   "v": 1,
+   "why": "שר האוצר סמוטריץ' ביטל מכסים על יבוא מוצרי חקלאות ומוצרים מארה\"ב.",
+   "source": "https://ynetnews.com/article/rkgzvffakl",
+   "date": "2025-04"
+  },
+  "shas": null,
+  "utj": null,
+  "amcha": {
+   "v": 2,
+   "why": "מצע: פתיחת השווקים לתחרות והסרת חסמי יבוא ורגולציה מיותרת.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19"
+  },
+  "yashar": {
+   "v": 1,
+   "why": "תבטל חסמי יבוא ותקנים ייחודיים ותפתח ליבוא מקביל, תוך שימור החקלאות הישראלית.",
+   "source": "https://yasharwitheisenkot.com/principles/economics/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "הסרת חסמי יבוא וביטול הדרגתי של המכסים, כולל על מוצרי חקלאות.",
+   "source": "https://be-yahad.org.il/plans/yokermichya/",
+   "date": "2026-09-23"
+  },
+  "dems": null,
+  "yb": {
+   "v": 1,
+   "why": "המצע תומך בהגברת התחרות בתחום היבוא ובהסדרת היבוא המקביל.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": null,
+  "raam": null
+ },
+ "e4": {
+  "likud": {
+   "v": -1,
+   "why": "השרה מאי גולן (ליכוד) הציעה להעביר כ־2.5 מיליארד ש\"ח מתוכנית החומש לחברה הערבית למשטרה ולשב\"כ.",
+   "source": "https://www.shomrim.news/eng/pillaging-the-five-year-plan",
+   "date": "2025-12-08"
+  },
+  "otzma": {
+   "v": -1,
+   "why": "בן גביר הציע להעביר כספים מתוכנית החומש לחברה הערבית למשטרה ולשב\"כ.",
+   "source": "https://www.shomrim.news/eng/pillaging-the-five-year-plan",
+   "date": "2025-12-08"
+  },
+  "rzp": {
+   "v": -1,
+   "why": "סמוטריץ' הקפיא כ־200 מיליון ש\"ח לחברה הערבית \"עד שיהיו מנגנוני פיקוח\".",
+   "source": "https://jpost.com/israel-news/article-753870",
+   "date": "2023-08-06"
+  },
+  "shas": null,
+  "utj": null,
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "מתנה תמיכה בממשלה בתוכנית ממומנת למיגור הפשיעה, ודורשת שוויון מלא בתקציבי הרשויות הערביות.",
+   "source": "https://www.jpost.com/israel-election-2026/article-911417",
+   "date": "2026-10-10"
+  },
+  "raam": {
+   "v": 2,
+   "why": "מציבה את המאבק בפשיעה בחברה הערבית בראש סדר העדיפויות ומבקשת את תיק המאבק בפשיעה.",
+   "source": "https://www.ynetnews.com/article/bydawe7ugx",
+   "date": "2026-08-31"
+  }
+ },
+ "e5": {
+  "likud": {
+   "v": -1,
+   "why": "ממשלת נתניהו אישרה כספים קואליציוניים בהיקף של יותר מ־5 מיליארד ש\"ח.",
+   "source": "https://www.timesofisrael.com/cabinet-okays-1-6-billion-in-coalition-funds-including-715-million-for-ultra-orthodox/amp",
+   "date": "2026-03-10",
+   "inferred": true
+  },
+  "otzma": {
+   "v": -1,
+   "why": "הייתה שותפה בממשלה שאישרה כספים קואליציוניים בהיקף של יותר מ־5 מיליארד ש\"ח.",
+   "source": "https://www.timesofisrael.com/cabinet-okays-1-6-billion-in-coalition-funds-including-715-million-for-ultra-orthodox/amp",
+   "date": "2026-03-10",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -1,
+   "why": "סמוטריץ' כשר אוצר העביר כספים קואליציוניים, כולל 400 מיליון ש\"ח למשרד ההתיישבות.",
+   "source": "https://www.timesofisrael.com/cabinet-okays-1-6-billion-in-coalition-funds-including-715-million-for-ultra-orthodox/amp",
+   "date": "2026-03-10",
+   "inferred": true
+  },
+  "shas": {
+   "v": -2,
+   "why": "מוסדות חרדיים מקבלים את רוב הכספים הקואליציוניים (2.2 מיליארד ש\"ח).",
+   "source": "https://www.timesofisrael.com/cabinet-okays-1-6-billion-in-coalition-funds-including-715-million-for-ultra-orthodox/amp",
+   "date": "2026-03-10",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "מוסדות חרדיים מקבלים את רוב הכספים הקואליציוניים (2.2 מיליארד ש\"ח).",
+   "source": "https://www.timesofisrael.com/cabinet-okays-1-6-billion-in-coalition-funds-including-715-million-for-ultra-orthodox/amp",
+   "date": "2026-03-10",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": null,
+  "yb": null,
+  "reservists": null,
+  "joint": null,
+  "raam": {
+   "v": -1,
+   "why": "אסטרטגיית המפלגה מבוססת על השגת תקציבים ייעודיים לחברה הערבית, כמו בהסכם הקואליציוני ב־2021.",
+   "source": "https://en.globes.co.il/en/article-1001374021",
+   "date": "2021-06",
+   "inferred": true
+  }
+ },
+ "e6": {
+  "likud": null,
+  "otzma": null,
+  "rzp": null,
+  "shas": null,
+  "utj": null,
+  "amcha": null,
+  "yashar": null,
+  "together": {
+   "v": 1,
+   "why": "100 אלף דירות לשכירות ארוכה, 40% מהן במסלול מסובסד ומפוקח; אין הגבלה על שכר הדירה.",
+   "source": "https://be-yahad.org.il/plans/housing/",
+   "date": "2026-09"
+  },
+  "dems": {
+   "v": 1,
+   "why": "המפלגה תומכת בהרחבת הדיור בר־ההשגה.",
+   "source": "https://jewishvirtuallibrary.org/israel-political-parties-the-democrats",
+   "date": "2026-07"
+  },
+  "yb": null,
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "המצע תומך בהרחבת הדיור הציבורי במחירים נגישים ובשכירות מסובסדת לטווח ארוך.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": null
+ },
+ "j1": {
+  "likud": {
+   "v": -1,
+   "why": "לוין: אם הימין ינצח \"יהיו שופטים אחרים\" ו\"מערכת משפט אחרת\".",
+   "source": "http://www.jpost.com/israel-news/article-911597",
+   "date": "2026-10-13",
+   "inferred": true
+  },
+  "otzma": {
+   "v": -1,
+   "why": "דורשת לצמצם את סמכויות בג\"ץ.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22"
+  },
+  "rzp": {
+   "v": -1,
+   "why": "מבקשת פסקת התגברות ברוב 61 והגבלת זכות העמידה.",
+   "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "shas": {
+   "v": -1,
+   "why": "דרעי: נתקן \"מהיסוד את מערכת המשפט ונחזיר את הכוח לעם ולנבחריו\".",
+   "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "utj": {
+   "v": -1,
+   "why": "לטענתה בית המשפט העליון צבר כוח מופרז ויש לבחון מחדש את סמכויותיו.",
+   "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+   "date": "2026-09-22"
+  },
+  "amcha": {
+   "v": -1,
+   "why": "מציעה \"ערכאת ערעור עליונה\" על החלטות בג\"ץ.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19",
+   "inferred": true
+  },
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "בית המשפט יוכל לבטל חוק בהרכב מורחב וברוב מיוחד, ללא פסקת התגברות.",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": null,
+  "reservists": null,
+  "joint": {
+   "v": 2,
+   "why": "מצדדת בבלמים על כוח הממשלה וקובעת ש״מערכת המשפט צריכה להגן על זכויות כל האזרחים״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": {
+   "v": 1,
+   "why": "הצביעה נגד ביטול עילת הסבירות; עבאס: ״לאף רשות שלטונית לא צריך להיות כוח מוחלט״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  }
+ },
+ "j2": {
+  "likud": {
+   "v": 2,
+   "why": "החוק של השר לוין לשינוי הוועדה לבחירת שופטים, שמגדיל את כוח הפוליטיקאים, עבר בכנסת.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/knesset-passes-contentious-law-to-increase-political-control-over-judicial-appointments/",
+   "date": "2025-03-27"
+  },
+  "otzma": {
+   "v": 1,
+   "why": "דורשת שימוע בכנסת ורוב של שני שלישים בוועדת החוקה למינוי שופטי העליון.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22"
+  },
+  "rzp": {
+   "v": 2,
+   "why": "הצביעה בעד החוק לשינוי הוועדה לבחירת שופטים, שהגדיל את כוח הפוליטיקאים.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/knesset-passes-contentious-law-to-increase-political-control-over-judicial-appointments/",
+   "date": "2025-03-27",
+   "inferred": true
+  },
+  "shas": {
+   "v": 1,
+   "why": "הייתה בקואליציה שהעבירה את החוק לשינוי הוועדה לבחירת שופטים.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/knesset-passes-contentious-law-to-increase-political-control-over-judicial-appointments/",
+   "date": "2025-03-27",
+   "inferred": true
+  },
+  "utj": {
+   "v": 1,
+   "why": "הייתה בקואליציה שהעבירה את החוק לשינוי הוועדה לבחירת שופטים.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/knesset-passes-contentious-law-to-increase-political-control-over-judicial-appointments/",
+   "date": "2025-03-27",
+   "inferred": true
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "\"נבטל את החוק לשינוי הוועדה לבחירת שופטים, שיוצר פוליטיזציה\".",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": null,
+  "reservists": null,
+  "joint": {
+   "v": -2,
+   "why": "דורשת ״מנגנון מאוזן שישמור על עצמאות מערכת המשפט״ במינוי שופטים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": null
+ },
+ "j3": {
+  "likud": {
+   "v": 2,
+   "why": "הממשלה בראשות הליכוד הצביעה על פיטורי היועמ\"שית בהרב־מיארה.",
+   "source": "https://krdo.com/news/2025/08/04/israels-government-votes-to-fire-countrys-attorney-general/",
+   "date": "2025-08-04"
+  },
+  "otzma": {
+   "v": 2,
+   "why": "דורשת לפטר את היועמ\"שית מיד עם הקמת הממשלה.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22"
+  },
+  "rzp": {
+   "v": 2,
+   "why": "מבקשת לפצל את תפקיד היועמ\"ש ולהפוך את הייעוץ המשפטי למשרת אמון.",
+   "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+   "date": "2026-09-22"
+  },
+  "shas": {
+   "v": 1,
+   "why": "שריה היו בממשלה שהצביעה פה אחד נגד היועמ\"שית בהליך לפיטוריה.",
+   "source": "https://ynetnews.com/article/sk7op5ahjl",
+   "date": "2025-03-23",
+   "inferred": true
+  },
+  "utj": null,
+  "amcha": null,
+  "yashar": {
+   "v": -1,
+   "why": "המצע מבקש להסדיר את אי־התלות המקצועית של היועמ\"ש ושומרי הסף.",
+   "source": "https://yasharwitheisenkot.com/principles/government-and-public-service/",
+   "date": "2026-07-19",
+   "inferred": true
+  },
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "גולן נתן גיבוי מלא ליועמ\"שית מול ניסיונות הממשלה לפטר אותה.",
+   "source": "https://www.jpost.com/israel-election-2026/article-910100",
+   "date": "2026-10-01"
+  },
+  "yb": null,
+  "reservists": null,
+  "joint": null,
+  "raam": null
+ },
+ "j4": {
+  "likud": {
+   "v": -2,
+   "why": "יו\"ר הליכוד נתניהו מכהן כראש ממשלה ורץ שוב, בזמן שמשפטו הפלילי מתנהל.",
+   "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
+   "date": "2026-10",
+   "inferred": true
+  },
+  "otzma": {
+   "v": -1,
+   "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
+   "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
+   "date": "2026-10",
+   "inferred": true
+  },
+  "rzp": {
+   "v": -1,
+   "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
+   "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
+   "date": "2026-10",
+   "inferred": true
+  },
+  "shas": {
+   "v": -2,
+   "why": "התנתה את הצטרפותה לממשלה ב־2022 בחקיקה שתאפשר לדרעי, שהורשע, לכהן כשר.",
+   "source": "https://www.ynetnews.com/article/ryc2o22uo",
+   "date": "2022-12-18",
+   "inferred": true
+  },
+  "utj": null,
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": 2,
+   "why": "גולן: מי שעומד נגדו כתב אישום לא יכול לכהן כראש ממשלה או כשר.",
+   "source": "https://www.jpost.com/israel-election-2026/article-910100",
+   "date": "2026-10-01"
+  },
+  "yb": {
+   "v": 2,
+   "why": "מי שעומד נגדו כתב אישום לא יוכל להתמודד לנשיאות או להרכיב ממשלה.",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": null,
+  "raam": null
+ },
+ "j5": {
+  "likud": {
+   "v": 1,
+   "why": "הליכוד הודיע ב־2022 שיקדם פסקת התגברות.",
+   "source": "https://www.ynetnews.com/article/ryc2o22uo",
+   "date": "2022-12-18",
+   "inferred": true
+  },
+  "otzma": {
+   "v": 1,
+   "why": "דורשת לצמצם את סמכויות בג\"ץ.",
+   "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "rzp": {
+   "v": 2,
+   "why": "מבקשת פסקת התגברות ברוב 61, כתנאי לכניסה לקואליציה.",
+   "source": "https://www.ynetnews.com/article/hkcjtk1cme",
+   "date": "2026-09-22"
+  },
+  "shas": {
+   "v": 1,
+   "why": "דרשה ב־2022 חקיקה שתעקוף את בג\"ץ כדי שדרעי יוכל לכהן כשר.",
+   "source": "https://www.ynetnews.com/article/ryc2o22uo",
+   "date": "2022-12-18",
+   "inferred": true
+  },
+  "utj": {
+   "v": 2,
+   "why": "דרשה חקיקה שתאפשר לרוב של 61 ח\"כים לעקוף פסיקות של בג\"ץ.",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07"
+  },
+  "amcha": null,
+  "yashar": null,
+  "together": null,
+  "dems": {
+   "v": -2,
+   "why": "מציעה ביקורת שיפוטית ברוב מיוחד \"ללא פסקת התגברות\".",
+   "source": "https://www.jns.org/he/article/000001a0-848d-d4dd-a3f2-eecd4f810000",
+   "date": "2026-09-09"
+  },
+  "yb": {
+   "v": -2,
+   "why": "המצע מתנגד לפסקת ההתגברות ול\"חוק הצרפתי\".",
+   "source": "https://beytenu.org.il/party-platform/",
+   "date": "2026-10"
+  },
+  "reservists": null,
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת למהפכה המשפטית ותומכת בבלמים שימנעו ריכוז כוח בידי הממשלה והכנסת.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  },
+  "raam": {
+   "v": -1,
+   "why": "התנגדה לצעדי 2023 שהעבירו כוח מבית המשפט לממשלה ולכנסת; עבאס דורש איזון בין הרשויות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14903844",
+   "date": "2026-09-22",
+   "inferred": true
+  }
+ },
+ "d1": {
+  "likud": null,
+  "otzma": {
+   "v": 1,
+   "why": "בן גביר: \"הוכחנו שאפשר לשלב חרדים בשירות משמעותי\", במסלולים במשטרה ובמשמר הגבול.",
+   "source": "https://www.ynetnews.com/article/sjph72wyzx",
+   "date": "2026-09-16"
+  },
+  "rzp": {
+   "v": 1,
+   "why": "סמוטריץ': \"צריך לגייס את החרדים, אבל בתהליך ובהסכמה\", בלי מעצרים.",
+   "source": "https://cyprus-mail.com/2026/08/07/israels-smotrich-fights-for-political-survival-over-military-draft-row",
+   "date": "2026-08-07"
+  },
+  "shas": {
+   "v": -2,
+   "why": "דרעי: ש\"ס לא תהיה בממשלה בלי שיוסדר מעמד בני הישיבות.",
+   "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+   "date": "2026-10-14"
+  },
+  "utj": {
+   "v": -2,
+   "why": "אשר: לא תיכנס לממשלה שלא תעביר את החוק להסדרת מעמד בני הישיבות.",
+   "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+   "date": "2026-10-12"
+  },
+  "amcha": {
+   "v": 1,
+   "why": "חוק יסוד שירות: שירות חובה לכולם, עם פטור ללומדי תורה עד 25% מכל מחזור.",
+   "source": "https://www.ynetnews.com/article/s10tpvkjze",
+   "date": "2026-10-11"
+  },
+  "yashar": {
+   "v": 2,
+   "why": "חוק \"שירות לכולם\": דחייה ללומדי תורה רק במכסה של עד 3% מכל מחזור.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"כל אזרח... יתגייס לצה״ל או יעשה שירות לאומי אזרחי... ללא פטורים\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": 2,
+   "why": "\"חובת השירות למדינה צריכה לחול על כלל האזרחים, במסגרת ממלכתית ושוויונית\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "חובת שירות לכל בן 18, \"בלי פטורים, בלי מכסות ובלי קומבינות\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "חוק גיוס לכולם, כולל מערך ישיבות בקו העימות.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  },
+  "joint": {
+   "v": -2,
+   "why": "מתנגדת לגיוס חרדים ולכל צורה של גיוס חובה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  },
+  "raam": null
+ },
+ "d2": {
+  "likud": null,
+  "otzma": {
+   "v": -1,
+   "why": "בן גביר: \"אני לא חושב שכפייה תעזור\" בגיוס חרדים.",
+   "source": "https://www.timesofisrael.com/liveblog_entry/ben-gvir-on-haredi-draft-i-dont-think-coercion-will-help/",
+   "date": "2024-10-28",
+   "inferred": true
+  },
+  "rzp": null,
+  "shas": {
+   "v": -2,
+   "why": "מתנגדת לסנקציות על בני ישיבות ודורשת להסדיר את מעמדם בחוק.",
+   "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+   "date": "2026-10-14",
+   "inferred": true
+  },
+  "utj": {
+   "v": -2,
+   "why": "גפני: לומדי תורה ימשיכו ללמוד \"בלי מכסות, יעדים או סנקציות\".",
+   "source": "https://www.timesofisrael.com/utj-presses-netanyahu-on-coalition-demands-turning-up-heat-as-deadline-nears/",
+   "date": "2022-12-07"
+  },
+  "amcha": {
+   "v": 1,
+   "why": "העיקרון שלה: \"מי שנותן יקבל. מי שלא נותן לא יקבל\".",
+   "source": "https://www.ynetnews.com/article/s10tpvkjze",
+   "date": "2026-10-11"
+  },
+  "yashar": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הטבות אזרחיות וכלכליות, כולל הנחה בארנונה, ויעמוד לדין.",
+   "source": "https://yasharwitheisenkot.com/principles/service-for-all/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "ביטול קצבאות האברכים, ההנחות בארנונה וסבסוד המעונות למי שלא משרת.",
+   "source": "https://be-yahad.org.il/plans/meshartim/",
+   "date": "2026-09-22"
+  },
+  "dems": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הטבות כמו מעונות יום, צהרונים והנחות בארנונה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "למשתמטים: שלילת הנחות בארנונה, סבסוד מעונות, הטבות מס ומשרות ציבוריות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "מי שלא ישרת יאבד הנחות בארנונה, סבסוד מעונות ורישיון נהיגה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "joint": {
+   "v": -2,
+   "why": "״אין להטיל סנקציות על אדם שבוחר שלא להתגייס״.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  },
+  "raam": null
+ },
+ "d3": {
+  "likud": null,
+  "otzma": null,
+  "rzp": null,
+  "shas": null,
+  "utj": null,
+  "amcha": {
+   "v": 2,
+   "why": "מצע: כל אזרח חייב לשרת, בשירות צבאי או בשירות לאומי.",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19"
+  },
+  "yashar": {
+   "v": 2,
+   "why": "מסלול אזרחי חובה למי שלא משרת בצה\"ל, כולל גיוס צעירים ערבים לשירות אזרחי.",
+   "source": "https://yasharwitheisenkot.com/principles/homeland-security/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "שירות בצה\"ל או שירות לאומי אזרחי לכל אזרח, גם לאזרחים הערבים.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": 2,
+   "why": "שירות לכל האזרחים; מי שלא יגויס לצה\"ל יופנה לשירות לאומי־אזרחי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": 2,
+   "why": "חובת שירות לכל בן 18, כולל מוסלמים ונוצרים, בצה\"ל או בשירות אזרחי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": 2,
+   "why": "כל האזרחים ישובצו לצבא או לשירות לאומי, עם מסלולים נוספים לחברה הערבית.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "joint": {
+   "v": -2,
+   "why": "המצע דוחה את כל צורות גיוס החובה, כולל שירות ״אזרחי״, ותומך בהתנדבות חופשית.",
+   "source": "https://jointlist.org.il/he/platform/",
+   "date": "2026-10-19"
+  },
+  "raam": {
+   "v": -1,
+   "why": "מתנגדת לחוק שיחייב צעירים ערבים בשירות צבאי או אזרחי, אך תומכת בשירות אזרחי וולונטרי.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-16"
+  }
+ },
+ "d4": {
+  "likud": {
+   "v": 1,
+   "why": "עמדת הממשלה הייתה לתמוך בחוק יסוד לימוד תורה, בתנאי שיוסר ממנו ההשוואה לשירות הצבאי.",
+   "source": "https://www.timesofisrael.com/knesset-advances-basic-law-bill-enshrining-torah-study-despite-coalition-revolt/",
+   "date": "2026-06-10"
+  },
+  "otzma": null,
+  "rzp": {
+   "v": -1,
+   "why": "הודיעה שלא תתמוך בחוק יסוד לימוד תורה בנוסחו, וח\"כ סולומון הצביע נגד.",
+   "source": "https://www.timesofisrael.com/knesset-advances-basic-law-bill-enshrining-torah-study-despite-coalition-revolt/",
+   "date": "2026-06-10"
+  },
+  "shas": {
+   "v": 2,
+   "why": "דרעי: \"לא תקום ממשלה\" בהשתתפות ש\"ס בלי שיוסדר מעמד בני הישיבות.",
+   "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+   "date": "2026-10-14"
+  },
+  "utj": {
+   "v": 2,
+   "why": "אשר: לא תיכנס לממשלה שלא תעביר את החוק להסדרת מעמד בני הישיבות.",
+   "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/",
+   "date": "2026-10-12"
+  },
+  "amcha": null,
+  "yashar": {
+   "v": -2,
+   "why": "המנגנון היחיד לדחיית שירות הוא מכסה של עד 3% למצטיינים, ובהם לומדי תורה.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "together": {
+   "v": -2,
+   "why": "מתנגדת לכל פטור, מכסה או יעד; \"מי שלא מתגייס לא יקבל שקל מהמדינה\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "dems": {
+   "v": -2,
+   "why": "חובת שירות לכלל האזרחים ושלילת מימון ממוסדות שמעודדים השתמטות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": {
+   "v": -2,
+   "why": "מתנגדת לכל פטור ומציעה לבטל את הקצבאות לתלמידי ישיבות.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "reservists": {
+   "v": -1,
+   "why": "רק פטורים רפואיים; המצע מאפשר פטור זמני ל\"עילויים בתורה\" שיעברו מבחן.",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "joint": null,
+  "raam": null
+ },
+ "d5": {
+  "likud": null,
+  "otzma": {
+   "v": 2,
+   "why": "בין דרישותיה הקואליציוניות: העלאת שכר החיילים וקרקע בחינם ללוחמים.",
+   "source": "https://www.jpost.com/israel-election-2026/article-909411",
+   "date": "2026-09-23"
+  },
+  "rzp": {
+   "v": 2,
+   "why": "תעגן בחוק יסוד את מעמד משרתי צה\"ל והמילואים: \"מי שמשרת מקבל הכול\".",
+   "source": "https://www.ynetnews.com/article/sjph72wyzx",
+   "date": "2026-09-16"
+  },
+  "shas": null,
+  "utj": null,
+  "amcha": {
+   "v": 2,
+   "why": "תגמול מדורג לפי סוג השירות, הסיכון והמשך: \"מי שנותן יותר יקבל הרבה יותר\".",
+   "source": "https://amchaisrael.co.il/foundations",
+   "date": "2026-10-19"
+  },
+  "yashar": {
+   "v": 2,
+   "why": "מתחייבת להשקיע 20 מיליארד ש\"ח במשרתי המילואים ולהעלות את שכר משרתי הסדיר.",
+   "source": "https://yasharwitheisenkot.com/principles/reservists-honour-and-compensation/",
+   "date": "2026-07-19"
+  },
+  "together": {
+   "v": 2,
+   "why": "\"הטבות חסרות תקדים\" למשרתים, כמו מיליון ש\"ח לדירה ראשונה לכל משרת מילואים.",
+   "source": "https://be-yahad.org.il/plans/meshartim/",
+   "date": "2026-09-22"
+  },
+  "dems": {
+   "v": 1,
+   "why": "\"המדינה תתגמל שירות ולא השתמטות\".",
+   "source": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+   "date": "2026-09-15"
+  },
+  "yb": null,
+  "reservists": {
+   "v": 2,
+   "why": "פיצוי למעסיקי מילואימניקים וסבסוד שכר דירה וביטוח בתקופת המילואים.",
+   "source": "https://www.themiluimnikim.org.il/platform/",
+   "date": "2026-03"
+  },
+  "joint": null,
+  "raam": null
+ }
+}
