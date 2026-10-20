@@ -1,0 +1,1228 @@
+{
+ "parties": {
+  "yashar": {
+   "name": "Yashar!",
+   "leader": "Gadi Eisenkot",
+   "summary": "A new party led by former IDF chief of staff Gadi Eisenkot, running together with Hili Tropper's Yesodot Yisrael party.",
+   "topics": {
+    "security": "Eisenkot: \"There is no Palestinian state, and in the government we form, no Palestinian state will be established.\" According to the party's goals, Israel should pursue peace agreements and regional cooperation from a position of strength.",
+    "religion": "Israel as a Jewish and democratic state in the spirit of the Declaration of Independence.",
+    "economy": "Lower the cost of living by opening up imports, removing barriers and breaking up monopolies, and change taxation so that \"work always pays more than benefits\" and those who work and serve are rewarded.",
+    "judiciary": "A constitution including a Basic Law: Legislation, a sovereign Knesset, a government able to govern, and a strong, independent judiciary.",
+    "draft": "A \"Service for All\" law: every citizen, man or woman, serves in the IDF or in civilian service. Deferrals for Torah students and outstanding individuals only within a quota of up to 3% of each age group; for draft evaders, loss of benefits and criminal prosecution."
+   },
+   "sourceLabels": {
+    "security": "Eisenkot statement, Maariv",
+    "religion": "Israel Democracy Institute",
+    "economy": "Party platform – Economy",
+    "judiciary": "Israel Democracy Institute",
+    "draft": "Party platform – Service for All"
+   },
+   "candidates": {
+    "1": {
+     "name": "Gadi Eisenkot",
+     "note": "21st IDF chief of staff"
+    },
+    "2": {
+     "name": "Yoram Cohen",
+     "note": "Former Shin Bet director"
+    },
+    "3": {
+     "name": "Orit Farkash-Hacohen",
+     "note": "Former minister"
+    },
+    "4": {
+     "name": "Adi Altschuler"
+    },
+    "5": {
+     "name": "Matan Kahana",
+     "note": "Former MK and deputy minister"
+    },
+    "6": {
+     "name": "Yehiel Moshe (Hili) Tropper",
+     "note": "Former culture minister"
+    },
+    "7": {
+     "name": "Shaul Meridor",
+     "note": "Former Finance Ministry budget director"
+    },
+    "8": {
+     "name": "Tair Ifergan"
+    },
+    "9": {
+     "name": "Oshrat Gani Gonen"
+    },
+    "10": {
+     "name": "Shira Shapira"
+    }
+   }
+  },
+  "likud": {
+   "name": "Likud",
+   "leader": "Benjamin Netanyahu",
+   "summary": "A \"national liberal movement\" founded in 1973. Running together with Gideon Sa'ar's New Hope. According to the Israel Democracy Institute, Likud has not published an election platform since 2009.",
+   "topics": {
+    "security": "Netanyahu: \"As long as I am prime minister, there will be no Palestinian state controlled by Iran – not in Gaza and not in Judea and Samaria.\"",
+    "religion": "The party's constitution seeks to instill the values of Jewish tradition in education and in the life of the state.",
+    "economy": "A free, competitive economy and less government involvement in the economy.",
+    "judiciary": "Justice Minister Yariv Levin (No. 4 on the list): \"If the right wins the election, there will be different judges on the Supreme Court in the next term\" and there will be \"a different justice system.\"",
+    "draft": "Netanyahu: \"We have not given up on the draft law\" – the coalition's bill was temporarily frozen because of the war."
+   },
+   "sourceLabels": {
+    "security": "Netanyahu statement, ynet",
+    "religion": "Israel Democracy Institute",
+    "economy": "Israel Democracy Institute",
+    "judiciary": "Yariv Levin speaking at a conference, The Jerusalem Post",
+    "draft": "Netanyahu's answer to a ynet question"
+   },
+   "candidates": {
+    "1": {
+     "name": "Benjamin Netanyahu",
+     "note": "Prime minister"
+    },
+    "2": {
+     "name": "Eliyahu (Eli) Cohen",
+     "note": "Minister in the 37th government"
+    },
+    "3": {
+     "name": "Amir Ohana",
+     "note": "Speaker of the 25th Knesset"
+    },
+    "4": {
+     "name": "Yariv Levin",
+     "note": "Justice minister in the 37th government"
+    },
+    "5": {
+     "name": "Miriam (Miri) Regev",
+     "note": "Transportation minister in the 37th government"
+    },
+    "6": {
+     "name": "Israel Katz",
+     "note": "Defense minister in the 37th government"
+    },
+    "7": {
+     "name": "Gideon Sa'ar",
+     "note": "Foreign minister in the 37th government"
+    },
+    "8": {
+     "name": "Ofir Katz",
+     "note": "Coalition whip in the 25th Knesset"
+    },
+    "9": {
+     "name": "Tali Goeli"
+    },
+    "10": {
+     "name": "Yoav Kisch",
+     "note": "Education minister in the 37th government"
+    }
+   }
+  },
+  "together": {
+   "name": "Together",
+   "leader": "Naftali Bennett",
+   "summary": "A joint list of the Bennett 2026 party and Yair Lapid's Yesh Atid.",
+   "topics": {
+    "security": "Do not move from the \"Yellow Line\" in Gaza until Hamas is disarmed, prevent Iran from obtaining nuclear weapons, and strengthen the Abraham Accords and the alliance with moderate forces in the region.",
+    "religion": "A civil union law, public transportation on Shabbat as decided by each local authority, conversion by community rabbis, and an end to the Chief Rabbinate's monopoly (without abolishing it).",
+    "economy": "Cut food prices by 30% within three years by breaking up monopolies, removing import barriers and reducing regulation.",
+    "judiciary": "Adopt a constitution based on the principles of the Declaration of Independence, regulate judicial review and the Basic Laws \"while seeking broad agreement,\" and limit the prime minister's tenure to 8 years.",
+    "draft": "\"The Servers' Law\": everyone enlists in the IDF or in civilian service, with no exemptions; cancel stipends for married yeshiva students (avrechim) and benefits for those who do not serve, and transfer the money to those who serve."
+   },
+   "sourceLabels": {
+    "security": "List platform – National security",
+    "religion": "List platform – Religion and state",
+    "economy": "List platform – Cost of living",
+    "judiciary": "List platform – Governance reform",
+    "draft": "List platform – The Servers' Law"
+   },
+   "candidates": {
+    "1": {
+     "name": "Naftali Bennett",
+     "note": "13th prime minister"
+    },
+    "2": {
+     "name": "Yair Lapid",
+     "note": "14th prime minister, opposition leader"
+    },
+    "3": {
+     "name": "Karen Turner Eyal"
+    },
+    "4": {
+     "name": "Merav Ben Ari",
+     "note": "MK in the 25th Knesset"
+    },
+    "5": {
+     "name": "Liran Avishar Ben Horin"
+    },
+    "6": {
+     "name": "Noam Moshe Tibon",
+     "note": "Maj. Gen. (res.)"
+    },
+    "7": {
+     "name": "Michal Talia Hirsch Negri"
+    },
+    "8": {
+     "name": "Eitan Ginzburg",
+     "note": "Former MK"
+    },
+    "9": {
+     "name": "Meirav Cohen",
+     "note": "Former minister"
+    },
+    "10": {
+     "name": "Yonatan Shalev"
+    }
+   }
+  },
+  "dems": {
+   "name": "The Democrats",
+   "leader": "Yair Golan",
+   "summary": "Founded in 2024 through the merger of Labor and Meretz; defines itself as \"Zionist, liberal and democratic.\"",
+   "topics": {
+    "security": "Yair Golan: \"We need to decide one issue – annexation or separation\"; he says an alternative to Hamas rule must be created in Gaza and that Palestinian and Jewish terrorism must be fought.",
+    "religion": "Golan: the next coalition should be one \"that understands the separation of religion and state.\"",
+    "economy": "Fighting the high cost of living, improving welfare services and rebuilding the civil service.",
+    "judiciary": "Advancing a Basic Law: Legislation and strengthening the \"gatekeepers\" (oversight bodies).",
+    "draft": "\"The duty to serve the state should apply to all citizens, in a state-run and equal framework\"; the state should stop incentivizing non-service."
+   },
+   "sourceLabels": {
+    "security": "Golan interview on \"Meet the Press,\" N12",
+    "religion": "Golan interview on \"Meet the Press,\" N12",
+    "economy": "Israel Democracy Institute",
+    "judiciary": "Israel Democracy Institute",
+    "draft": "Party's response to a ynet inquiry"
+   },
+   "candidates": {
+    "1": {
+     "name": "Yair Golan",
+     "note": "Former IDF deputy chief of staff"
+    },
+    "2": {
+     "name": "Naama Lazimi",
+     "note": "MK in the 25th Knesset"
+    },
+    "3": {
+     "name": "Gilad Kariv",
+     "note": "MK in the 25th Knesset"
+    },
+    "4": {
+     "name": "Efrat Rayten",
+     "note": "MK in the 25th Knesset"
+    },
+    "5": {
+     "name": "Yair Fink"
+    },
+    "6": {
+     "name": "Gabriela (Gabi) Lasky Schutz"
+    },
+    "7": {
+     "name": "Omri Ronen"
+    },
+    "8": {
+     "name": "Michal Rozin",
+     "note": "Former MK"
+    },
+    "9": {
+     "name": "Moshe Radman"
+    },
+    "10": {
+     "name": "Sumaya Bashir"
+    }
+   }
+  },
+  "utj": {
+   "name": "United Torah Judaism",
+   "leader": "Yaakov Asher",
+   "summary": "A joint list of the Haredi parties Agudat Yisrael and Degel HaTorah.",
+   "topics": {
+    "security": "Sees foreign affairs and security as a central part of its work, but also decides according to Torah considerations.",
+    "religion": "Preserving the religious character of the state; since 1977 it has tended to support the right-wing bloc.",
+    "judiciary": "According to the party, the Supreme Court has accumulated excessive power, and its powers should be re-examined and clearly defined.",
+    "draft": "Party chairman Yaakov Asher: \"United Torah Judaism will not join a government that does not actually pass the law to regulate the status of yeshiva students.\""
+   },
+   "sourceLabels": {
+    "security": "Israel Democracy Institute",
+    "religion": "Israel Democracy Institute",
+    "judiciary": "Party position, ynet",
+    "draft": "Yaakov Asher statement, The Times of Israel"
+   },
+   "candidates": {
+    "1": {
+     "name": "Yaakov Asher",
+     "note": "MK in the 25th Knesset"
+    },
+    "2": {
+     "name": "Yitzhak Yissachar Goldknopf",
+     "note": "Former construction and housing minister"
+    },
+    "3": {
+     "name": "Yitzhak Zeev Pindrus",
+     "note": "MK in the 25th Knesset"
+    },
+    "4": {
+     "name": "Meir Porush",
+     "note": "Former minister"
+    },
+    "5": {
+     "name": "Moshe Azriel Rosenthal"
+    },
+    "6": {
+     "name": "Eli Stark"
+    },
+    "7": {
+     "name": "Yehuda Leib Weissfisch"
+    },
+    "8": {
+     "name": "Yoel Yaakov Tessler"
+    },
+    "9": {
+     "name": "David Zaltz"
+    },
+    "10": {
+     "name": "David Ohana"
+    }
+   }
+  },
+  "otzma": {
+   "name": "Otzma Yehudit",
+   "leader": "Itamar Ben Gvir",
+   "summary": "The Israel Democracy Institute describes it as a \"radical right-wing party.\"",
+   "topics": {
+    "security": "Encouraging voluntary emigration of Palestinians, disarming the Palestinian Authority, and changing the IDF's open-fire regulations and code of ethics. It presented a plan for the emigration of about 1.86 million Gaza residents within seven years.",
+    "religion": "Visiting the Temple Mount on Tisha B'Av, Ben Gvir said: \"Jews are praying and feel that they are the masters of this place.\"",
+    "economy": "Among its coalition demands: raising soldiers' pay and giving free land to combat soldiers.",
+    "judiciary": "Firing the attorney general as soon as the government is formed, a Knesset hearing and a two-thirds majority in the Constitution Committee to appoint Supreme Court justices, and curbing the powers of the High Court of Justice.",
+    "draft": "Ben Gvir: \"We have proven that Haredim can be integrated into meaningful service,\" through dedicated tracks in the police and the Border Police."
+   },
+   "sourceLabels": {
+    "security": "Party demands at a press conference, The Times of Israel",
+    "religion": "Ben Gvir on the Temple Mount, The Jerusalem Post",
+    "economy": "Party demands, The Jerusalem Post",
+    "judiciary": "Tally Gotliv's legal platform, The Times of Israel",
+    "draft": "Ben Gvir statement, ynet"
+   },
+   "candidates": {
+    "1": {
+     "name": "Itamar Ben Gvir",
+     "note": "National security minister in the 37th government"
+    },
+    "2": {
+     "name": "Revital Tally Gotliv",
+     "note": "MK in the 25th Knesset (from Likud)"
+    },
+    "3": {
+     "name": "Yitzhak Shimon Wasserlauf",
+     "note": "Minister in the 37th government"
+    },
+    "4": {
+     "name": "Amichai Eliyahu",
+     "note": "Heritage minister in the 37th government"
+    },
+    "5": {
+     "name": "Limor Son Har-Melech",
+     "note": "MK in the 25th Knesset"
+    },
+    "6": {
+     "name": "Yitzhak Kroizer",
+     "note": "MK in the 25th Knesset"
+    },
+    "7": {
+     "name": "Hanamel Shirai Dorfman"
+    },
+    "8": {
+     "name": "Tzachi Yitzhak Eliyahu"
+    },
+    "9": {
+     "name": "Yosef Yitzhak Goldberger"
+    },
+    "10": {
+     "name": "Itiel Yaakov Neiman"
+    }
+   }
+  },
+  "shas": {
+   "name": "Shas",
+   "leader": "Aryeh Deri",
+   "summary": "Founded in 1984 as a national party of Sephardi Haredim, under the slogan \"restoring past glory\" and led by the Council of Torah Sages.",
+   "topics": {
+    "security": "Supports peace arrangements with Arab states and opposes dividing Jerusalem; in key votes it has taken a hawkish right-wing line.",
+    "economy": "\"Advancing social justice.\"",
+    "judiciary": "Has not presented a detailed legal platform. Deri said he intends \"to fix the justice system from the ground up and return power to the people and their elected representatives.\"",
+    "draft": "Deri: \"No government will be formed in Israel with the support or participation of Shas without the status of yeshiva students being regulated.\""
+   },
+   "sourceLabels": {
+    "security": "Israel Democracy Institute",
+    "economy": "Israel Democracy Institute",
+    "judiciary": "Deri statement, ynet",
+    "draft": "Deri interview with Kikar HaShabbat, via The Times of Israel"
+   },
+   "candidates": {
+    "1": {
+     "name": "Aryeh Makhlouf Deri",
+     "note": "Shas chairman, former minister"
+    },
+    "2": {
+     "name": "Yinon Azulai",
+     "note": "MK in the 25th Knesset"
+    },
+    "3": {
+     "name": "Michael Moshe Malchieli",
+     "note": "Former minister"
+    },
+    "4": {
+     "name": "Yoav Ben Tzur",
+     "note": "Former minister"
+    },
+    "5": {
+     "name": "Haim Biton",
+     "note": "Former minister"
+    },
+    "6": {
+     "name": "Dror David Amos"
+    },
+    "7": {
+     "name": "Moshe Abutbul",
+     "note": "MK in the 25th Knesset"
+    },
+    "8": {
+     "name": "Uriel Menachem Buso",
+     "note": "Former health minister"
+    },
+    "9": {
+     "name": "Yosef Taieb",
+     "note": "MK in the 25th Knesset"
+    },
+    "10": {
+     "name": "Yonatan Mishriki",
+     "note": "MK in the 25th Knesset"
+    }
+   }
+  },
+  "yb": {
+   "name": "Yisrael Beytenu",
+   "leader": "Avigdor Liberman",
+   "summary": "Founded in 1999 by Avigdor Liberman. Opposes forming a government with Likud and the Haredi parties.",
+   "topics": {
+    "security": "Ending Israeli responsibility for the Gaza Strip, including closing the crossings and cutting off water, electricity and fuel supplies. According to the party, there is no point in an arrangement with the Palestinians alone.",
+    "religion": "Civil marriage and divorce, transferring authority over public transportation and businesses on Shabbat to local authorities, and conversion by city rabbis.",
+    "economy": "Less regulation, a smaller government and public sector, and breaking up monopolies, alongside topping up pensioners' income to the level of the minimum wage.",
+    "judiciary": "Adopting a constitution and establishing a constitutional court; opposes the \"French law\" and the override clause.",
+    "draft": "A compulsory draft law for every citizen at age 18 regardless of religion or origin, with a separate framework for Haredim and members of minorities within the Home Front Command."
+   },
+   "sourceLabels": {
+    "security": "Party platform",
+    "religion": "Party platform",
+    "economy": "Party platform",
+    "judiciary": "Party platform",
+    "draft": "Party platform"
+   },
+   "candidates": {
+    "1": {
+     "name": "Avigdor Liberman",
+     "note": "Former finance and defense minister"
+    },
+    "2": {
+     "name": "Rafael (Rafi) Ben Shitrit"
+    },
+    "3": {
+     "name": "Talia Lankri"
+    },
+    "4": {
+     "name": "Oded Forer",
+     "note": "Former agriculture minister"
+    },
+    "5": {
+     "name": "Yulia Malinovsky Konin",
+     "note": "MK in the 25th Knesset"
+    },
+    "6": {
+     "name": "Sharon Sharabi"
+    },
+    "7": {
+     "name": "Hamad Amar",
+     "note": "Former minister"
+    },
+    "8": {
+     "name": "Evgeny Sova",
+     "note": "MK in the 25th Knesset"
+    },
+    "9": {
+     "name": "Elvira Kolikhman"
+    },
+    "10": {
+     "name": "Dan Eliyahu Yaakov Illouz"
+    }
+   }
+  },
+  "joint": {
+   "name": "Joint List",
+   "leader": "Yousef Jabareen",
+   "summary": "A joint list of Hadash, Ta'al and Balad, first formed ahead of the election for the 20th Knesset.",
+   "topics": {
+    "security": "Ending the occupation and stopping the war, and establishing a sovereign Palestinian state on the June 4, 1967 borders with East Jerusalem as its capital, alongside Israel. Opposes annexation and settlement expansion.",
+    "religion": "Repealing the Nation-State Law and a constitutional basis of equal citizenship for all citizens, including separation of religion and state.",
+    "economy": "Raising the minimum wage to at least 70% of the average wage, progressive taxation, and opposition to privatizing education, health and housing. Shifting budgets from the war and the settlements to social services.",
+    "judiciary": "Supports reforms that strengthen democratic protections, especially for minorities, and a balanced mechanism for appointing judges that preserves judicial independence; \"The justice system must protect the rights of all citizens without exception.\"",
+    "draft": "Rejects all forms of compulsory conscription, including civilian service programs, and supports free volunteering in the community."
+   },
+   "sourceLabels": {
+    "security": "Party platform",
+    "religion": "Party platform",
+    "economy": "Party platform",
+    "judiciary": "Party position, ynet",
+    "draft": "Party platform"
+   },
+   "candidates": {
+    "1": {
+     "name": "Yousef Jabareen",
+     "note": "Former MK"
+    },
+    "2": {
+     "name": "Ahmad Tibi",
+     "note": "MK in the 25th Knesset"
+    },
+    "3": {
+     "name": "Sami Abou Shahadeh",
+     "note": "Former MK. Withdrew from the race on October 2, amid proceedings at the High Court of Justice to disqualify him"
+    },
+    "4": {
+     "name": "Faten Ghattas"
+    },
+    "5": {
+     "name": "Bakr Awawdeh"
+    },
+    "6": {
+     "name": "Ofer Cassif",
+     "note": "MK in the 25th Knesset"
+    },
+    "7": {
+     "name": "Youssef Atauna",
+     "note": "MK in the 25th Knesset"
+    },
+    "8": {
+     "name": "Maha Karkabi Sabbah"
+    },
+    "9": {
+     "name": "Ahmad Darawshe"
+    },
+    "10": {
+     "name": "Nihaya Washahi"
+    }
+   }
+  },
+  "rzp": {
+   "name": "Religious Zionism and Zehut",
+   "leader": "Bezalel Smotrich",
+   "summary": "Smotrich's National Union–Tkuma and Moshe Feiglin's Zehut. The Israel Democracy Institute places it \"on the far right of the political map.\"",
+   "topics": {
+    "security": "Smotrich called for applying sovereignty in Judea and Samaria \"before the election\" and declared: \"On my watch there will be no Palestinian state. Period.\"",
+    "religion": "Strengthening Jewish education in schools and the Jewish identity and character of the state.",
+    "economy": "Expanding the free market and encouraging private enterprise.",
+    "judiciary": "Smotrich: \"The election is about the justice system.\" The plan: an override clause with a 61-vote majority, splitting the attorney general's role and making legal advisers political appointees, and limiting interim injunctions and legal standing. Implementing it is a condition for joining the coalition.",
+    "draft": "Will enshrine in a Basic Law the status of those who serve in the IDF and the reserves (\"whoever serves gets everything\"); widening the circle of those who serve will also include drafting Haredim. Did not address sanctions on draft evaders."
+   },
+   "sourceLabels": {
+    "security": "Smotrich statement, The Times of Israel",
+    "religion": "Israel Democracy Institute",
+    "economy": "Israel Democracy Institute",
+    "judiciary": "Smotrich statement and party plan, ynet",
+    "draft": "Party announcement, ynet"
+   },
+   "candidates": {
+    "1": {
+     "name": "Bezalel Yoel Smotrich",
+     "note": "Finance minister in the 37th government"
+    },
+    "2": {
+     "name": "Moshe Zalman Feiglin",
+     "note": "Zehut chairman, former MK"
+    },
+    "3": {
+     "name": "Orit Malka Strock",
+     "note": "Settlement minister in the 37th government"
+    },
+    "4": {
+     "name": "Simcha Dan Rothman",
+     "note": "Chairman of the Constitution Committee in the 25th Knesset"
+    },
+    "5": {
+     "name": "Zvi (Zvika) Mor"
+    },
+    "6": {
+     "name": "Itamar Mordechai Eitam"
+    },
+    "7": {
+     "name": "Zvi Yedidya Sukkot",
+     "note": "MK in the 25th Knesset"
+    },
+    "8": {
+     "name": "Yitzhak Hai Zaga"
+    },
+    "9": {
+     "name": "Reut Ben Haim"
+    },
+    "10": {
+     "name": "Omer Petsinyash Waldman"
+    }
+   }
+  },
+  "raam": {
+   "name": "Ra'am",
+   "leader": "Mansour Abbas",
+   "summary": "An Arab party founded in 1996; in 2021 it left the Joint List and was a member of the Bennett-Lapid government's coalition.",
+   "topics": {
+    "security": "Mansour Abbas reiterated his support for \"recognizing the Palestinian state alongside the State of Israel.\"",
+    "economy": "Developing industrial zones near Arab communities.",
+    "judiciary": "The party has not presented an updated position. Abbas: \"No governing authority should have absolute power\"; he proposed adding opposition representatives and representatives of Arab society to the Judicial Selection Committee.",
+    "draft": "Opposes a law that would require young Arabs to serve; declined to address the drafting of Haredim."
+   },
+   "sourceLabels": {
+    "security": "Mansour Abbas statement, The Jerusalem Post",
+    "economy": "Israel Democracy Institute",
+    "judiciary": "Party position and Abbas statement, ynet",
+    "draft": "Party position, ynet"
+   },
+   "candidates": {
+    "1": {
+     "name": "Mansour Abbas",
+     "note": "Ra'am chairman, MK in the 25th Knesset"
+    },
+    "2": {
+     "name": "Yoav Segalovitz",
+     "note": "Former deputy minister (from Yesh Atid)"
+    },
+    "3": {
+     "name": "Walid Taha",
+     "note": "MK in the 25th Knesset"
+    },
+    "4": {
+     "name": "Waleed Alhwashla",
+     "note": "MK in the 25th Knesset"
+    },
+    "5": {
+     "name": "Iman Khatib-Yassin",
+     "note": "MK in the 25th Knesset"
+    },
+    "6": {
+     "name": "Yasser Hujirat",
+     "note": "MK in the 25th Knesset"
+    },
+    "7": {
+     "name": "Ibrahim al-Turi"
+    },
+    "8": {
+     "name": "Abd al-Karim Masri"
+    },
+    "9": {
+     "name": "Abd al-Karim Azzam"
+    },
+    "10": {
+     "name": "Ibrahim Abu Laban"
+    }
+   }
+  },
+  "reservists": {
+   "name": "The Reservists and the Economic Party",
+   "leader": "Yoaz Hendel and Yaron Zelekha",
+   "summary": "Former minister Yoaz Hendel's Reservists party (founded in 2025), on a joint list with Yaron Zelekha's New Economic Party.",
+   "topics": {
+    "security": "Working against the establishment of a Palestinian state, strengthening settlement in Judea and Samaria and \"sovereignty through action\" in Area C.",
+    "economy": "\"Encouraging competition and a free market\": tax benefits for companies that employ people in the periphery, removing barriers for businesses and breaking up economic concentration.",
+    "judiciary": "Changes to the justice system \"based on broad agreement\": external, independent oversight of the justice system, splitting the attorney general's roles, and a Basic Law: Legislation.",
+    "draft": "\"Whoever does not serve will get nothing from the state\": revoking the right to vote and to run for office and revoking driver's licenses, alongside service frameworks adapted for Haredim."
+   },
+   "sourceLabels": {
+    "security": "Reservists platform",
+    "economy": "Reservists platform",
+    "judiciary": "Reservists platform",
+    "draft": "Reservists platform"
+   },
+   "candidates": {
+    "1": {
+     "name": "Yoaz Hendel",
+     "note": "Former communications minister"
+    },
+    "2": {
+     "name": "Yaron Zelekha",
+     "note": "Former accountant general"
+    },
+    "3": {
+     "name": "Einat Wilf",
+     "note": "Former MK"
+    },
+    "4": {
+     "name": "Haviv Wolibovitz"
+    },
+    "5": {
+     "name": "Yoav Shlomo Adomi"
+    },
+    "6": {
+     "name": "Ofir Shai Langman"
+    },
+    "7": {
+     "name": "Shlomi Damari"
+    },
+    "8": {
+     "name": "Lior Gilboa"
+    },
+    "9": {
+     "name": "Tehila Peretz"
+    },
+    "10": {
+     "name": "Shalom Biton"
+    }
+   }
+  },
+  "amcha": {
+   "name": "Amcha Yisrael",
+   "leader": "Ofer Winter",
+   "summary": "A party founded ahead of the 2026 election by Brig. Gen. (res.) Ofer Winter.",
+   "topics": {
+    "security": "\"A swift decisive victory, exacting a territorial price from the enemy\" instead of rounds of fighting, and a voluntary emigration plan for Gaza residents who wish to leave, with international agreement. Strengthening settlement in border areas.",
+    "religion": "A \"Jewish, Zionist and sovereign\" state in which Judaism is \"a family, not a battlefield\"; education in Jewish values and Zionism, and no funding for schools that teach anti-Zionist content.",
+    "economy": "A free market, breaking up monopolies and removing import barriers and regulation to lower the cost of living; tax benefits for businesses that employ those who serve.",
+    "judiciary": "Splitting the attorney general's role into an independent prosecutor general and a legal adviser to the government, and establishing a \"supreme court of appeal\" over High Court of Justice rulings.",
+    "draft": "Universal compulsory service: military for those suited to it and national service for those who cannot serve in the military, with graded rewards. Tracks for \"Torah excellence\" will be preserved, with objective criteria for quotas of Torah students."
+   },
+   "sourceLabels": {
+    "security": "Party platform",
+    "religion": "Party platform",
+    "economy": "Party platform",
+    "judiciary": "Party platform",
+    "draft": "Party platform"
+   },
+   "candidates": {
+    "1": {
+     "name": "Ofer Winter",
+     "note": "Brig. Gen. (res.)"
+    },
+    "2": {
+     "name": "Yoseph Haddad"
+    },
+    "3": {
+     "name": "Natali Shem Tov"
+    },
+    "4": {
+     "name": "Eran Ben Ari"
+    },
+    "5": {
+     "name": "Fleur Hassan-Nahoum",
+     "note": "Former deputy mayor of Jerusalem"
+    },
+    "6": {
+     "name": "Lali Deri"
+    },
+    "7": {
+     "name": "Ronen Bodnaru"
+    },
+    "8": {
+     "name": "David Nahum Ben Zion"
+    },
+    "9": {
+     "name": "Aviv Haim Ezra"
+    },
+    "10": {
+     "name": "Eli Gino"
+    }
+   }
+  },
+  "bw": {
+   "name": "Blue and White",
+   "leader": "Benny Gantz",
+   "summary": "A centrist party founded to bridge divides in Israeli society; the Israel Democracy Institute describes it as moderate and conciliatory on religion and state. In every poll here it is below the electoral threshold.",
+   "withdrawn": "On October 19, Benny Gantz announced that Blue and White will not run in the election, after it failed to pass the electoral threshold in the polls. Its ballot slip will still be at the polling station because it is too late to remove it, but the party is not running, and a vote for it will not get it into the Knesset.",
+   "topics": {
+    "religion": "A moderate, conciliatory approach and an empathetic attitude toward the religious and Haredi public.",
+    "draft": "A \"Service for All\" framework: every young man and woman will serve the state; economic sanctions, benefits first and foremost for those who serve, and an \"exemption\" only for outstanding individuals within quotas."
+   },
+   "sourceLabels": {
+    "religion": "Israel Democracy Institute",
+    "draft": "Party's response to a ynet inquiry"
+   },
+   "candidates": {
+    "1": {
+     "name": "Benjamin (Benny) Gantz",
+     "note": "20th IDF chief of staff, former defense minister"
+    },
+    "2": {
+     "name": "Pnina Tamano",
+     "note": "Former minister"
+    },
+    "3": {
+     "name": "Geula Aliza Bloch"
+    },
+    "4": {
+     "name": "Roy Konkol"
+    },
+    "5": {
+     "name": "Retem Avidar Tsalik"
+    },
+    "6": {
+     "name": "Alon Natan Schuster",
+     "note": "Former MK"
+    },
+    "7": {
+     "name": "Mufid Mar'i"
+    },
+    "8": {
+     "name": "Malka Yehudit Oliel"
+    },
+    "9": {
+     "name": "Ariel Bazi"
+    },
+    "10": {
+     "name": "Moriah Silfan"
+    }
+   }
+  }
+ },
+ "minor": {
+  "צדק": {
+   "name": "Sharshar for Love and the Unity of the People",
+   "head": "Eitan Shvili",
+   "description": "A new party led by businessman Eitan Shvili (\"Sharshar\"), who presents himself as a candidate for prime minister and says his party will bring unity and effective governance."
+  },
+  "ד": {
+   "name": "Partnership for All",
+   "head": "Talal al-Krenawi",
+   "description": "A party that has announced it will put the fight against crime and violence in Arab society at the center of its activity, and will act against home demolitions and against corruption in local authorities.",
+   "note": "Al-Krenawi, a resident of Rahat, was previously a member of Kadima and Labor"
+  },
+  "צף": {
+   "name": "The Pirates",
+   "head": "Ohad Shem Tov",
+   "description": "Part of the global Pirate movement; the party lists individual freedom, freedom of information, transparency and participatory democracy as its principles.",
+   "note": "Has run in elections since 2013 without passing the electoral threshold; Prof. Dan Ariely is in third place"
+  },
+  "י": {
+   "name": "Israel First",
+   "head": "Sharren Haskel",
+   "description": "A party that seeks to be a political home for the Zionist, statist, security-minded and national-liberal right, and puts the draft and equal sharing of the burden at its center.",
+   "note": "Sharren Haskel – outgoing MK and former deputy foreign minister; the Ale Yarok party has joined the list"
+  },
+  "ה": {
+   "name": "Garden of Eden",
+   "head": "Yeshua Yisrael Ben David",
+   "description": "A party presenting a vision of \"a government of peace, justice, freedom and abundance,\" centered on a \"national jubilee\" plan to move Israel \"from a debt economy to a life economy.\"",
+   "note": "The Elections Committee rejected the ballot letters the list requested (Yod-He) and approved He alone"
+  },
+  "קה": {
+   "name": "Women's Voice",
+   "head": null,
+   "description": "A party founded in 2020 to strengthen the presence of women in politics and achieve fair representation for women in the Knesset.",
+   "note": "The description is from 2020, when it was led by Dr. Mazal Shaul; the name at the top of the 2026 candidate list is \"Yisrael Shadmi Amir\""
+  },
+  "בד": {
+   "name": "Together We Will Succeed – An Arab-Jewish List",
+   "head": "Avi Shaked",
+   "description": "A joint Jewish-Arab list that holds that Jewish and Arab citizens share an interest: full civil equality, personal security in every community, and a diplomatic path to stability and peace – \"not tolerance, not promises – partnership.\"",
+   "note": "Avi Shaked is a co-founder of the 888 company and previously ran for the leadership of the Labor Party"
+  },
+  "קץ": {
+   "name": "Fair Trial",
+   "head": "Larissa Trimbobler-Amir",
+   "description": "A party led by Larissa Trimbobler-Amir that demands a retrial for Yigal Amir.",
+   "note": "Trimbobler-Amir is Yigal Amir's wife; in 2021 the Elections Committee did not allow \"to free Yigal Amir\" to be added to the list's name"
+  },
+  "נף": {
+   "name": "Shema",
+   "head": "Naftali Goldman",
+   "description": "A party calling for a return to a moral society, built on three pillars: community, kindness and Jewish unity.",
+   "note": "The platform on its website was written mostly in 2020"
+  },
+  "קך": {
+   "name": "New Order for a Constitution, Separation of Powers and Direct Elections",
+   "head": "Avital Ofek",
+   "description": "A list working to change the electoral and government system: adopting a constitution, separation of powers and direct elections.",
+   "note": "According to an earlier party platform: regional elections to the Knesset and direct election of the prime minister"
+  },
+  "זך": {
+   "name": "The Haredi Public",
+   "head": "Moti Litner",
+   "description": "A Haredi party that advocates protecting Torah students alongside security service in adapted tracks for those who are not studying, strengthening Haredi education and employment, and supports a free economy.",
+   "note": "Litner is deputy mayor of Beit Shemesh; the list has two women in its top four places"
+  },
+  "פה": {
+   "name": "You and Me – The Israeli People's Party",
+   "head": "Alon Giladi",
+   "description": null
+  },
+  "זץ": {
+   "name": "Eternal Covenant for the Redemption of Israel",
+   "head": "Ofer Lifshitz",
+   "description": "A party calling for direct election of a president as head of the executive branch, regional elections to the Knesset, cancellation of the Oslo Accords, and applying Israeli sovereignty to Judea, Samaria and the Gaza Strip.",
+   "note": "Has run in previous elections since 2006"
+  },
+  "נקי": {
+   "name": "Reform of the Electoral and Government System",
+   "head": "Moshe Slomovich",
+   "description": null
+  },
+  "יק": {
+   "name": "Gahat – The Biblical Bloc",
+   "head": "Moshe Lifkin",
+   "description": "A party calling for preparations for the mass immigration of millions of Jews to Israel.",
+   "note": "The description is from 2020, when it was led by Avi Lifkin; in 2026 Moshe Lifkin heads the candidate list"
+  },
+  "ז": {
+   "name": "Betach – Social Security",
+   "head": "Semion Grafman",
+   "description": "A social party that presents itself as representing \"the citizens who carry the burden,\" focusing on socio-economic issues and the fight against bureaucracy and corruption, with no diplomatic agenda.",
+   "note": "The description is from the party's 2019 campaign; Grafman is a social activist and social media personality"
+  },
+  "בקר": {
+   "name": "Lights of Dawn",
+   "head": "Nissim Louk",
+   "description": "A party that presents itself as \"a party for everyone.\"",
+   "note": "Nissim Louk is the father of the late Shani Louk, who was murdered on October 7"
+  },
+  "נץ": {
+   "name": "Personal Security",
+   "head": "Michael Topchiashvili",
+   "description": null
+  },
+  "נר": {
+   "name": "Black Color – Defender of the Torah World",
+   "head": "Eliyahu Eliezer Baumrind",
+   "description": "A Haredi party that began as an alert network against the draft, and seeks to restore the \"Torato Umanuto\" (Torah study as occupation) arrangement without sanctions.",
+   "note": "According to the report, dozens of rabbis and yeshiva heads are behind the initiative"
+  },
+  "צבי": {
+   "name": "Ahi Movement",
+   "head": "Yuval Elmaleh",
+   "description": "A list that presents itself as \"the movement of the late Rabbi Yoram Abergel.\""
+  },
+  "בי": {
+   "name": "Tzomet Beit Yisrael",
+   "head": "Gadi Yevarkan",
+   "description": "A joint list of Beit Yisrael and Tzomet, presenting itself as \"the third camp on the right\": a Zionist right that combines security and nationalism with socio-economic responsibility, and supports national service for every citizen.",
+   "note": "Yevarkan left Likud in July 2026"
+  },
+  "ק": {
+   "name": "Tkuma",
+   "head": "Elkana Federman",
+   "description": "A new party that seeks to represent young people, the Nova community, bereaved families, and combat soldiers and reservists who, it says, have no political home.",
+   "note": "Federman was the security officer at the Nova festival"
+  },
+  "רץ": {
+   "name": "HaKahal",
+   "head": "Shlomo Elboim",
+   "description": "An all-Haredi party demanding that its Knesset representatives be chosen in primaries and answer to the \"Kahal Council,\" an elected body of public representatives.",
+   "note": "Elboim is a member of the Bnei Brak city council"
+  },
+  "ני": {
+   "name": "Noam for Israel",
+   "head": "Avi Maoz",
+   "description": "A religious-nationalist party that puts the Jewish identity of the state at its center, under the slogan \"Free to be Jewish.\"",
+   "note": "Avi Maoz is an outgoing MK (the party's only representative)"
+  }
+ },
+ "coalition": {
+  "likud": {
+   "recommends": "Netanyahu, the party chairman",
+   "wontSitWith": [
+    "Netanyahu: \"No left-wing government that depends on the Arab parties\"",
+    "Netanyahu: \"No left-wing government that depends on the Arab parties\""
+   ],
+   "wontSitWithNotes": [
+    null,
+    null
+   ],
+   "conditions": []
+  },
+  "yashar": {
+   "recommends": "The head of the largest party in the bloc will be the candidate; Eisenkot is running for the post",
+   "wontSitWith": [
+    "Ruled out a joint government with Netanyahu; \"unfit to lead\" because of October 7",
+    "\"I don't see an Arab party that accepts my principles\"",
+    "\"I don't see an Arab party that accepts my principles\""
+   ],
+   "wontSitWithNotes": [
+    "Applies to Netanyahu himself, not to Likud as a whole",
+    null,
+    null
+   ],
+   "conditions": [
+    "A partner must accept Israel as a Jewish and democratic state, the values of the Declaration of Independence and the duty to serve",
+    "\"Whoever does not accept that Hamas is a terrorist organization that must be dismantled will not be a partner in the government\""
+   ]
+  },
+  "together": {
+   "recommends": "Bennett, the list's chairman, is a candidate for prime minister",
+   "wontSitWith": [
+    "\"We will not sit with him in any configuration\" (after hinting otherwise the same day)",
+    "Asked about a partnership with Ben Gvir, he answered: \"No\"",
+    "\"We will rely only on the Zionist parties. The Arab parties are not Zionist\"",
+    "\"We will rely only on the Zionist parties. The Arab parties are not Zionist\""
+   ],
+   "wontSitWithNotes": [
+    "Applies to Netanyahu himself, not to Likud as a whole",
+    null,
+    null,
+    null
+   ],
+   "conditions": [
+    "\"The door is locked to anyone who supports draft evasion\" – including the Haredi parties",
+    "\"The Deri Law\": a draft evader will not serve in the security cabinet – a \"basic condition\" for joining the government"
+   ]
+  },
+  "dems": {
+   "recommends": "The head of the largest party in the bloc; \"right now Eisenkot is the natural candidate\"",
+   "wontSitWith": [
+    "Rules out a government with Netanyahu and Likud",
+    "Golan: we will not sit with the Haredi parties in the same coalition",
+    "Golan: we will not sit with the Haredi parties in the same coalition"
+   ],
+   "wontSitWithNotes": [
+    null,
+    null,
+    null
+   ],
+   "conditions": [
+    "\"In our government there will be zero people under criminal indictment\" – an indicted person will not serve as prime minister or minister"
+   ]
+  },
+  "utj": {
+   "recommends": null,
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": [
+    "\"We will not join a government that does not actually pass the law\" regulating the status of yeshiva students"
+   ]
+  },
+  "otzma": {
+   "recommends": null,
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": [
+    "A \"threshold condition\": removing Attorney General Gali Baharav-Miara as soon as the government is formed",
+    "A demand for the defense portfolio for Ben Gvir (presented as a condition for joining)"
+   ]
+  },
+  "shas": {
+   "recommends": "Netanyahu: \"We support Netanyahu, period\"",
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": [
+    "No government will be formed with the support or participation of Shas without regulating the status of yeshiva students"
+   ]
+  },
+  "yb": {
+   "recommends": "Liberman presents himself as a candidate for prime minister",
+   "wontSitWith": [
+    "Will not sit with Netanyahu \"under any circumstances\"; Likud without Netanyahu is a possible partner",
+    "\"Without Ra'am, without the Joint List, without Shas and without United Torah Judaism\"",
+    "\"Without Ra'am, without the Joint List, without Shas and without United Torah Judaism\"",
+    "\"Without Ra'am, without the Joint List, without Shas and without United Torah Judaism\"",
+    "\"Without Ra'am, without the Joint List, without Shas and without United Torah Judaism\""
+   ],
+   "wontSitWithNotes": [
+    "Applies to Netanyahu himself, not to Likud as a whole",
+    null,
+    null,
+    null,
+    null
+   ],
+   "conditions": [
+    "A coalition of Zionist parties only",
+    "\"We will not support any minority government, not even temporarily\""
+   ]
+  },
+  "joint": {
+   "recommends": null,
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": [
+    "Condition for supporting the government (from outside): a funded plan to eradicate crime in Arab society",
+    "Condition for support: stopping home demolitions and recognizing the unrecognized villages in the Negev",
+    "Condition for support: \"a diplomatic horizon for the Palestinians\""
+   ]
+  },
+  "rzp": {
+   "recommends": "Netanyahu",
+   "wontSitWith": [
+    "Ruled out relying on Arab parties; a government with Ra'am is \"worse than the October 7 massacre\"",
+    "Ruled out relying on Arab parties to form a government"
+   ],
+   "wontSitWithNotes": [
+    null,
+    null
+   ],
+   "conditions": []
+  },
+  "raam": {
+   "recommends": null,
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": []
+  },
+  "reservists": {
+   "recommends": "\"Whoever brings the most Zionist seats – that's who we will recommend\"",
+   "wontSitWith": [
+    "\"We will not sit in a 61-seat coalition with Netanyahu and the Haredim\"",
+    "\"We will not sit in a 61-seat coalition with the Arab parties\"",
+    "\"We will not sit in a 61-seat coalition with the Arab parties\""
+   ],
+   "wontSitWithNotes": [
+    "Only in a narrow 61-seat coalition",
+    "Only in a narrow 61-seat coalition",
+    "Only in a narrow 61-seat coalition"
+   ],
+   "conditions": []
+  },
+  "amcha": {
+   "recommends": "Netanyahu: \"The head of the right-wing camp is Netanyahu, and we will recommend only him\"",
+   "wontSitWith": [],
+   "wontSitWithNotes": [],
+   "conditions": [
+    "\"We will not join a government that does not pass, before it is formed, a law that puts an end to draft evasion\""
+   ]
+  }
+ },
+ "categories": {
+  "security": "Security and diplomacy",
+  "religion": "Religion and state",
+  "economy": "Economy and society",
+  "judiciary": "Justice system",
+  "draft": "Draft and service"
+ },
+ "blocs": {
+  "coalition": "Outgoing coalition parties",
+  "opposition": "Opposition parties",
+  "arab": "Arab parties"
+ },
+ "whyVote": {
+  "metaTitle": "Why vote · Political Map 2026",
+  "metaDescription": "What happens to your vote, what happens to a blank ballot, and how many votes decided the result last time.",
+  "title": "Why vote at all?",
+  "intro": "Because your vote is worth more than it seems. Here are the numbers from the last election, and what really happens to the ballot you put, or don't put, in the box.",
+  "statVotedLabel": "voted in the 2022 election",
+  "statNotVotedValue": "{notVotedMillions} million",
+  "statNotVotedLabel": "eligible voters did not vote",
+  "statPerSeatValue": "~{perSeatThousands},000",
+  "statPerSeatLabel": "votes were worth one seat",
+  "statMeretzLabel": "votes short of getting Meretz into the Knesset",
+  "reason1Title": "The Knesset decides things that affect everyone",
+  "reason1P1": "The Knesset that is elected will vote on the budget, the draft law, the justice system, the war and diplomatic arrangements. It also determines who forms the government. All of this will affect prices, military service, education and security over the next four years, including for those who did not vote.",
+  "reason2Title": "Elections are decided by small margins",
+  "reason2P1": "In 2022, Meretz received {meretzVotes} votes, 3.16%, and was about {meretzShort} votes short of passing the electoral threshold. Had it passed, it would have received about 4 seats, at the expense of other parties.",
+  "reason2P2": "The four parties that formed the government together received 48.4% of the valid votes, and that was enough for 64 seats, because {lostVotes} votes went to lists that did not pass the threshold and were not counted in the seat allocation. A few thousand votes one way or the other can change the whole picture.",
+  "reason3Title": "If you don't vote, you let others decide",
+  "reason3P1": "Seats are divided according to the votes of those who showed up. If half your neighborhood doesn't vote, the Knesset will reflect the other half. There is no \"protest\" that gets counted: whoever stays home simply does not appear in the results.",
+  "blankTitle": "What about a blank ballot?",
+  "blankP1": "A blank ballot (or an empty envelope) counts as an invalid vote. It is not counted anywhere: not in the seat allocation, not in calculating the electoral threshold, and not as an official \"protest.\" In 2022 there were {invalidVotes} invalid votes, and none of them affected the result.",
+  "blankP1Bold": "an invalid vote",
+  "blankP2": "As far as the elected Knesset is concerned, a blank ballot is exactly the same as staying home. The only difference is that it raises the turnout figure in the statistics.",
+  "blankP3": "If no party feels perfect to you, that's normal. Almost no one agrees with a party on every issue. You can choose the one closest to you on the issues that matter most to you, and a vote like that does make a difference.",
+  "startTitle": "I have no one to vote for. Where do I start?",
+  "cardQuizTitle": "Short quiz",
+  "cardQuizText": "10 questions, and you'll see which party is closest to your views.",
+  "cardTopicsTitle": "The issues",
+  "cardTopicsText": "What each party says about security, the economy, religion, the draft and the justice system.",
+  "cardCompareTitle": "Compare",
+  "cardCompareText": "Two parties side by side, issue by issue.",
+  "thresholdNote": "Mind the electoral threshold: a vote for a list that does not pass 3.25% is not counted in the seat allocation. Each party's page shows how many seats it gets in the polls.",
+  "dayTitle": "On election day, October 27",
+  "dayBullet1": "Polling stations are open from 07:00 to 22:00, and election day is a public holiday.",
+  "dayBullet2": "You can vote only at the polling station you are assigned to, based on the address registered with the Interior Ministry.",
+  "dayBullet3": "Bring photo ID: an identity card, passport or driver's license.",
+  "dayBullet4Before": "Find your polling station on the website of the",
+  "dayBullet4Link": "Central Elections Committee",
+  "dayBullet4After": ".",
+  "afterPollsLink": "What happens after the polls close",
+  "footnoteBefore": "Figures from the 2022 election are based on",
+  "footnoteLink": "the official results as summarized on Wikipedia",
+  "footnoteAfter": ". The number of people who did not vote, the value of a seat and how far Meretz fell short are our own calculations from the same data. \"Eligible voters\" also includes citizens who live abroad and cannot vote. The site does not recommend any party."
+ },
+ "ui": {
+  "siteName": "Political Map",
+  "siteTitle": "Political Map 2026",
+  "siteDescription": "The parties, their positions and their candidates in the election for the 26th Knesset, October 27, 2026",
+  "navParties": "Parties",
+  "navTowns": "2022 results by town",
+  "navWhy": "Why vote",
+  "menu": "Menu",
+  "daysLeft": "{n} days until the election",
+  "homeMetaTitle": "Parties · Political Map 2026",
+  "homeTitle": "Election for the 26th Knesset",
+  "homeIntro": "The election is on Tuesday, October 27, 2026. Here you'll find the parties, what they say about the key issues, who is on their lists, and how many seats they get in the polls.",
+  "seatsTitle": "Seats in the polls",
+  "seatsSub": "Average of the last {n} polls. Forming a government takes 61 of 120 seats.",
+  "partiesTitle": "Parties",
+  "withdrawnShort": "Withdrew from the race",
+  "avgSeats": "{n} seats on average",
+  "ledBy": "Led by {name}",
+  "minorTitle": "{n} other lists are running",
+  "minorText": "These lists do not pass the electoral threshold in any poll we found. A vote for a list that does not pass 3.25% is not counted in the seat allocation.",
+  "source": "Source",
+  "sourceDate": "{label}, {date}",
+  "townsCardTitle": "How did your town vote in 2022?",
+  "townsCardText": "Search for your town and see the results and turnout.",
+  "whyCardTitle": "Why vote at all?",
+  "whyCardText": "What happens to your vote and what happens to a blank ballot.",
+  "allParties": "All parties",
+  "ballotNote": "The ballot slip",
+  "withdrawnBold": "The party has withdrawn from the race.",
+  "statAvg": "Average of {n} polls",
+  "belowThreshold": "Below the threshold",
+  "statRange": "Range in the polls",
+  "positionsTitle": "Positions",
+  "noPosition": "We found no statement from the party on this issue.",
+  "coalitionTitle": "Who will it sit with in government?",
+  "recommends": "Recommends",
+  "wontSitWith": "Won't sit with",
+  "conditions": "Conditions",
+  "listTitle": "The list",
+  "fullListBefore": "The full list as submitted to the Central Elections Committee,",
+  "fullListLink": "in Hebrew",
+  "cutoffLine": "Cutoff based on the poll average: {n} seats",
+  "cutoffNote": "Those above the line enter the Knesset if the party gets its poll average. Range in the polls: {range}.",
+  "footerSourcesLabel": "Sources:",
+  "footerSrc1": "Candidate lists and party descriptions from the",
+  "footerSrcIdi": "Israel Democracy Institute",
+  "footerSrc2": "; polls from the",
+  "footerSrcSkarim": "skarim.org poll archive",
+  "footerSrc3": "; party positions from their platforms, websites and statements, with a link and date for each position. The English text is translated from Hebrew.",
+  "footerNeutral": "The site is not affiliated with any party and does not recommend any party.",
+  "calendarGoogle": "Add to Google Calendar",
+  "calendarOther": "Add to another calendar (Apple / Outlook)"
+ },
+ "towns": {
+  "metaTitle": "How my town voted · Political Map 2026",
+  "metaDescription": "Results of the election for the 25th Knesset (2022) in every city and town, and what each list has become today.",
+  "title": "How did my town vote in 2022?",
+  "intro": "The official results of the last election in every city and town, compared with the whole country. Under each list it says what that list is today, because many have split or merged since then.",
+  "sourceLabel": "Source:",
+  "sourceLink": "Central Elections Committee final results by town",
+  "sourceMid": "(the official file, via a",
+  "mirrorLink": "copy on GitHub",
+  "sourceAfter": ", which we checked against the national vote total). \"Whole country\" also includes double-envelope votes, such as soldiers', that are not assigned to a town. Lists that received less than half a percent in a town are counted under \"Other lists.\" Town names in English are as given in the official file.",
+  "search": "Type the name of a city, town or village",
+  "national": "Whole country",
+  "turnout": "Turnout",
+  "nationalTurnout": "nationwide",
+  "voters": "Eligible voters",
+  "valid": "Valid votes",
+  "other": "Other lists",
+  "nowIs": "In 2026:",
+  "gone": "Not running in 2026",
+  "marker": "The thin line marks the nationwide result.",
+  "loading": "Loading…",
+  "none": "We found no town by that name.",
+  "lists": {
+   "מחל": "Likud",
+   "פה": "Yesh Atid",
+   "ט": "Religious Zionism",
+   "כן": "National Unity",
+   "שס": "Shas",
+   "ג": "United Torah Judaism",
+   "ל": "Yisrael Beytenu",
+   "עם": "Ra'am",
+   "ום": "Hadash-Ta'al",
+   "אמת": "Labor",
+   "מרצ": "Meretz",
+   "ד": "Balad",
+   "ב": "Jewish Home"
+  }
+ }
+}

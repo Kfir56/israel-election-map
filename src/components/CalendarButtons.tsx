@@ -6,15 +6,16 @@ const GOOGLE =
   "&dates=20261027T040000Z/20261027T190000Z" +
   `&details=${encodeURIComponent("הקלפיות פתוחות 07:00-22:00. להביא תעודה מזהה עם תמונה. בודקים את הקלפי באתר ועדת הבחירות: https://www.bechirot.gov.il/")}`;
 
-export default function CalendarButtons({ ar = false }: { ar?: boolean }) {
+// Hebrew by default; the translated sections pass their own labels.
+export default function CalendarButtons({ labels }: { labels?: { google: string; other: string } }) {
   const btn = "rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-800";
   return (
     <div className="mt-3 flex flex-wrap gap-2">
       <a href={GOOGLE} target="_blank" rel="noreferrer" className={btn}>
-        📅 {ar ? "إضافة إلى تقويم Google" : "להוסיף ליומן גוגל"}
+        📅 {labels?.google ?? "להוסיף ליומן גוגל"}
       </a>
       <a href="/election-day.ics" className={btn}>
-        📅 {ar ? "إضافة إلى تقويم آخر (Apple / Outlook)" : "להוסיף ליומן אחר (אפל / אאוטלוק)"}
+        📅 {labels?.other ?? "להוסיף ליומן אחר (אפל / אאוטלוק)"}
       </a>
     </div>
   );

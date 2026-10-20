@@ -15,17 +15,55 @@ const links = [
   { href: "/coalitions", label: "קואליציות" },
   { href: "/results", label: "תוצאות" },
   { href: "/why-vote", label: "למה להצביע" },
+  { href: "/election-day", label: "יום הבחירות" },
   { href: "/predict", label: "החיזוי שלי" },
-  { href: "/friends", label: "חברים" },
-  { href: "/dashboard", label: "הלוח של החברים" },
 ];
 
-// The Arabic section covers the explainer pages; the game and friends stay Hebrew.
-const arLinks = [
-  { href: "/ar", label: "الأحزاب" },
-  { href: "/ar/towns", label: "نتائج 2022 حسب البلدة" },
-  { href: "/ar/why-vote", label: "لماذا نصوّت" },
+// The translated sections cover the explainer pages; the game and friends stay Hebrew.
+type Lang = "he" | "ar" | "en" | "ru";
+const intl: Record<
+  Exclude<Lang, "he">,
+  { name: string; days: (n: number) => string; menu: string; links: { href: string; label: string }[] }
+> = {
+  ar: {
+    name: "الخريطة السياسية",
+    days: (n) => `${n} أيام حتى الانتخابات`,
+    menu: "القائمة",
+    links: [
+      { href: "/ar", label: "الأحزاب" },
+      { href: "/ar/towns", label: "نتائج 2022 حسب البلدة" },
+      { href: "/ar/why-vote", label: "لماذا نصوّت" },
+    ],
+  },
+  en: {
+    name: "Political Map",
+    days: (n) => `${n} days to the election`,
+    menu: "Menu",
+    links: [
+      { href: "/en", label: "Parties" },
+      { href: "/en/towns", label: "2022 results by town" },
+      { href: "/en/why-vote", label: "Why vote" },
+    ],
+  },
+  ru: {
+    name: "Политическая карта",
+    days: (n) => `До выборов дней: ${n}`,
+    menu: "Меню",
+    links: [
+      { href: "/ru", label: "Партии" },
+      { href: "/ru/towns", label: "Итоги 2022 по городам" },
+      { href: "/ru/why-vote", label: "Зачем голосовать" },
+    ],
+  },
+};
+const languages: { lang: Lang; href: string; label: string; short: string }[] = [
+  { lang: "he", href: "/", label: "עברית", short: "עב" },
+  { lang: "ar", href: "/ar", label: "العربية", short: "ع" },
+  { lang: "en", href: "/en", label: "English", short: "EN" },
+  { lang: "ru", href: "/ru", label: "Русский", short: "RU" },
 ];
+const langOf = (path: string): Lang =>
+  (["ar", "en", "ru"] as const).find((l) => path === `/${l}` || path.startsWith(`/${l}/`)) ?? "he";
 
 function daysLeft() {
   return Math.ceil((ELECTION_DAY.getTime() - Date.now()) / 86_400_000);
@@ -42,16 +80,23 @@ export default function NavBar() {
   );
   const days = mounted ? daysLeft() : null;
 
-  const ar = path === "/ar" || path.startsWith("/ar/");
-  const shown = ar ? arLinks : links;
-  const active = (href: string) => (href === "/" || href === "/ar" ? path === href : path.startsWith(href));
+  const lang = langOf(path);
+  const t = lang === "he" ? null : intl[lang];
+  const shown = t ? t.links : links;
+  const home = t ? t.links[0].href : "/";
+  const active = (href: string) => (href === home ? path === href : path.startsWith(href));
+  const countdown = (n: number) => (t ? t.days(n) : `עוד ${n} ימים לבחירות`);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+    <header
+      dir={lang === "en" || lang === "ru" ? "ltr" : "rtl"}
+      lang={lang}
+      className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md"
+    >
       <nav className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 sm:px-6">
-        <Link href={ar ? "/ar" : "/"} className="flex shrink-0 items-center gap-2 font-extrabold">
+        <Link href={home} className="flex shrink-0 items-center gap-2 font-extrabold">
           <Logo />
-          <span className="hidden sm:inline">{ar ? "الخريطة السياسية" : "המפה הפוליטית"}</span>
+          <span className="hidden sm:inline">{t ? t.name : "המפה הפוליטית"}</span>
           <span className="rounded bg-sky-500/15 px-1.5 text-xs font-bold text-sky-300">2026</span>
         </Link>
 
@@ -61,7 +106,9 @@ export default function NavBar() {
               key={l.href}
               href={l.href}
               className={`whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm transition ${
-                active(l.href) ? "bg-slate-800 font-semibold text-white" : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"
+                active(l.href)
+                  ? "bg-slate-800 font-semibold text-white"
+                  : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"
               }`}
             >
               {l.label}
@@ -72,21 +119,15 @@ export default function NavBar() {
         <div className="ms-auto flex items-center gap-3">
           {days !== null && days > 0 && (
             <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 2xl:inline">
-              {ar ? `${days} أيام حتى الانتخابات` : `עוד ${days} ימים לבחירות`}
+              {countdown(days)}
             </span>
           )}
-          <Link
-            href={ar ? "/" : "/ar"}
-            lang={ar ? "he" : "ar"}
-            className="whitespace-nowrap rounded-lg border border-slate-700 px-2.5 py-1 text-sm text-slate-300 hover:border-sky-500/60 hover:text-white"
-          >
-            {ar ? "עברית" : "العربية"}
-          </Link>
-          {!ar && <AccountMenu />}
+          <LanguageMenu lang={lang} />
+          {lang === "he" && <AccountMenu />}
           <button
             onClick={() => setOpen((o) => !o)}
             className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 xl:hidden"
-            aria-label={ar ? "القائمة" : "תפריט"}
+            aria-label={t ? t.menu : "תפריט"}
             aria-expanded={open}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
@@ -108,12 +149,52 @@ export default function NavBar() {
               {l.label}
             </Link>
           ))}
-          {days !== null && days > 0 && (
-            <p className="px-3 py-2 text-xs text-amber-200">{ar ? `${days} أيام حتى الانتخابات` : `עוד ${days} ימים לבחירות`}</p>
-          )}
+          {days !== null && days > 0 && <p className="px-3 py-2 text-xs text-amber-200">{countdown(days)}</p>}
         </div>
       )}
     </header>
+  );
+}
+
+function LanguageMenu({ lang }: { lang: Lang }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const close = (e: MouseEvent) => ref.current && !ref.current.contains(e.target as Node) && setOpen(false);
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, []);
+  const current = languages.find((l) => l.lang === lang)!;
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        aria-label="Language / שפה / اللغة / Язык"
+        className="flex items-center gap-1 whitespace-nowrap rounded-lg border border-slate-700 px-2.5 py-1 text-sm text-slate-300 hover:border-sky-500/60 hover:text-white"
+      >
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+          <circle cx="10" cy="10" r="8" />
+          <path d="M2 10h16M10 2c2.5 2.5 2.5 13.5 0 16M10 2c-2.5 2.5-2.5 13.5 0 16" />
+        </svg>
+        {current.short}
+      </button>
+      {open && (
+        <div className="absolute end-0 mt-2 w-36 overflow-hidden rounded-xl border border-slate-700 bg-slate-900 shadow-xl">
+          {languages.map((l) => (
+            <Link
+              key={l.lang}
+              href={l.href}
+              lang={l.lang}
+              onClick={() => setOpen(false)}
+              className={`block px-4 py-2 text-sm hover:bg-slate-800 ${l.lang === lang ? "font-semibold text-sky-300" : ""}`}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -144,7 +225,11 @@ function AccountMenu() {
   const name = profile?.display_name ?? user.email ?? "";
   return (
     <div ref={ref} className="relative">
-      <button onClick={() => setOpen((o) => !o)} className="flex items-center gap-2 rounded-full hover:opacity-90" aria-label="החשבון שלי">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center gap-2 rounded-full hover:opacity-90"
+        aria-label="החשבון שלי"
+      >
         <Avatar name={name} url={profile?.avatar_url} />
       </button>
       {open && (
@@ -162,6 +247,9 @@ function AccountMenu() {
           </Link>
           <Link href="/friends" className="block px-4 py-2 text-sm hover:bg-slate-800">
             חברים והפרופיל שלי
+          </Link>
+          <Link href="/dashboard" className="block px-4 py-2 text-sm hover:bg-slate-800">
+            הלוח של החברים
           </Link>
           <button
             onClick={async () => {

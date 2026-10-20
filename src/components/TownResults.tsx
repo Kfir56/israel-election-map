@@ -2,14 +2,44 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { ar } from "@/data/ar";
+import type { Locale } from "@/data/intl";
 import { parties } from "@/data/parties";
 
 type List = { letter: string; he: string; ar: string; color: string; now: string[] };
 type Row = (string | number)[]; // [code, he, en, ar, registered, cast, valid, ...votes, other]
 type Data = { lists: List[]; national: number[]; towns: Row[] };
 
-const T = {
+type Strings = Record<
+  | "search"
+  | "national"
+  | "turnout"
+  | "nationalTurnout"
+  | "voters"
+  | "valid"
+  | "other"
+  | "nowIs"
+  | "gone"
+  | "marker"
+  | "loading"
+  | "none",
+  string
+> & { partyHref: (id: string) => string; partyName: (id: string) => string; listName: (l: List) => string };
+
+/** What a translated section passes in, so its whole content file stays on the server. */
+export type TownStrings = {
+  text: Record<string, unknown>;
+  lists: Record<string, string>;
+  partyNames: Record<string, string>;
+};
+
+const intl = (l: Locale, s: TownStrings): Strings => ({
+  ...(s.text as Record<keyof Strings, string>),
+  partyHref: (id) => `/${l}/party/${id}`,
+  partyName: (id) => s.partyNames[id] ?? id,
+  listName: (list) => s.lists[list.letter] ?? list.he,
+});
+
+const T: Record<"he", Strings> = {
   he: {
     search: "הקלידו שם של עיר, יישוב או קיבוץ",
     national: "כל הארץ",
@@ -27,23 +57,6 @@ const T = {
     partyName: (id: string) => parties.find((p) => p.id === id)?.name ?? id,
     listName: (l: List) => l.he,
   },
-  ar: {
-    search: "اكتبوا اسم مدينة أو قرية أو بلدة",
-    national: "كل البلاد",
-    turnout: "نسبة التصويت",
-    nationalTurnout: "في كل البلاد",
-    voters: "أصحاب حق الاقتراع",
-    valid: "أصوات صحيحة",
-    other: "قوائم أخرى",
-    nowIs: "في 2026:",
-    gone: "لا تتنافس في 2026",
-    marker: "الخط الرفيع يشير إلى النتيجة في كل البلاد.",
-    loading: "جارٍ التحميل…",
-    none: "لم نجد بلدة بهذا الاسم.",
-    partyHref: (id: string) => `/ar/party/${id}`,
-    partyName: (id: string) => ar.parties[id]?.name ?? id,
-    listName: (l: List) => l.ar,
-  },
 };
 
 // Search ignores punctuation, spaces and Arabic letter variants, since the
@@ -57,8 +70,8 @@ const norm = (s: string) =>
     .replace(/ى/g, "ي")
     .replace(/[\s׳'"״()\-–.,]/g, "");
 
-export default function TownResults({ locale }: { locale: "he" | "ar" }) {
-  const t = T[locale];
+export default function TownResults({ locale, strings }: { locale: "he" | Locale; strings?: TownStrings }) {
+  const t = locale === "he" || !strings ? T.he : intl(locale, strings);
   const [data, setData] = useState<Data | null>(null);
   const [q, setQ] = useState("");
   const [code, setCode] = useState<number | null>(null);
@@ -79,7 +92,8 @@ export default function TownResults({ locale }: { locale: "he" | "ar" }) {
   if (!data) return <p className="text-slate-400">{t.loading}</p>;
 
   const town = code === null ? null : data.towns.find((r) => r[0] === code)!;
-  const name = (r: Row) => String((locale === "ar" && r[3]) || r[1]);
+  // Arabic has its own town names; English and Russian use the official Latin spelling.
+  const name = (r: Row) => String((locale === "ar" ? r[3] : locale === "he" ? r[1] : r[2]) || r[1]);
   const [registered, cast, valid, ...votes] = (town ? town.slice(4) : data.national) as number[];
   const [nReg, nCast, nValid, ...nVotes] = data.national;
   const rows = [
@@ -113,7 +127,9 @@ export default function TownResults({ locale }: { locale: "he" | "ar" }) {
                   className="w-full px-4 py-2 text-start text-sm hover:bg-slate-800"
                 >
                   {name(r)}
-                  {locale === "ar" && r[3] && <span className="text-xs text-slate-500"> · {String(r[1])}</span>}
+                  {locale !== "he" && name(r) !== r[1] && (
+                    <span className="text-xs text-slate-500"> · {String(r[1])}</span>
+                  )}
                 </button>
               </li>
             ))}
@@ -131,7 +147,10 @@ export default function TownResults({ locale }: { locale: "he" | "ar" }) {
           )}
         </div>
         <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-          <Stat value={pct(cast / registered)} label={town ? `${t.turnout} (${pct(nCast / nReg)} ${t.nationalTurnout})` : t.turnout} />
+          <Stat
+            value={pct(cast / registered)}
+            label={town ? `${t.turnout} (${pct(nCast / nReg)} ${t.nationalTurnout})` : t.turnout}
+          />
           <Stat value={registered.toLocaleString("en-US")} label={t.voters} />
           <Stat value={valid.toLocaleString("en-US")} label={t.valid} />
         </div>

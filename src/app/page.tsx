@@ -45,40 +45,56 @@ export default function Home() {
       <header className="mb-6">
         <h1 className="text-3xl font-extrabold sm:text-4xl">מי נגד מי בבחירות 2026?</h1>
         <p className="mt-2 max-w-3xl text-slate-300">
-          הבחירות לכנסת ה־26 ב־27 באוקטובר. כאן אפשר לראות את כל המפלגות על מפה אחת, להבין מה כל אחת חושבת ומי ברשימה שלה,
-          להשוות בין הסקרים ולחזות את התוצאות עם החברים.
+          הבחירות לכנסת ה־26 ב־27 באוקטובר. כאן אפשר לראות את כל המפלגות על מפה אחת, להבין מה כל אחת חושבת ומי ברשימה
+          שלה, להשוות בין הסקרים ולחזות את התוצאות עם החברים.
         </p>
         <div className="mt-4 flex flex-wrap gap-2 text-sm">
           <Stat>
             הגדולה בממוצע הסקרים: <b style={{ color: leader.color }}>{leader.name}</b> ({averageSeats[leader.id]})
           </Stat>
           <Stat>
-            הקואליציה היוצאת: <b className={coalition >= MAJORITY ? "text-emerald-300" : "text-rose-300"}>{coalition}</b> מתוך {MAJORITY}{" "}
+            הקואליציה היוצאת:{" "}
+            <b className={coalition >= MAJORITY ? "text-emerald-300" : "text-rose-300"}>{coalition}</b> מתוך {MAJORITY}{" "}
             הדרושים
           </Stat>
           <Stat>ממוצע של {polls.length} סקרים אחרונים</Stat>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link href="/predict" className="rounded-xl bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400">
+          <Link
+            href="/predict"
+            className="rounded-xl bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400"
+          >
             לחזות את התוצאות
           </Link>
-          <Link href="/parties" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+          <Link
+            href="/parties"
+            className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800"
+          >
             כל המפלגות והמועמדים
           </Link>
-          <Link href="/quiz" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+          <Link
+            href="/quiz"
+            className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800"
+          >
             איזו מפלגה קרובה אליי?
           </Link>
-          <Link href="/compare" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
+          <Link
+            href="/compare"
+            className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800"
+          >
             להשוות שתי מפלגות
           </Link>
         </div>
         <div className="mt-4 max-w-3xl rounded-xl border border-amber-400/30 bg-amber-400/5 p-3 text-sm text-slate-300">
-          <b className="text-amber-200">יום הבחירות: שלישי, 27 באוקטובר.</b> הקלפיות פתוחות 07:00–22:00, וזה יום שבתון. מביאים
-          תעודה מזהה עם תמונה ומצביעים רק בקלפי שלכם (בודקים אותה ב
+          <b className="text-amber-200">יום הבחירות: שלישי, 27 באוקטובר.</b> הקלפיות פתוחות 07:00–22:00, וזה יום שבתון.
+          מביאים תעודה מזהה עם תמונה ומצביעים רק בקלפי שלכם (בודקים אותה ב
           <a href="https://www.bechirot.gov.il/" target="_blank" rel="noreferrer" className="text-sky-400 underline">
             אתר ועדת הבחירות
           </a>
-          ).
+          ).{" "}
+          <Link href="/election-day" className="text-sky-400 underline">
+            המדריך המלא ליום הבחירות
+          </Link>
           <CalendarButtons />
         </div>
       </header>
@@ -94,7 +110,10 @@ export default function Home() {
         </div>
         <div className="mt-4 grid gap-2 md:grid-cols-2">
           {faq.map((f) => (
-            <details key={f.q} className="group rounded-xl border border-slate-800 bg-slate-900/40 p-4 open:bg-slate-900/70">
+            <details
+              key={f.q}
+              className="group rounded-xl border border-slate-800 bg-slate-900/40 p-4 open:bg-slate-900/70"
+            >
               <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
                 {f.q}
                 <span className="text-slate-500 transition group-open:rotate-45">+</span>
@@ -109,5 +128,7 @@ export default function Home() {
 }
 
 function Stat({ children }: { children: React.ReactNode }) {
-  return <span className="rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1.5 text-slate-300">{children}</span>;
+  return (
+    <span className="rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1.5 text-slate-300">{children}</span>
+  );
 }

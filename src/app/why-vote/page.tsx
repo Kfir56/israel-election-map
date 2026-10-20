@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CalendarButtons from "@/components/CalendarButtons";
 import { ogImage } from "@/lib/site";
+import Term from "@/components/Term";
 
 export const metadata = {
   openGraph: { images: [ogImage("למה בכלל להצביע?", "מה קורה לקול שלך, ומה קורה לפתק לבן")] },
@@ -37,7 +38,8 @@ const reasons: { title: string; body: React.ReactNode }[] = [
       <>
         <p>
           הכנסת שתיבחר תצביע על התקציב, על חוק הגיוס, על מערכת המשפט, על המלחמה ועל ההסדרים המדיניים. היא גם קובעת מי
-          תהיה הממשלה. כל אלה ישפיעו על המחירים, על השירות הצבאי, על החינוך ועל הביטחון בארבע השנים הבאות, גם למי שלא הצביע.
+          תהיה הממשלה. כל אלה ישפיעו על המחירים, על השירות הצבאי, על החינוך ועל הביטחון בארבע השנים הבאות, גם למי שלא
+          הצביע.
         </p>
       </>
     ),
@@ -51,8 +53,8 @@ const reasons: { title: string; body: React.ReactNode }[] = [
           החסימה. אילו עברה, היא הייתה מקבלת בערך 4 מנדטים, על חשבון מפלגות אחרות.
         </p>
         <p>
-          ארבע המפלגות שהרכיבו את הממשלה קיבלו יחד 48.4% מהקולות הכשרים, וזה הספיק ל־64 מנדטים, כי {fmt(LOST_2022)} קולות
-          הלכו לרשימות שלא עברו ולא נספרו בחלוקה. כמה אלפי קולות לכאן או לכאן יכולים לשנות את התמונה כולה.
+          ארבע המפלגות שהרכיבו את הממשלה קיבלו יחד 48.4% מהקולות הכשרים, וזה הספיק ל־64 מנדטים, כי {fmt(LOST_2022)}{" "}
+          קולות הלכו לרשימות שלא עברו ולא נספרו בחלוקה. כמה אלפי קולות לכאן או לכאן יכולים לשנות את התמונה כולה.
         </p>
       </>
     ),
@@ -61,8 +63,8 @@ const reasons: { title: string; body: React.ReactNode }[] = [
     title: "מי שלא מצביע, נותן לאחרים להחליט",
     body: (
       <p>
-        המנדטים מתחלקים לפי הקולות של מי שהגיע. אם חצי מהשכונה שלך לא מצביעה, הכנסת תשקף את החצי השני. אין &quot;מחאה&quot;
-        שנספרת: מי שנשאר בבית פשוט לא מופיע בתוצאות.
+        המנדטים מתחלקים לפי הקולות של מי שהגיע. אם חצי מהשכונה שלך לא מצביעה, הכנסת תשקף את החצי השני. אין
+        &quot;מחאה&quot; שנספרת: מי שנשאר בבית פשוט לא מופיע בתוצאות.
       </p>
     ),
   },
@@ -103,15 +105,15 @@ export default function WhyVotePage() {
         <h2 className="text-2xl font-bold">ומה עם פתק לבן?</h2>
         <div className="mt-3 space-y-2 leading-relaxed text-slate-300">
           <p>
-            פתק לבן (או מעטפה ריקה) נחשב <b>קול פסול</b>. הוא לא נספר בשום מקום: לא בחלוקת המנדטים, לא בחישוב אחוז החסימה ולא
-            כ״מחאה״ רשמית. ב־2022 היו {fmt(INVALID_2022)} קולות פסולים, ואף אחד מהם לא השפיע על התוצאה.
+            פתק לבן (או מעטפה ריקה) נחשב <b>קול פסול</b>. הוא לא נספר בשום מקום: לא בחלוקת המנדטים, לא בחישוב אחוז
+            החסימה ולא כ״מחאה״ רשמית. ב־2022 היו {fmt(INVALID_2022)} קולות פסולים, ואף אחד מהם לא השפיע על התוצאה.
           </p>
           <p>
             מבחינת הכנסת שתיבחר, פתק לבן שווה בדיוק להישאר בבית. ההבדל היחיד הוא שהוא מעלה את אחוז ההצבעה בסטטיסטיקה.
           </p>
           <p>
-            אם אף מפלגה לא מרגישה לכם מושלמת, זה נורמלי. כמעט אף אחד לא מסכים עם מפלגה בכל נושא. אפשר לבחור את זו
-            שהכי קרובה אליכם בנושאים שהכי חשובים לכם, וקול כזה כן משפיע.
+            אם אף מפלגה לא מרגישה לכם מושלמת, זה נורמלי. כמעט אף אחד לא מסכים עם מפלגה בכל נושא. אפשר לבחור את זו שהכי
+            קרובה אליכם בנושאים שהכי חשובים לכם, וקול כזה כן משפיע.
           </p>
         </div>
       </section>
@@ -127,8 +129,8 @@ export default function WhyVotePage() {
           ואיך הצביעו ביישוב שלכם בפעם הקודמת? ←
         </Link>
         <p className="mt-3 text-sm text-slate-400">
-          שימו לב לאחוז החסימה: קול לרשימה שלא עוברת 3.25% לא נספר בחלוקה. בעמוד של כל מפלגה מופיע כמה מנדטים היא מקבלת
-          בסקרים.
+          שימו לב ל<Term id="threshold">אחוז החסימה</Term>: קול לרשימה שלא עוברת 3.25% לא נספר בחלוקה. בעמוד של כל מפלגה
+          מופיע כמה מנדטים היא מקבלת בסקרים.
         </p>
       </section>
 
@@ -147,6 +149,9 @@ export default function WhyVotePage() {
           </li>
         </ul>
         <CalendarButtons />
+        <Link href="/election-day" className="mt-3 me-4 inline-block text-sm text-sky-400 hover:underline">
+          המדריך המלא ליום הבחירות ←
+        </Link>
         <Link href="/guide" className="mt-3 inline-block text-sm text-sky-400 hover:underline">
           מה קורה אחרי שסוגרים את הקלפיות ←
         </Link>
@@ -166,7 +171,10 @@ export default function WhyVotePage() {
 
 function Card({ href, title, text }: { href: string; title: string; text: string }) {
   return (
-    <Link href={href} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 transition hover:border-sky-500/60">
+    <Link
+      href={href}
+      className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 transition hover:border-sky-500/60"
+    >
       <div className="font-semibold text-sky-300">{title} ←</div>
       <p className="mt-1 text-sm text-slate-400">{text}</p>
     </Link>

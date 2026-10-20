@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { parties } from "@/data/parties";
+import { averageSeats, partyRange } from "@/data/polls";
 import { bioFor, findCandidate, partyHref, personHref, recordFor, wikiUrl, type RecordItem } from "@/data/people";
 
 const link = "text-sky-400 underline";
@@ -60,6 +61,7 @@ export default async function PersonPage({ params }: { params: Params }) {
               {candidate.faction && <> · מטעם {candidate.faction}</>}
             </p>
             {(bio?.summary ?? candidate.note) && <p className="mt-3 text-lg">{bio?.summary ?? candidate.note}</p>}
+            {!party.withdrawn && <ChanceBadge pos={candidate.pos} partyId={party.id} />}
           </div>
         </div>
       </header>
@@ -87,7 +89,10 @@ export default async function PersonPage({ params }: { params: Params }) {
               <ol className="relative border-r border-slate-700 pr-5">
                 {bio.roles.map((r, i) => (
                   <li key={i} className="relative mb-4">
-                    <span className="absolute -right-[25px] top-1.5 h-2.5 w-2.5 rounded-full" style={{ background: party.color }} />
+                    <span
+                      className="absolute -right-[25px] top-1.5 h-2.5 w-2.5 rounded-full"
+                      style={{ background: party.color }}
+                    />
                     {r.years && (
                       <div dir="ltr" className="text-right text-sm tabular-nums text-slate-400">
                         {r.years.replace(/–(?=,|$)/g, "–היום")}
@@ -111,8 +116,12 @@ export default async function PersonPage({ params }: { params: Params }) {
                 , בתמצות שלנו.
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
-                {record.plus.length > 0 && <RecordList title="צעדים בולטים" items={record.plus} tone="text-emerald-400" />}
-                {record.minus.length > 0 && <RecordList title="ביקורת ומחלוקות" items={record.minus} tone="text-rose-400" />}
+                {record.plus.length > 0 && (
+                  <RecordList title="צעדים בולטים" items={record.plus} tone="text-emerald-400" />
+                )}
+                {record.minus.length > 0 && (
+                  <RecordList title="ביקורת ומחלוקות" items={record.minus} tone="text-rose-400" />
+                )}
               </div>
             </section>
           )}
@@ -196,5 +205,27 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
       <div className="text-xs font-semibold text-sky-400">{label}</div>
       <div className="mt-1">{children}</div>
     </div>
+  );
+}
+
+// Where this slot falls against the polls: inside every poll, only some, or none.
+function ChanceBadge({ pos, partyId }: { pos: number; partyId: string }) {
+  const avg = averageSeats[partyId] ?? 0;
+  const { min, max } = partyRange(partyId);
+  const [text, cls] =
+    pos <= min
+      ? ["נכנס/ת לכנסת לפי כל הסקרים", "border-emerald-500/40 bg-emerald-500/10 text-emerald-200"]
+      : pos <= avg
+        ? ["נכנס/ת לפי ממוצע הסקרים, אבל לא בכולם", "border-sky-500/40 bg-sky-500/10 text-sky-200"]
+        : pos <= max
+          ? ["מחוץ לממוצע הסקרים, ונכנס/ת רק בחלק מהם", "border-amber-500/40 bg-amber-500/10 text-amber-200"]
+          : ["לא נכנס/ת לפי אף סקר", "border-slate-700 bg-slate-800/60 text-slate-300"];
+  return (
+    <p className={`mt-3 inline-block rounded-lg border px-3 py-1.5 text-sm ${cls}`}>
+      {text}{" "}
+      <span className="opacity-70">
+        (ממוצע {avg} מנדטים, טווח {min === max ? max : `${min}–${max}`})
+      </span>
+    </p>
   );
 }

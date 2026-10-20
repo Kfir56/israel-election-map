@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BallotLetter from "@/components/BallotLetter";
+import CutoffLine from "@/components/CutoffLine";
 import { blocLabels, categories, formatSourceDate, parties, positionSources, sourceTypeLabels } from "@/data/parties";
 import { partyHistory } from "@/data/party-history";
 import { bioFor, personHref, partyHref } from "@/data/people";
 import { averageSeats, formatDate, partyRange, polls } from "@/data/polls";
 import { topicHref } from "@/data/topics";
 import { ogImage } from "@/lib/site";
+import Term from "@/components/Term";
 
 const link = "text-sky-400 underline";
 const INCUMBENT = /כנסת ה־25|ממשלה ה־37/;
@@ -37,7 +39,9 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
   const history = partyHistory[party.id] ?? [];
   const incumbents = party.candidates.filter((c) => c.note && INCUMBENT.test(c.note)).length;
   // Only a real joint list has a faction on every candidate.
-  const factions = party.candidates.every((c) => c.faction) ? [...new Set(party.candidates.map((c) => c.faction!))] : [];
+  const factions = party.candidates.every((c) => c.faction)
+    ? [...new Set(party.candidates.map((c) => c.faction!))]
+    : [];
   const maxSeats = Math.max(...range.values, 1);
 
   return (
@@ -81,7 +85,10 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
           <p className="mt-4 max-w-3xl text-slate-300">{party.summary}</p>
 
           <div className="mt-6 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
-            <Stat label={`ממוצע ${polls.length} הסקרים`} value={averageSeats[party.id] ? `${averageSeats[party.id]}` : "מתחת לחסימה"} />
+            <Stat
+              label={`ממוצע ${polls.length} הסקרים`}
+              value={averageSeats[party.id] ? `${averageSeats[party.id]}` : "מתחת לחסימה"}
+            />
             <Stat label="טווח בסקרים" value={range.min === range.max ? `${range.max}` : `${range.min}–${range.max}`} />
             <Stat label="בכנסת היוצאת" value={party.seats25 !== undefined ? `${party.seats25}` : "מפלגה חדשה"} />
             <Stat label="ח״כים ושרים מכהנים ברשימה" value={`${incumbents}`} />
@@ -117,7 +124,9 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
                     rel="noreferrer"
                     className="mt-1.5 inline-flex flex-wrap items-center gap-1.5 text-xs text-slate-500 hover:text-sky-300"
                   >
-                    <span className="rounded bg-slate-800 px-1.5 py-0.5 text-slate-300">{sourceTypeLabels[src.sourceType]}</span>
+                    <span className="rounded bg-slate-800 px-1.5 py-0.5 text-slate-300">
+                      {sourceTypeLabels[src.sourceType]}
+                    </span>
                     {src.sourceLabel} · {src.sourceType === "idi" ? "נבדק ב־" : ""}
                     {formatSourceDate(src.date)}
                   </a>
@@ -173,8 +182,9 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
         <ol className="grid gap-2 sm:grid-cols-2">
           {party.candidates.map((c) => {
             const bio = bioFor(party.id, c.pos);
-            return (
-              <li key={c.pos}>
+            const seats = averageSeats[party.id] ?? 0;
+            return [
+              <li key={c.pos} className={seats && c.pos > seats ? "opacity-60" : undefined}>
                 <Link
                   href={personHref(party.id, c.pos)}
                   className="group flex h-full items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/40 p-3 transition hover:border-sky-500/60 hover:bg-slate-800/60"
@@ -191,12 +201,26 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
                       {bio?.summary ?? [c.note, c.faction && `מטעם ${c.faction}`].filter(Boolean).join(" · ")}
                     </div>
                   </div>
-                  {bio && <span className="shrink-0 rounded-full bg-sky-500/15 px-2 py-0.5 text-[11px] text-sky-300">ביוגרפיה</span>}
+                  {bio && (
+                    <span className="shrink-0 rounded-full bg-sky-500/15 px-2 py-0.5 text-[11px] text-sky-300">
+                      ביוגרפיה
+                    </span>
+                  )}
                 </Link>
-              </li>
-            );
+              </li>,
+              seats > 0 && c.pos === seats && c.pos < party.candidates.length && (
+                <CutoffLine key="cutoff" label={`קו הכניסה לפי ממוצע הסקרים: ${seats} מנדטים`} />
+              ),
+            ];
           })}
         </ol>
+        {(averageSeats[party.id] ?? 0) > 0 && (
+          <p className="mt-3 text-xs text-slate-400">
+            מי שמעל הקו נכנס לכנסת אם המפלגה תקבל את ממוצע הסקרים. הטווח בסקרים:{" "}
+            {range.min === range.max ? range.max : `${range.min}–${range.max}`} מנדטים. שרים שיתפטרו לפי{" "}
+            <Term id="norwegian">החוק הנורבגי</Term> יכולים להכניס עוד כמה מועמדים מתחת לקו.
+          </p>
+        )}
         <p className="mt-3 text-xs text-slate-500">
           הסדר והשמות לפי{" "}
           <a href={party.listSource} target="_blank" rel="noreferrer" className={link}>
@@ -211,8 +235,13 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
           <ol className="relative border-r border-slate-700 pr-5">
             {history.map((m, i) => (
               <li key={i} className="relative mb-4">
-                <span className="absolute -right-[25px] top-1.5 h-2.5 w-2.5 rounded-full" style={{ background: party.color }} />
-                <div dir="ltr" className="text-right font-mono text-sm text-slate-400">{m.year}</div>
+                <span
+                  className="absolute -right-[25px] top-1.5 h-2.5 w-2.5 rounded-full"
+                  style={{ background: party.color }}
+                />
+                <div dir="ltr" className="text-right font-mono text-sm text-slate-400">
+                  {m.year}
+                </div>
                 <div>{m.text}</div>
               </li>
             ))}
@@ -227,18 +256,28 @@ export default async function PartyPage({ params }: { params: Promise<{ id: stri
             const v = range.values[i];
             return (
               <li key={p.id} className="flex items-center gap-3 text-sm">
-                <a href={p.source} target="_blank" rel="noreferrer" className="w-36 shrink-0 truncate hover:text-sky-300">
+                <a
+                  href={p.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-36 shrink-0 truncate hover:text-sky-300"
+                >
                   {p.outlet} <span className="text-xs text-slate-500">{formatDate(p.date)}</span>
                 </a>
                 <div className="h-3 flex-1 rounded-full bg-slate-800">
-                  <div className="h-3 rounded-full" style={{ width: `${(v / maxSeats) * 100}%`, background: party.color }} />
+                  <div
+                    className="h-3 rounded-full"
+                    style={{ width: `${(v / maxSeats) * 100}%`, background: party.color }}
+                  />
                 </div>
                 <span className="w-6 text-left font-mono">{v || "—"}</span>
               </li>
             );
           })}
         </ul>
-        <p className="mt-3 text-xs text-slate-500">כל שורה מקשרת לסקר עצמו בארכיון skarim.org. ״—״ פירושו מתחת לאחוז החסימה.</p>
+        <p className="mt-3 text-xs text-slate-500">
+          כל שורה מקשרת לסקר עצמו בארכיון skarim.org. ״—״ פירושו מתחת לאחוז החסימה.
+        </p>
       </Section>
     </main>
   );
@@ -257,7 +296,9 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl bg-slate-800/60 p-3">
       <div className="text-xs text-slate-400">{label}</div>
-      <div dir="ltr" className="mt-0.5 text-xl font-bold">{value}</div>
+      <div dir="ltr" className="mt-0.5 text-xl font-bold">
+        {value}
+      </div>
     </div>
   );
 }

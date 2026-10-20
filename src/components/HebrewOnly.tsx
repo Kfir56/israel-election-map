@@ -2,8 +2,8 @@
 
 import { usePathname } from "next/navigation";
 
-/** Renders its children everywhere except the Arabic section, which has its own. */
+/** Renders its children everywhere except the translated sections, which have their own. */
 export default function HebrewOnly({ children }: { children: React.ReactNode }) {
   const path = usePathname();
-  return path === "/ar" || path.startsWith("/ar/") ? null : children;
+  return /^\/(ar|en|ru)(\/|$)/.test(path) ? null : children;
 }

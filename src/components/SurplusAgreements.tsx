@@ -2,6 +2,7 @@ import surplus from "@/data/surplus.json";
 import { parties } from "@/data/parties";
 import { averageSeats, formatDate } from "@/data/polls";
 import { colorOnDark } from "@/lib/party-color";
+import Term from "@/components/Term";
 
 const name = (id: string) => parties.find((p) => p.id === id)?.name ?? id;
 
@@ -18,7 +19,9 @@ function Src({ href, date }: { href: string; date: string }) {
 export default function SurplusAgreements() {
   return (
     <section id="surplus" className="mt-10 scroll-mt-20">
-      <h2 className="text-2xl font-bold">הסכמי עודפים</h2>
+      <h2 className="text-2xl font-bold">
+        <Term id="surplus">הסכמי עודפים</Term>
+      </h2>
       <p className="mt-1 text-slate-300">
         אחרי שמחלקים את המנדטים השלמים נשארים &quot;עודפים&quot; של קולות. שתי רשימות שחתמו על הסכם נספרות יחד בחלוקת
         העודפים, וכך אחת מהן יכולה לקבל מנדט נוסף. בדרך כלל מדובר במנדט אחד לכל היותר, אבל בבחירות צמודות גם זה משנה.{" "}
@@ -45,7 +48,9 @@ export default function SurplusAgreements() {
                 {a.text} <Src href={a.source} date={a.date} />
               </p>
               <p className={`mt-1 text-xs ${both ? "text-emerald-300" : "text-amber-300"}`}>
-                {both ? "לפי ממוצע הסקרים שתיהן עוברות, אז ההסכם ייספר" : "לפי ממוצע הסקרים אחת מהן לא עוברת, אז ההסכם לא ייספר"}
+                {both
+                  ? "לפי ממוצע הסקרים שתיהן עוברות, אז ההסכם ייספר"
+                  : "לפי ממוצע הסקרים אחת מהן לא עוברת, אז ההסכם לא ייספר"}
               </p>
             </li>
           );
