@@ -16,6 +16,30 @@ export type Poll = {
 
 export const polls: Poll[] = [
   {
+    id: "ch12-2026-10-19",
+    date: "2026-10-19",
+    outlet: "חדשות 12",
+    pollster: "מנו גבע",
+    source: "https://www.skarim.org/polls/channel-12-2026-10-19",
+    seats: { yashar: 24, likud: 21, together: 14, dems: 9, joint: 9, yb: 8, otzma: 8, shas: 8, utj: 7, rzp: 7, raam: 5 },
+  },
+  {
+    id: "ch14-2026-10-19",
+    date: "2026-10-19",
+    outlet: "ערוץ 14",
+    pollster: "NEXT DATA (שלמה פילבר)",
+    source: "https://www.skarim.org/polls/channel-14-2026-10-19",
+    seats: { likud: 30, yashar: 19, together: 10, dems: 10, shas: 10, joint: 8, utj: 8, otzma: 7, rzp: 7, yb: 6, raam: 5 },
+  },
+  {
+    id: "ch13-2026-10-19",
+    date: "2026-10-19",
+    outlet: "חדשות 13",
+    pollster: "יצחק כ״ץ / המדד",
+    source: "https://www.skarim.org/polls/channel-13-2026-10-19",
+    seats: { yashar: 20, likud: 18, together: 14, dems: 9, joint: 9, yb: 8, otzma: 7, shas: 7, utj: 7, rzp: 7, raam: 6, reservists: 4, amcha: 4 },
+  },
+  {
     id: "ch14-2026-10-18",
     date: "2026-10-18",
     outlet: "ערוץ 14",
