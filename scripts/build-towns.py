@@ -49,4 +49,4 @@ out = {
 }
 json.dump(out, open("public/data/towns-2022.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(rows), "towns,", os.path.getsize("public/data/towns-2022.json") // 1024, "KB,", sum(1 for r in rows if r[3]), "with Arabic names")
-print(json.dumps(meta["source"], ensure_ascii=False)[:400]); print(json.dumps(nat, ensure_ascii=False)[:300])
+

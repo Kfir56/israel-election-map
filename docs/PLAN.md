@@ -189,3 +189,7 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 
 ### 20 Oct: coalitions page
 - `/coalitions`: every minimal 61-seat combination for the poll average or any single poll, sorted by how many stated red lines it breaks. Data in `src/data/coalition-lines.json` (recommends / won't sit with / conditions, each sourced and dated). Netanyahu-the-person lines are filed under Likud with a note; Amcha's paraphrased refusals dropped. On the current average no combination reaching 61 breaks zero red lines.
+
+### 20 Oct: Arabic section and 2022 results by town
+- `/ar`, `/ar/party/<id>`, `/ar/why-vote`, `/ar/towns`: Arabic text in `src/data/ar.json` (our translation of the Hebrew data, from scripts/ar/content.json); sources, dates and numbers come from the Hebrew data files. Nav shows a עברית/العربية switch; the game, quiz and friends pages stay Hebrew-only.
+- `/towns` (+ `/ar/towns`): CEC Knesset 25 results per locality (expc.csv via a pinned GitHub mirror, checked against national totals), built by `scripts/build-towns.py` into `public/data/towns-2022.json`. Arabic locality names in `scripts/results-2022/names-ar.json` are our transliteration.
