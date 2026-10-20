@@ -12,7 +12,7 @@ const nameOf = (id: string) => parties.find((p) => p.id === id)!.name;
 
 const W = 760;
 const H = 360;
-const PAD = { top: 16, right: 92, bottom: 28, left: 32 };
+const PAD = { top: 16, right: 128, bottom: 28, left: 32 };
 const DAY = 86_400_000;
 const WINDOW_DAYS = 7;
 
@@ -45,7 +45,8 @@ export default function PollTrend({ polls }: { polls: Poll[] }) {
   const y = (v: number) => PAD.top + (1 - v / yMax) * (H - PAD.top - PAD.bottom);
   const lines = [...shown].map((id) => ({ id, pts: rolling(polls, id) }));
   const ticks = Array.from({ length: yMax / 5 + 1 }, (_, i) => i * 5);
-  const months = [...new Set(polls.map((p) => p.date.slice(0, 7)))].map((m) => Date.parse(`${m}-01`)).filter((t) => t >= t0);
+  // One date tick a week, starting from the first poll.
+  const weeks = Array.from({ length: Math.floor((t1 - t0) / (7 * DAY)) + 1 }, (_, i) => t0 + i * 7 * DAY);
   const hoverPoll = hover === null ? null : polls[hover];
 
   // Direct labels at the right end, nudged apart so they don't overlap.
@@ -85,10 +86,10 @@ export default function PollTrend({ polls }: { polls: Poll[] }) {
         })}
       </div>
 
-      <div dir="ltr" className="relative mt-3">
+      <div dir="ltr" className="relative mt-3 overflow-x-auto">
         <svg
           viewBox={`0 0 ${W} ${H}`}
-          className="w-full"
+          className="w-full min-w-[640px]"
           role="img"
           aria-label="מנדטים בסקרים לאורך זמן"
           onMouseLeave={() => setHover(null)}
@@ -110,11 +111,14 @@ export default function PollTrend({ polls }: { polls: Poll[] }) {
               </text>
             </g>
           ))}
-          {months.map((t) => (
-            <text key={t} x={x(t)} y={H - 8} textAnchor="middle" fontSize={11} fill="#64748b">
-              {new Date(t).toLocaleDateString("he-IL", { month: "short" })}
-            </text>
-          ))}
+          {weeks.map((t) => {
+            const d = new Date(t);
+            return (
+              <text key={t} x={x(t)} y={H - 8} textAnchor="middle" fontSize={11} fill="#64748b">
+                {d.getUTCDate()}.{d.getUTCMonth() + 1}
+              </text>
+            );
+          })}
           {/* The threshold: about 4 seats. */}
           <line x1={PAD.left} x2={W - PAD.right} y1={y(4)} y2={y(4)} stroke="#f59e0b" strokeDasharray="4 4" strokeWidth={1} opacity={0.6} />
           <text x={PAD.left + 4} y={y(4) - 4} fontSize={10} fill="#f59e0b" opacity={0.8}>

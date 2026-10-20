@@ -7,9 +7,11 @@ import MapGuide from "@/components/MapGuide";
 import PartyPanel from "@/components/PartyPanel";
 import PollPicker, { pollLabel } from "@/components/PollPicker";
 import PollsTable from "@/components/PollsTable";
+import PollTrend from "@/components/PollTrend";
+import pollHistory from "@/data/poll-history.json";
 import { type Bloc, type CategoryId, MAJORITY, blocLabels, categories, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
-import { AVERAGE_ID, seatsFor } from "@/data/polls";
+import { AVERAGE_ID, type Poll, seatsFor } from "@/data/polls";
 import { topicHref } from "@/data/topics";
 
 const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {
@@ -205,8 +207,21 @@ export default function Explorer() {
           להסבר המלא על {categories.find((c) => c.id === category)?.label}: הרקע, הגישות והמושגים ←
         </Link>
         <p className="mt-3 text-xs text-slate-500">
-          מקור העמדות: דפי המפלגות באתר המכון הישראלי לדמוקרטיה, בתמצות שלנו. הקישור למקור נמצא בעמוד של כל מפלגה.
+          מקור העמדות: המצע, האתר או הצהרה מתועדת של כל מפלגה, ואיפה שלא מצאנו, המכון הישראלי לדמוקרטיה. המקור והתאריך
+          של כל עמדה נמצאים בעמוד של המפלגה.
         </p>
+      </section>
+
+      <section id="trend" className="mt-12 scroll-mt-20">
+        <h2 className="text-2xl font-bold">איך הסקרים זזו</h2>
+        <p className="mt-1 mb-3 text-sm text-slate-400">
+          כל {pollHistory.length} הסקרים שפורסמו מאז שנסגרו הרשימות ב־8 בספטמבר, לפי{" "}
+          <a href="https://www.skarim.org/polls" target="_blank" rel="noreferrer" className="underline">
+            ארכיון הסקרים skarim.org
+          </a>
+          .
+        </p>
+        <PollTrend polls={pollHistory as Poll[]} />
       </section>
 
       <section id="polls" className="mt-12 scroll-mt-20">
