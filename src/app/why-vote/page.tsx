@@ -120,6 +120,9 @@ export default function WhyVotePage() {
           <Card href="/topics" title="הנושאים" text="מה כל מפלגה אומרת על ביטחון, כלכלה, דת, גיוס ומשפט." />
           <Card href="/compare" title="השוואה" text="שתי מפלגות זו לצד זו, נושא אחרי נושא." />
         </div>
+        <Link href="/towns" className="mt-3 inline-block text-sm text-sky-400 hover:underline">
+          ואיך הצביעו ביישוב שלכם בפעם הקודמת? ←
+        </Link>
         <p className="mt-3 text-sm text-slate-400">
           שימו לב לאחוז החסימה: קול לרשימה שלא עוברת 3.25% לא נספר בחלוקה. בעמוד של כל מפלגה מופיע כמה מנדטים היא מקבלת
           בסקרים.

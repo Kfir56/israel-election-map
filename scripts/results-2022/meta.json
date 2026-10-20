@@ -1,0 +1,462 @@
+{
+ "election": "25th Knesset, 2022-11-01",
+ "source": {
+  "description": "Central Elections Committee final results by locality (CEC export, identical to the data.gov.il copy)",
+  "originalOfficialUrl": "https://media25.bechirot.gov.il/files/expc.csv",
+  "officialResultsPage": "https://votes25.bechirot.gov.il/cityresults?cityID=0",
+  "mirrorUsed": "https://raw.githubusercontent.com/DarthVictor/israel-election-results/89f84f89e8054f365341a799ff2981a9ae131004/data/raw/polls_25.csv",
+  "mirrorRepo": "https://github.com/DarthVictor/israel-election-results (data/raw, README states files retrieved from CEC 2026-08-05 and preserved byte for byte)",
+  "crossCheck": "https://raw.githubusercontent.com/YardenMorad2003/election-dashboard/ac9969e1b4dbe28bd162382d4a41313650dfed3c/analysis/official_cec/k25_locality.json (data.gov.il datastore dump with _id; all 1216 rows identical in every field)",
+  "rawFile": "raw/expb_k25_final.csv",
+  "rawSha256": "f595319f5e3645b5bcb577406432f755e4a0b3293f15beab73b8728d1355f1d3",
+  "englishNames": "nameEn/nameCbs from CBS statistical-areas layer (SHEM_YISHUV_ENGLISH), raw/cbs_localities_DarthVictor.geojson from the same repo/commit; not part of the CEC file",
+  "arabicNames": "not found in any reachable source; nameAr omitted"
+ },
+ "rowsInSource": 1216,
+ "localitiesWritten": 1215,
+ "localitiesWithoutCbsName": [
+  {
+   "code": 967,
+   "name": "אבו גווייעד שבט"
+  },
+  {
+   "code": 958,
+   "name": "אבו עבדון שבט"
+  },
+  {
+   "code": 968,
+   "name": "אבו קורינאת שבט"
+  },
+  {
+   "code": 966,
+   "name": "אבו רובייעה שבט"
+  },
+  {
+   "code": 961,
+   "name": "אבו רוקייק שבט"
+  },
+  {
+   "code": 965,
+   "name": "אטרש שבט"
+  },
+  {
+   "code": 960,
+   "name": "אסד שבט"
+  },
+  {
+   "code": 963,
+   "name": "אעצם שבט"
+  },
+  {
+   "code": 976,
+   "name": "גנאביב שבט"
+  },
+  {
+   "code": 1169,
+   "name": "הוואשלה שבט"
+  },
+  {
+   "code": 956,
+   "name": "הוזייל שבט"
+  },
+  {
+   "code": 3400,
+   "name": "חברון"
+  },
+  {
+   "code": 65,
+   "name": "מגדל"
+  },
+  {
+   "code": 1411,
+   "name": "מחנה הילה"
+  },
+  {
+   "code": 1418,
+   "name": "מחנה טלי"
+  },
+  {
+   "code": 1413,
+   "name": "מחנה יהודית"
+  },
+  {
+   "code": 1416,
+   "name": "מחנה יוכבד"
+  },
+  {
+   "code": 1415,
+   "name": "מחנה יפה"
+  },
+  {
+   "code": 1414,
+   "name": "מחנה מרים"
+  },
+  {
+   "code": 1412,
+   "name": "מחנה תל נוף"
+  },
+  {
+   "code": 939,
+   "name": "מסעודין אלעזאזמה"
+  },
+  {
+   "code": 99,
+   "name": "מצפה רמון"
+  },
+  {
+   "code": 1041,
+   "name": "נצאצרה שבט"
+  },
+  {
+   "code": 1170,
+   "name": "סייד שבט"
+  },
+  {
+   "code": 957,
+   "name": "עוקבי בנו עוקבה"
+  },
+  {
+   "code": 969,
+   "name": "עטאוונה שבט"
+  },
+  {
+   "code": 1234,
+   "name": "קבועה שבט"
+  },
+  {
+   "code": 964,
+   "name": "קודייראת אצאנעשבט"
+  },
+  {
+   "code": 972,
+   "name": "קוואעין שבט"
+  },
+  {
+   "code": 26,
+   "name": "ראש פינה"
+  },
+  {
+   "code": 3826,
+   "name": "שער שומרון"
+  },
+  {
+   "code": 970,
+   "name": "תראבין אצאנע שבט"
+  }
+ ],
+ "doubleEnvelopes": {
+  "code": 9999,
+  "name": "מעטפות חיצוניות",
+  "committee": 99,
+  "registered": 0,
+  "cast": 462807,
+  "invalid": 4093,
+  "valid": 458714,
+  "votes": {
+   "אמת": 23488,
+   "אצ": 3489,
+   "ב": 6771,
+   "ג": 17144,
+   "ד": 7311,
+   "ום": 7830,
+   "ז": 52,
+   "זך": 15,
+   "זנ": 19,
+   "זץ": 33,
+   "ט": 70887,
+   "י": 132,
+   "יז": 1750,
+   "ינ": 31,
+   "יץ": 25,
+   "יק": 34,
+   "כן": 48847,
+   "ך": 148,
+   "ל": 26156,
+   "מחל": 107885,
+   "מרצ": 14349,
+   "נז": 41,
+   "ני": 134,
+   "נף": 19,
+   "נץ": 92,
+   "נק": 272,
+   "נר": 40,
+   "עם": 8015,
+   "פה": 77681,
+   "ף": 536,
+   "צ": 2051,
+   "ץ": 81,
+   "ק": 260,
+   "קי": 55,
+   "קך": 96,
+   "קנ": 127,
+   "קץ": 1066,
+   "רז": 83,
+   "שס": 31378,
+   "ת": 291
+  }
+ },
+ "nationalTotals": {
+  "registered": 6788804,
+  "cast": 4794593,
+  "invalid": 29851,
+  "valid": 4764742,
+  "votes": {
+   "אמת": 175992,
+   "אצ": 15801,
+   "ב": 56775,
+   "ג": 280194,
+   "ד": 138617,
+   "ום": 178735,
+   "ז": 430,
+   "זך": 205,
+   "זנ": 153,
+   "זץ": 292,
+   "ט": 516470,
+   "י": 1157,
+   "יז": 13920,
+   "ינ": 234,
+   "יץ": 262,
+   "יק": 411,
+   "כן": 432482,
+   "ך": 746,
+   "ל": 213687,
+   "מחל": 1115336,
+   "מרצ": 150793,
+   "נז": 350,
+   "ני": 1354,
+   "נף": 255,
+   "נץ": 1020,
+   "נק": 1215,
+   "נר": 334,
+   "עם": 194047,
+   "פה": 847435,
+   "ף": 1728,
+   "צ": 8800,
+   "ץ": 988,
+   "ק": 1618,
+   "קי": 415,
+   "קך": 1078,
+   "קנ": 1292,
+   "קץ": 14694,
+   "רז": 939,
+   "שס": 392964,
+   "ת": 1524
+  }
+ },
+ "parties": {
+  "מחל": {
+   "he": "הליכוד בהנהגת בנימין נתניהו לראשות הממשלה",
+   "en": "Likud"
+  },
+  "פה": {
+   "he": "יש עתיד בראשות יאיר לפיד לראשות הממשלה",
+   "en": "Yesh Atid"
+  },
+  "ט": {
+   "he": "הציונות הדתית בראשות בצלאל סמוטריץ' ועוצמה יהודית",
+   "en": "Religious Zionism"
+  },
+  "כן": {
+   "he": "המחנה הממלכתי בהנהגת בני גנץ לראשות הממשלה",
+   "en": "National Unity"
+  },
+  "שס": {
+   "he": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדי",
+   "en": "Shas"
+  },
+  "ג": {
+   "he": "יהדות התורה והשבת אגודת ישראל - דגל התורה",
+   "en": "United Torah Judaism"
+  },
+  "ל": {
+   "he": "ישראל ביתנו בראשות אביגדור ליברמן",
+   "en": "Yisrael Beiteinu"
+  },
+  "עם": {
+   "he": "הרשימה הערבית המאוחדת",
+   "en": "Ra'am"
+  },
+  "ום": {
+   "he": "חד\"ש תע\"ל בראשות איימן עודה ואחמד טיבי",
+   "en": "Hadash–Ta'al"
+  },
+  "אמת": {
+   "he": "מפלגת העבודה בראשות מרב מיכאלי",
+   "en": "Labor Party"
+  },
+  "מרצ": {
+   "he": "מרצ השמאל של ישראל בראשות זהבה גלאון",
+   "en": "Meretz"
+  },
+  "ד": {
+   "he": "בל\"ד - אלתג'מוע אלווטני אלדמוקרטי בראשות סמי אבו ש",
+   "en": "Balad"
+  },
+  "ב": {
+   "he": "הבית היהודי בראשות איילת שקד",
+   "en": "Jewish Home"
+  },
+  "אצ": {
+   "he": "חופש כלכלי בראשות אביר קארה"
+  },
+  "קץ": {
+   "he": "באומץ בשבילך"
+  },
+  "יז": {
+   "he": "הכלכלית החדשה בראשות פרופסור ירון זליכה"
+  },
+  "צ": {
+   "he": "צעירים בוערים בהנהגת הדר מוכתר"
+  },
+  "ף": {
+   "he": "הפיראטים- הכי טוב לדעתי אני רוצה להיות שם",
+   "en": "Pirates"
+  },
+  "ק": {
+   "he": "קול הסביבה והחי"
+  },
+  "ת": {
+   "he": "דעת טוב ורע וברית שבט אברהם-עלה ירוק ואוסרת אל איס"
+  },
+  "ני": {
+   "he": "נתיב - נחיה תמיד יחד בכבוד"
+  },
+  "קנ": {
+   "he": "כל קול קובע נועם קולמן ולירון עופרי לראשות הממשלה"
+  },
+  "נק": {
+   "he": "יש כיוון בראשות עמוס דב סילבר"
+  },
+  "י": {
+   "he": "ישראל חופשית דמוקרטית בראשות אלי אבידר"
+  },
+  "קך": {
+   "he": "סדר חדש- למען האזרחים הותיקים בישראל"
+  },
+  "נץ": {
+   "he": "העצמאים החדשים בראשות יורם מועלמי"
+  },
+  "ץ": {
+   "he": "מנהיגות חברתית"
+  },
+  "רז": {
+   "he": "רשימת שלושים/ארבעים בראשות סטלה ויינשטיין"
+  },
+  "ך": {
+   "he": "אני ואתה"
+  },
+  "ז": {
+   "he": "שחר כוח חברתי בראשות וג'די טאהר"
+  },
+  "קי": {
+   "he": "הלב היהודי בראשות אלי יוסף"
+  },
+  "יק": {
+   "he": "מפלגת הגוש התנ\"כי"
+  },
+  "נז": {
+   "he": "כבוד האדם בראשות עו\"ד ארקדי פוגץ'"
+  },
+  "נר": {
+   "he": "\"אנחנו\" - בראשות עו\"ד מוש חוג'ה"
+  },
+  "זץ": {
+   "he": "צומת בראשות משה גרין דרכו של רפול",
+   "en": "Tzomet"
+  },
+  "יץ": {
+   "he": "צו השעה"
+  },
+  "נף": {
+   "he": "מפלגת שמע בראשות נפתלי גולדמן"
+  },
+  "ינ": {
+   "he": "איחוד בני הברית -בראשות רב חובל בשארה שליאן"
+  },
+  "זך": {
+   "he": "קמ\"ה - קידום מעמד הפרט"
+  },
+  "זנ": {
+   "he": "כח להשפיע בראשות בני אלבז"
+  }
+ },
+ "verification": {
+  "checks": {
+   "valid": {
+    "expected": 4764742,
+    "file": 4764742,
+    "diff": 0
+   },
+   "מחל": {
+    "expected": 1115336,
+    "file": 1115336,
+    "diff": 0
+   },
+   "פה": {
+    "expected": 847435,
+    "file": 847435,
+    "diff": 0
+   },
+   "ט": {
+    "expected": 516470,
+    "file": 516470,
+    "diff": 0
+   },
+   "כן": {
+    "expected": 432482,
+    "file": 432482,
+    "diff": 0
+   },
+   "שס": {
+    "expected": 392964,
+    "file": 392964,
+    "diff": 0
+   },
+   "ג": {
+    "expected": 280194,
+    "file": 280194,
+    "diff": 0
+   },
+   "ל": {
+    "expected": 213687,
+    "file": 213687,
+    "diff": 0
+   },
+   "עם": {
+    "expected": 194047,
+    "file": 194047,
+    "diff": 0
+   },
+   "ום": {
+    "expected": 178735,
+    "file": 178735,
+    "diff": 0
+   },
+   "אמת": {
+    "expected": 175992,
+    "file": 175992,
+    "diff": 0
+   },
+   "מרצ": {
+    "expected": 150793,
+    "file": 150793,
+    "diff": 0
+   },
+   "ד": {
+    "expected": 138617,
+    "file": 138617,
+    "diff": 0
+   },
+   "ב": {
+    "expected": 56793,
+    "file": 56775,
+    "diff": -18
+   }
+  },
+  "notes": [
+   "All figures match except Jewish Home (ב): file has 56,775 vs 56,793 given in the task. IDI (idi.org.il/policy/parties-and-elections/parties/habait-hayehudi/) lists 56,775, and sum of all list votes in the file equals total valid votes 4,764,742, so 56,775 appears correct and 56,793 is likely a typo/secondary-source figure.",
+   "Per-row consistency: every row satisfies sum(list votes) == valid and valid + invalid == cast.",
+   "A different, earlier (preliminary/pre-correction) version of the same CEC file circulates (e.g. EladHeller/israel-elections, kept as raw/expb_k25_preliminary_EladHeller.csv for reference only); it is ~1,048 valid votes short nationally and is NOT used."
+  ]
+ }
+}

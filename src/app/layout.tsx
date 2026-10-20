@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import Footer from "@/components/Footer";
+import HebrewOnly from "@/components/HebrewOnly";
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 
@@ -26,7 +27,9 @@ export default function RootLayout({
         <AuthProvider>
           <NavBar />
           {children}
-          <Footer />
+          <HebrewOnly>
+            <Footer />
+          </HebrewOnly>
         </AuthProvider>
       </body>
     </html>

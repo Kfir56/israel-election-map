@@ -28,6 +28,12 @@ export default function Footer() {
           <Link href="/#polls" className="hover:text-white">
             הסקרים
           </Link>
+          <Link href="/towns" className="hover:text-white">
+            איך הצביעו ביישוב שלי
+          </Link>
+          <Link href="/ar" lang="ar" className="hover:text-white">
+            العربية
+          </Link>
           <Link href="/coalitions" className="hover:text-white">
             קואליציות אפשריות
           </Link>

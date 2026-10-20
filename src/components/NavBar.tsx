@@ -19,6 +19,13 @@ const links = [
   { href: "/dashboard", label: "הלוח של החברים" },
 ];
 
+// The Arabic section covers the explainer pages; the game and friends stay Hebrew.
+const arLinks = [
+  { href: "/ar", label: "الأحزاب" },
+  { href: "/ar/towns", label: "نتائج 2022 حسب البلدة" },
+  { href: "/ar/why-vote", label: "لماذا نصوّت" },
+];
+
 function daysLeft() {
   return Math.ceil((ELECTION_DAY.getTime() - Date.now()) / 86_400_000);
 }
@@ -34,19 +41,21 @@ export default function NavBar() {
   );
   const days = mounted ? daysLeft() : null;
 
-  const active = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+  const ar = path === "/ar" || path.startsWith("/ar/");
+  const shown = ar ? arLinks : links;
+  const active = (href: string) => (href === "/" || href === "/ar" ? path === href : path.startsWith(href));
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
       <nav className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-2 font-extrabold">
+        <Link href={ar ? "/ar" : "/"} className="flex shrink-0 items-center gap-2 font-extrabold">
           <Logo />
-          <span className="hidden sm:inline">המפה הפוליטית</span>
+          <span className="hidden sm:inline">{ar ? "الخريطة السياسية" : "המפה הפוליטית"}</span>
           <span className="rounded bg-sky-500/15 px-1.5 text-xs font-bold text-sky-300">2026</span>
         </Link>
 
         <div className="hidden flex-1 items-center gap-0.5 xl:flex">
-          {links.map((l) => (
+          {shown.map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -62,14 +71,21 @@ export default function NavBar() {
         <div className="ms-auto flex items-center gap-3">
           {days !== null && days > 0 && (
             <span className="hidden rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200 2xl:inline">
-              עוד {days} ימים לבחירות
+              {ar ? `${days} أيام حتى الانتخابات` : `עוד ${days} ימים לבחירות`}
             </span>
           )}
-          <AccountMenu />
+          <Link
+            href={ar ? "/" : "/ar"}
+            lang={ar ? "he" : "ar"}
+            className="whitespace-nowrap rounded-lg border border-slate-700 px-2.5 py-1 text-sm text-slate-300 hover:border-sky-500/60 hover:text-white"
+          >
+            {ar ? "עברית" : "العربية"}
+          </Link>
+          {!ar && <AccountMenu />}
           <button
             onClick={() => setOpen((o) => !o)}
             className="rounded-lg p-2 text-slate-300 hover:bg-slate-800 xl:hidden"
-            aria-label="תפריט"
+            aria-label={ar ? "القائمة" : "תפריט"}
             aria-expanded={open}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
@@ -81,7 +97,7 @@ export default function NavBar() {
 
       {open && (
         <div className="border-t border-slate-800 px-4 py-2 xl:hidden">
-          {links.map((l) => (
+          {shown.map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -91,7 +107,9 @@ export default function NavBar() {
               {l.label}
             </Link>
           ))}
-          {days !== null && days > 0 && <p className="px-3 py-2 text-xs text-amber-200">עוד {days} ימים לבחירות</p>}
+          {days !== null && days > 0 && (
+            <p className="px-3 py-2 text-xs text-amber-200">{ar ? `${days} أيام حتى الانتخابات` : `עוד ${days} ימים לבחירות`}</p>
+          )}
         </div>
       )}
     </header>
