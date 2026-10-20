@@ -198,3 +198,9 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - A scheduled task fires into the thread session daily 06:52 Israel time, 21-27 Oct, to add new skarim.org polls to polls.ts and poll-history.json.
 - Surplus agreements (src/data/surplus.json, from news reports; CEC site unreachable) shown on /coalitions#surplus, with whether both lists pass on the poll average.
 - @vercel/analytics added in the root layout; Kfir must enable Web Analytics in the Vercel project.
+
+### 20 Oct (afternoon): sharing, calendar, results page
+- `/og` route draws link-preview images (Heebo woff in public/fonts; Hebrew reversed per word because Satori has no bidi). Used by layout, party, coalitions, why-vote, towns, results and shared quiz results (`/quiz/r?p=&m=`).
+- Quiz: share to WhatsApp / copy link; withdrawn lists excluded.
+- `/election-day.ics` + Google Calendar link (home banner, why-vote, Arabic why-vote).
+- `/results`: election-night page driven by src/data/results-2026.json (status before/exit/counting/final). Scheduled tasks fire into the thread session 27 Oct 22:08/23:08 (exit polls) and 4x daily 28-31 Oct (count).
