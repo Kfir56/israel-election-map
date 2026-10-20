@@ -12,6 +12,7 @@ const links = [
   { href: "/topics", label: "הנושאים" },
   { href: "/quiz", label: "שאלון" },
   { href: "/guide", label: "איך זה עובד" },
+  { href: "/coalitions", label: "קואליציות" },
   { href: "/why-vote", label: "למה להצביע" },
   { href: "/predict", label: "החיזוי שלי" },
   { href: "/friends", label: "חברים" },

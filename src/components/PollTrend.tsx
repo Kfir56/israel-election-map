@@ -3,11 +3,9 @@
 import { useMemo, useState } from "react";
 import { parties } from "@/data/parties";
 import type { Poll } from "@/data/polls";
+import { colorOnDark } from "@/lib/party-color";
 
-// Party colors are the parties' own, so they stay. The two near-black ones
-// would vanish on the dark surface; they get a light gray stand-in here.
-const LINE_COLOR: Record<string, string> = { shas: "#e7e5e4", utj: "#a8a29e" };
-const colorOf = (id: string) => LINE_COLOR[id] ?? parties.find((p) => p.id === id)!.color;
+const colorOf = colorOnDark;
 const nameOf = (id: string) => parties.find((p) => p.id === id)!.name;
 
 const W = 760;

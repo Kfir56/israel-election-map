@@ -28,6 +28,9 @@ export default function Footer() {
           <Link href="/#polls" className="hover:text-white">
             הסקרים
           </Link>
+          <Link href="/coalitions" className="hover:text-white">
+            קואליציות אפשריות
+          </Link>
           <Link href="/topics" className="hover:text-white">
             הנושאים
           </Link>

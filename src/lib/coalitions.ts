@@ -16,7 +16,7 @@ export function minimalCoalitions(seats: Record<string, number>, majority = 61):
 export type Conflict = { a: string; b: string; text: string; source: string; date: string };
 
 /** The stated red lines a coalition would break. */
-export function conflictsIn(members: string[], conflicts: Conflict[]): Conflict[] {
+export function conflictsIn<C extends Conflict>(members: string[], conflicts: C[]): C[] {
   const set = new Set(members);
   return conflicts.filter((c) => set.has(c.a) && set.has(c.b));
 }

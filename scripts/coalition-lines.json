@@ -1,0 +1,123 @@
+{
+  "likud": {
+    "recommends": { "text": "נתניהו, יו״ר המפלגה", "source": "https://www.jpost.com/israel-election-2026/article-912218", "date": "2026-10-19" },
+    "wontSitWith": [
+      { "party": "raam", "text": "נתניהו: ״לא ממשלת שמאל שתלויה במפלגות הערביות״", "source": "https://www.timesofisrael.com/netanyahus-vow-to-build-broad-national-government-marks-familiar-attempt-at-pre-election-rebrand/", "date": "2026-06-27" },
+      { "party": "joint", "text": "נתניהו: ״לא ממשלת שמאל שתלויה במפלגות הערביות״", "source": "https://www.timesofisrael.com/netanyahus-vow-to-build-broad-national-government-marks-familiar-attempt-at-pre-election-rebrand/", "date": "2026-06-27" }
+    ],
+    "conditions": []
+  },
+  "yashar": {
+    "recommends": { "text": "ראש המפלגה הגדולה בגוש יהיה המועמד; איזנקוט מתמודד על התפקיד", "source": "https://www.maariv.co.il/news/politics/article-1370825", "date": "2026-09-26" },
+    "wontSitWith": [
+      { "party": "נתניהו", "text": "שלל ממשלה משותפת עם נתניהו; ״לא כשיר להנהיג״ בגלל 7 באוקטובר", "source": "https://www.timesofisrael.com/liveblog_entry/eisenkot-rules-out-power-sharing-government-with-netanyahu-appears-to-contradict-his-no-2-over-partnering-with-smotrich/", "date": "2026-09-17" },
+      { "party": "raam", "text": "״אינני רואה מפלגה ערבית שמקבלת את העקרונות שלי״", "source": "https://www.jpost.com/israel-election-2026/article-911779", "date": "2026-10-15" },
+      { "party": "joint", "text": "״אינני רואה מפלגה ערבית שמקבלת את העקרונות שלי״", "source": "https://www.jpost.com/israel-election-2026/article-911779", "date": "2026-10-15" }
+    ],
+    "conditions": [
+      { "text": "שותף חייב לקבל את ישראל כמדינה יהודית ודמוקרטית, את ערכי מגילת העצמאות וחובת השירות", "source": "https://www.maariv.co.il/news/politics/article-1370825", "date": "2026-09-26" },
+      { "text": "״מי שאינו מקבל שחמאס הוא ארגון טרור שיש לפרק – לא יהיה שותף בממשלה״", "source": "https://www.maariv.co.il/news/politics/article-1370825", "date": "2026-09-26" }
+    ]
+  },
+  "together": {
+    "recommends": { "text": "בנט, יו״ר הרשימה, מועמד לראשות הממשלה", "source": "https://kan.org.il/content/kan-news/politic/1033450/", "date": "2026-04-26" },
+    "wontSitWith": [
+      { "party": "נתניהו", "text": "״לא נשב איתו בשום הרכב״ (אחרי שרמז אחרת באותו יום)", "source": "https://www.timesofisrael.com/bennett-suggests-netanyahu-could-be-part-of-future-government-quickly-backtracks/", "date": "2026-10-11" },
+      { "party": "otzma", "text": "נשאל על שותפות עם בן גביר וענה: ״לא״", "source": "https://www.mako.co.il/news-israel-elections/2026/Article-36775f2c58dcd91027.htm", "date": "2026-04-26" },
+      { "party": "raam", "text": "״נסתמך רק על המפלגות הציוניות. המפלגות הערביות אינן ציוניות״", "source": "https://www.mako.co.il/news-israel-elections/2026/Article-36775f2c58dcd91027.htm", "date": "2026-04-26" },
+      { "party": "joint", "text": "״נסתמך רק על המפלגות הציוניות. המפלגות הערביות אינן ציוניות״", "source": "https://www.mako.co.il/news-israel-elections/2026/Article-36775f2c58dcd91027.htm", "date": "2026-04-26" }
+    ],
+    "conditions": [
+      { "text": "״הדלת נעולה בפני כל מי שתומך בהשתמטות״ – כולל המפלגות החרדיות", "source": "https://ynetnews.com/article/sklmpablzx", "date": "2026-08-06" },
+      { "text": "״חוק דרעי״: משתמט לא יכהן בקבינט – ״תנאי יסוד״ לכניסה לממשלה", "source": "https://jpost.com/israel-election-2026/article-910804", "date": "2026-10-06" }
+    ]
+  },
+  "dems": {
+    "recommends": { "text": "ראש המפלגה הגדולה בגוש; ״כרגע איזנקוט הוא המועמד הטבעי״", "source": "https://www.ynetnews.com/article/syys00erge", "date": "2026-07-27" },
+    "wontSitWith": [
+      { "party": "likud", "text": "שוללת ממשלה עם נתניהו והליכוד", "source": "https://www.jpost.com/israel-election-2026/article-910100", "date": "2026-10-01" },
+      { "party": "shas", "text": "גולן: לא נשב עם המפלגות החרדיות באותה קואליציה", "source": "https://www.jpost.com/israel-election-2026/article-910100", "date": "2026-10-01" },
+      { "party": "utj", "text": "גולן: לא נשב עם המפלגות החרדיות באותה קואליציה", "source": "https://www.jpost.com/israel-election-2026/article-910100", "date": "2026-10-01" }
+    ],
+    "conditions": [
+      { "text": "״בממשלה שלנו יהיו אפס נאשמים בפלילים״ – נאשם לא יכהן כרה״מ או כשר", "source": "https://www.jpost.com/israel-election-2026/article-910100", "date": "2026-10-01" }
+    ]
+  },
+  "utj": {
+    "recommends": null,
+    "wontSitWith": [],
+    "conditions": [
+      { "text": "״לא ניכנס לממשלה שלא תעביר בפועל את החוק״ להסדרת מעמד בני הישיבות", "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/", "date": "2026-10-12" }
+    ]
+  },
+  "otzma": {
+    "recommends": null,
+    "wontSitWith": [],
+    "conditions": [
+      { "text": "״תנאי סף״: הדחת היועמ״ש גלי בהרב-מיארה מיד עם הקמת הממשלה", "source": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-903225", "date": "2026-07-20" },
+      { "text": "דרישה לתיק הביטחון לבן גביר (מוצגת כתנאי לכניסה)", "source": "https://www.jpost.com/israel-election-2026/article-911864", "date": "2026-10-15" }
+    ]
+  },
+  "shas": {
+    "recommends": { "text": "נתניהו: ״אנחנו תומכים בנתניהו, נקודה״", "source": "https://www.timesofisrael.com/liveblog_entry/rebuffing-eisenkots-overtures-shas-chief-deri-says-we-support-netanyahu-period/", "date": "2026-07-16" },
+    "wontSitWith": [],
+    "conditions": [
+      { "text": "לא תקום ממשלה בתמיכת ש״ס או בהשתתפותה בלי הסדרת מעמד בני הישיבות", "source": "https://www.timesofisrael.com/deri-says-like-utj-shas-wont-join-next-government-without-a-draft-exemption-law/", "date": "2026-10-14" }
+    ]
+  },
+  "yb": {
+    "recommends": { "text": "ליברמן מציג את עצמו כמועמד לראשות הממשלה", "source": "https://www.timesofisrael.com/liveblog_entry/eisenkot-said-to-propose-to-opposition-chiefs-they-all-agree-to-nominate-leader-of-largest-party-for-pm-after-election/", "date": "2026-05-31" },
+    "wontSitWith": [
+      { "party": "נתניהו", "text": "לא ישב עם נתניהו ״בשום מקרה״; ליכוד בלי נתניהו – שותף אפשרי", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" },
+      { "party": "raam", "text": "״בלי רע״מ, בלי הרשימה המשותפת, בלי ש״ס ובלי יהדות התורה״", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" },
+      { "party": "joint", "text": "״בלי רע״מ, בלי הרשימה המשותפת, בלי ש״ס ובלי יהדות התורה״", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" },
+      { "party": "shas", "text": "״בלי רע״מ, בלי הרשימה המשותפת, בלי ש״ס ובלי יהדות התורה״", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" },
+      { "party": "utj", "text": "״בלי רע״מ, בלי הרשימה המשותפת, בלי ש״ס ובלי יהדות התורה״", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" }
+    ],
+    "conditions": [
+      { "text": "קואליציה של מפלגות ציוניות בלבד", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" },
+      { "text": "״לא נתמוך בשום ממשלת מיעוט, גם לא זמנית״", "source": "https://www.jpost.com/israel-election-2026/article-911855", "date": "2026-10-15" }
+    ]
+  },
+  "joint": {
+    "recommends": null,
+    "wontSitWith": [],
+    "conditions": [
+      { "text": "תנאי לתמיכה (מבחוץ) בממשלה: תוכנית ממומנת למיגור הפשיעה בחברה הערבית", "source": "https://www.jpost.com/israel-election-2026/article-911417", "date": "2026-10-10" },
+      { "text": "תנאי לתמיכה: עצירת הריסות בתים והכרה בכפרים הלא-מוכרים בנגב", "source": "https://www.jpost.com/israel-election-2026/article-911417", "date": "2026-10-10" },
+      { "text": "תנאי לתמיכה: ״אופק מדיני לפלסטינים״", "source": "https://www.jpost.com/israel-election-2026/article-911417", "date": "2026-10-10" }
+    ]
+  },
+  "rzp": {
+    "recommends": { "text": "נתניהו", "source": "https://jpost.com/israel-election-2026/article-905686", "date": "2026-08-18" },
+    "wontSitWith": [
+      { "party": "raam", "text": "שלל הסתמכות על מפלגות ערביות; ממשלה עם רע״מ ״גרועה מטבח 7 באוקטובר״", "source": "https://jpost.com/israel-election-2026/article-905686", "date": "2026-08-18" },
+      { "party": "joint", "text": "שלל הסתמכות על מפלגות ערביות כדי להקים ממשלה", "source": "https://jpost.com/israel-election-2026/article-905686", "date": "2026-08-18" }
+    ],
+    "conditions": []
+  },
+  "raam": {
+    "recommends": null,
+    "wontSitWith": [],
+    "conditions": []
+  },
+  "reservists": {
+    "recommends": { "text": "״מי שיביא הכי הרבה מנדטים ציוניים – עליו נמליץ״", "source": "https://www.ynetnews.com/article/2ixdc53d3", "date": "2026-10-13" },
+    "wontSitWith": [
+      { "party": "נתניהו", "text": "״לא נשב בקואליציה של 61 עם נתניהו והחרדים״", "source": "https://www.ynetnews.com/article/2ixdc53d3", "date": "2026-10-13" },
+      { "party": "raam", "text": "״לא נשב בקואליציה של 61 עם המפלגות הערביות״", "source": "https://www.ynetnews.com/article/2ixdc53d3", "date": "2026-10-13" },
+      { "party": "joint", "text": "״לא נשב בקואליציה של 61 עם המפלגות הערביות״", "source": "https://www.ynetnews.com/article/2ixdc53d3", "date": "2026-10-13" }
+    ],
+    "conditions": []
+  },
+  "amcha": {
+    "recommends": { "text": "נתניהו: ״ראש מחנה הימין הוא נתניהו ונמליץ רק עליו״", "source": "https://www.jpost.com/israel-election-2026/article-908015", "date": "2026-09-07" },
+    "wontSitWith": [
+      { "party": "together", "text": "לא יצטרף לגורמי אופוזיציה כמו בנט (לפי ג׳רוזלם פוסט)", "source": "https://jpost.com/israel-election-2026/article-907373", "date": "2026-09-02" },
+      { "party": "yb", "text": "לא יצטרף לגורמי אופוזיציה כמו ליברמן (לפי ג׳רוזלם פוסט)", "source": "https://jpost.com/israel-election-2026/article-907373", "date": "2026-09-02" }
+    ],
+    "conditions": [
+      { "text": "״לא נצטרף לממשלה שלא תעביר, לפני שתוקם, חוק שישים סוף להשתמטות״", "source": "https://jpost.com/israel-election-2026/article-907373", "date": "2026-09-02" }
+    ]
+  }
+}
