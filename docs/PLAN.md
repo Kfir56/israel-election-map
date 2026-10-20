@@ -186,3 +186,6 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - Ballot letters (`letter`) on party pages and list. 24 small lists in `src/data/minor-lists.json`, shown on /parties#minor.
 - /why-vote page (2022 numbers, blank ballot = invalid). Women's representation on /parties#women (`src/data/gender.ts`, 4 unconfirmed).
 - Logos: blocked, the sandbox can't download images (Wikimedia/party sites refused by proxy).
+
+### 20 Oct: coalitions page
+- `/coalitions`: every minimal 61-seat combination for the poll average or any single poll, sorted by how many stated red lines it breaks. Data in `src/data/coalition-lines.json` (recommends / won't sit with / conditions, each sourced and dated). Netanyahu-the-person lines are filed under Likud with a note; Amcha's paraphrased refusals dropped. On the current average no combination reaching 61 breaks zero red lines.
