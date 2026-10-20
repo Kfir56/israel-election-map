@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Heebo } from "next/font/google";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import Footer from "@/components/Footer";
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Footer />
           </HebrewOnly>
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
