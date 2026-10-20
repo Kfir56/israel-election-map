@@ -209,3 +209,10 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - `/quiz` rebuilt: three lengths (quick 8, regular 17, full 27 statements), ⭐ per-question emphasis, per-topic importance weights (0.5/1/2).
 - Stances per party per statement in `src/data/quiz-stances.json` with reason, source link, date and an `inferred` flag; parties without a known stance on a statement are not scored on it; top-3 requires at least 3 compared statements.
 - Results: top 3, full list with per-party breakdown (agree/partly/disagree, per-topic %), continue to a longer version without re-answering, share link.
+
+## 20 Oct (evening): languages, election-day guide, cutoff line, glossary
+- English (/en) and Russian (/ru) sections next to Arabic: home, party pages, why-vote, 2022 town results. All three are shared components in `src/components/intl/` driven by `src/data/{ar,en,ru}.json` (same keys; `ui` and `towns` hold page strings). Navbar has a language menu. Only the top 10 candidates per list are translated.
+- /election-day: sourced guide (hours, ID, finding your station, how to vote and what invalidates a ballot, day off and free transport, special voting, results). Facts in `src/data/election-day.json`.
+- Party lists: dashed "cutoff by poll average" line; candidate pages show whether the slot gets in by all polls / the average / some / none.
+- Glossary: `src/data/glossary.ts` + `<Term>` pop-ups on guide, why-vote, minor lists, surplus agreements and party pages; full list at /guide#term-…
+- Friends and dashboard links moved from the top nav into the account menu.
