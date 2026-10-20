@@ -222,7 +222,7 @@ function Beam({
           <sphereGeometry args={[lit ? 0.14 : 0.1, 20, 20]} />
           <meshBasicMaterial color={color} transparent opacity={dimmed ? 0.2 : 1} toneMapped={false} />
         </mesh>
-        {(seats >= 8 || lit) && !dimmed && (
+        {(seats >= 8 || lit || (coalitionMode && seats > 0)) && !dimmed && (
           <Html position={[0, 0.32, 0]} center zIndexRange={[10, 0]}>
             <button
               onClick={onClick}

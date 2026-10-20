@@ -127,11 +127,18 @@ export const polls: Poll[] = [
 export const AVERAGE_ID = "average";
 
 // Mean of all polls above, rounded so the seats still add up to 120
-// (largest remainder).
+// (largest remainder). A list whose mean is under the threshold (3.25% of 120
+// is 3.9 seats) gets 0, since no real result can give a list 1-3 seats; its
+// seats are shared among the others in proportion.
+const THRESHOLD_SEATS = 3.9;
 export const averageSeats: Record<string, number> = (() => {
   const totals: Record<string, number> = {};
   for (const p of polls) for (const [id, s] of Object.entries(p.seats)) totals[id] = (totals[id] ?? 0) + s;
-  const exact = Object.entries(totals).map(([id, t]) => ({ id, v: t / polls.length }));
+  const means = Object.entries(totals)
+    .map(([id, t]) => ({ id, m: t / polls.length }))
+    .filter((e) => e.m >= THRESHOLD_SEATS);
+  const sum = means.reduce((n, e) => n + e.m, 0);
+  const exact = means.map((e) => ({ id: e.id, v: (e.m / sum) * KNESSET_SEATS }));
   const out: Record<string, number> = {};
   for (const e of exact) out[e.id] = Math.floor(e.v);
   let left = KNESSET_SEATS - Object.values(out).reduce((a, b) => a + b, 0);

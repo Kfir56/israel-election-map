@@ -21,7 +21,11 @@ const IsraelMap3D = dynamic(() => import("@/components/IsraelMap3D"), {
 
 const blocs: Bloc[] = ["coalition", "opposition", "arab"];
 const chip = "rounded-full bg-slate-950/60 px-2.5 py-1 backdrop-blur-sm";
-const blocColors: Record<Bloc, string> = { coalition: "#2563eb", opposition: "#14b8a6", arab: "#9f1239" };
+const blocColors: Record<Bloc, string> = {
+  coalition: "#2563eb",
+  opposition: "#14b8a6",
+  arab: "#9f1239",
+};
 
 export default function Explorer() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -51,62 +55,102 @@ export default function Explorer() {
     <>
       <MapGuide />
       <section className="grid gap-4 lg:grid-cols-[1fr_380px]">
-        {/* LTR so the 3D labels and the left/right axis line up with the screen. */}
-        <div dir="ltr" className="relative h-[60vh] min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 lg:h-[72vh]">
-          <IsraelMap3D
-            parties={parties}
-            seats={seats}
-            selectedId={selectedId}
-            focusBloc={focusBloc}
-            coalition={members}
-            coalitionMode={coalitionMode}
-            onPartyClick={onPartyClick}
-          />
-          <div dir="rtl" className="absolute inset-x-0 top-0 flex flex-wrap items-start justify-between gap-2 p-3">
-            <button
-              onClick={() => {
-                setCoalitionMode(!coalitionMode);
-                setSelectedId(null);
-              }}
-              className={`rounded-full px-4 py-2 text-sm font-bold shadow-lg transition ${
-                coalitionMode
-                  ? "bg-amber-400 text-slate-900"
-                  : "bg-gradient-to-l from-amber-400 to-pink-500 text-white hover:scale-105"
-              }`}
+        <div>
+          {/* LTR so the 3D labels and the left/right axis line up with the screen. */}
+          <div
+            dir="ltr"
+            className="relative h-[60vh] min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 lg:h-[72vh]"
+          >
+            <IsraelMap3D
+              parties={parties}
+              seats={seats}
+              selectedId={selectedId}
+              focusBloc={focusBloc}
+              coalition={members}
+              coalitionMode={coalitionMode}
+              onPartyClick={onPartyClick}
+            />
+            <div dir="rtl" className="absolute inset-x-0 top-0 flex flex-wrap items-start justify-between gap-2 p-3">
+              <button
+                onClick={() => {
+                  setCoalitionMode(!coalitionMode);
+                  setSelectedId(null);
+                }}
+                className={`rounded-full px-4 py-2 text-sm font-bold shadow-lg transition ${
+                  coalitionMode
+                    ? "bg-amber-400 text-slate-900"
+                    : "bg-gradient-to-l from-amber-400 to-pink-500 text-white hover:scale-105"
+                }`}
+              >
+                {coalitionMode ? "יציאה ממצב קואליציה" : "👑 נסו להרכיב קואליציה"}
+              </button>
+              {coalitionMode && (
+                <div className="rounded-xl bg-slate-950/80 px-3 py-2 text-sm text-white backdrop-blur">
+                  {coalitionSeats >= MAJORITY ? (
+                    <span className="font-bold text-amber-300">🎉 יש ממשלה! {coalitionSeats} מנדטים</span>
+                  ) : (
+                    <span>
+                      לחצו על מפלגות כדי לצרף אותן · <b>{coalitionSeats}</b>/{MAJORITY}
+                      {coalitionSeats > 0 && ` · חסרים ${MAJORITY - coalitionSeats}`}
+                    </span>
+                  )}
+                  {members.length > 0 && (
+                    <button onClick={() => setCoalition([])} className="mr-3 text-xs text-slate-400 underline">
+                      איפוס
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
+            {/* Axis labels, so the map explains itself even without the guide. */}
+            <div
+              dir="rtl"
+              className="pointer-events-none absolute inset-0 text-xs font-semibold text-slate-100 [text-shadow:0_1px_3px_#000]"
             >
-              {coalitionMode ? "יציאה ממצב קואליציה" : "👑 נסו להרכיב קואליציה"}
-            </button>
-            {coalitionMode && (
-              <div className="rounded-xl bg-slate-950/80 px-3 py-2 text-sm text-white backdrop-blur">
-                {coalitionSeats >= MAJORITY ? (
-                  <span className="font-bold text-amber-300">🎉 יש ממשלה! {coalitionSeats} מנדטים</span>
-                ) : (
-                  <span>
-                    לחצו על מפלגות כדי לצרף אותן · <b>{coalitionSeats}</b>/{MAJORITY}
-                    {coalitionSeats > 0 && ` · חסרים ${MAJORITY - coalitionSeats}`}
-                  </span>
-                )}
-                {members.length > 0 && (
-                  <button onClick={() => setCoalition([])} className="mr-3 text-xs text-slate-400 underline">
-                    איפוס
-                  </button>
-                )}
+              <span className={`${chip} absolute left-3 top-3 sm:left-1/2 sm:-translate-x-1/2`}>↑ דתי יותר</span>
+              <span className={`${chip} absolute bottom-10 left-1/2 -translate-x-1/2`}>↓ חילוני יותר</span>
+              <span className={`${chip} absolute bottom-3 left-3`}>← שמאל</span>
+              <span className={`${chip} absolute bottom-3 right-3`}>ימין →</span>
+              <span className="absolute bottom-3 left-1/2 hidden -translate-x-1/2 text-[11px] font-normal text-slate-300 sm:inline">
+                גררו לסיבוב · גלגלת לזום · לחצו על עמוד לפרטים
+              </span>
+              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] font-normal text-slate-300 sm:hidden">
+                גררו לסיבוב · צביטה לזום
+              </span>
+            </div>
+          </div>
+
+          {coalitionMode && (
+            <div className="mt-2 rounded-xl border border-slate-800 bg-slate-900/60 p-3">
+              <p className="mb-2 text-xs text-slate-400">
+                הרשימות שעוברות את אחוז החסימה בסקר הזה. אפשר ללחוץ כאן או על העמודים במפה.
+              </p>
+              {/* Every list that passes the threshold, so all names are visible and tappable. */}
+              <div className="flex flex-wrap gap-1.5">
+                {parties
+                  .filter((p) => seats[p.id])
+                  .sort((a, b) => seats[b.id] - seats[a.id])
+                  .map((p) => {
+                    const on = members.includes(p.id);
+                    return (
+                      <button
+                        key={p.id}
+                        onClick={() => onPartyClick(p.id)}
+                        aria-pressed={on}
+                        className={`rounded-full border px-2.5 py-1 text-sm transition ${
+                          on
+                            ? "border-amber-300 bg-amber-400 font-semibold text-slate-900"
+                            : "border-slate-600 text-slate-200 hover:border-slate-400"
+                        }`}
+                      >
+                        {on ? "✓ " : "+ "}
+                        {p.name} {seats[p.id]}
+                      </button>
+                    );
+                  })}
               </div>
-            )}
-          </div>
-          {/* Axis labels, so the map explains itself even without the guide. */}
-          <div dir="rtl" className="pointer-events-none absolute inset-0 text-xs font-semibold text-slate-100 [text-shadow:0_1px_3px_#000]">
-            <span className={`${chip} absolute left-3 top-3 sm:left-1/2 sm:-translate-x-1/2`}>↑ דתי יותר</span>
-            <span className={`${chip} absolute bottom-10 left-1/2 -translate-x-1/2`}>↓ חילוני יותר</span>
-            <span className={`${chip} absolute bottom-3 left-3`}>← שמאל</span>
-            <span className={`${chip} absolute bottom-3 right-3`}>ימין →</span>
-            <span className="absolute bottom-3 left-1/2 hidden -translate-x-1/2 text-[11px] font-normal text-slate-300 sm:inline">
-              גררו לסיבוב · גלגלת לזום · לחצו על עמוד לפרטים
-            </span>
-            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] font-normal text-slate-300 sm:hidden">
-              גררו לסיבוב · צביטה לזום
-            </span>
-          </div>
+            </div>
+          )}
         </div>
 
         <aside className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 lg:h-[72vh]">
@@ -123,7 +167,13 @@ export default function Explorer() {
               <h2 className="mt-4 text-lg font-bold">מאזן הגושים</h2>
               <div className="relative mt-3 flex h-4 overflow-hidden rounded-full bg-slate-800">
                 {blocs.map((b) => (
-                  <div key={b} style={{ width: `${(blocSeats(b) / 120) * 100}%`, background: blocColors[b] }} />
+                  <div
+                    key={b}
+                    style={{
+                      width: `${(blocSeats(b) / 120) * 100}%`,
+                      background: blocColors[b],
+                    }}
+                  />
                 ))}
                 <div className="absolute inset-y-0 w-0.5 bg-white" style={{ right: `${(MAJORITY / 120) * 100}%` }} />
               </div>
@@ -144,7 +194,9 @@ export default function Explorer() {
                   </button>
                 ))}
               </div>
-              <p className="mt-2 text-xs text-slate-500">דרושים {MAJORITY} מנדטים להקמת ממשלה. לחצו על גוש כדי להדגיש אותו.</p>
+              <p className="mt-2 text-xs text-slate-500">
+                דרושים {MAJORITY} מנדטים להקמת ממשלה. לחצו על גוש כדי להדגיש אותו.
+              </p>
 
               <h2 className="mt-5 text-lg font-bold">המפלגות</h2>
               <ul className="mt-2 flex-1 space-y-1 overflow-y-auto">
@@ -203,7 +255,10 @@ export default function Explorer() {
             </Link>
           ))}
         </div>
-        <Link href={topicHref(category)} className="mt-4 inline-block rounded-xl border border-sky-500/40 px-4 py-2 text-sm font-semibold text-sky-300 hover:bg-sky-500/10">
+        <Link
+          href={topicHref(category)}
+          className="mt-4 inline-block rounded-xl border border-sky-500/40 px-4 py-2 text-sm font-semibold text-sky-300 hover:bg-sky-500/10"
+        >
           להסבר המלא על {categories.find((c) => c.id === category)?.label}: הרקע, הגישות והמושגים ←
         </Link>
         <p className="mt-3 text-xs text-slate-500">
@@ -227,8 +282,8 @@ export default function Explorer() {
       <section id="polls" className="mt-12 scroll-mt-20">
         <h2 className="text-2xl font-bold">כל הסקרים</h2>
         <p className="mt-1 text-sm text-slate-400">
-          הסקרים שונים מאוד זה מזה, אז כאן רואים את כולם. ירוק = הכי גבוה בין הסקרים, אדום = הכי נמוך, ״—״ = מתחת
-          לאחוז החסימה. לחצו על סקר כדי להציג אותו במפה.
+          הסקרים שונים מאוד זה מזה, אז כאן רואים את כולם. ירוק = הכי גבוה בין הסקרים, אדום = הכי נמוך, ״—״ = מתחת לאחוז
+          החסימה. לחצו על סקר כדי להציג אותו במפה.
         </p>
         <div className="mt-4">
           <PollsTable pollId={pollId} onPick={pickPoll} />
