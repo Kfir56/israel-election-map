@@ -193,3 +193,8 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 ### 20 Oct: Arabic section and 2022 results by town
 - `/ar`, `/ar/party/<id>`, `/ar/why-vote`, `/ar/towns`: Arabic text in `src/data/ar.json` (our translation of the Hebrew data, from scripts/ar/content.json); sources, dates and numbers come from the Hebrew data files. Nav shows a עברית/العربية switch; the game, quiz and friends pages stay Hebrew-only.
 - `/towns` (+ `/ar/towns`): CEC Knesset 25 results per locality (expc.csv via a pinned GitHub mirror, checked against national totals), built by `scripts/build-towns.py` into `public/data/towns-2022.json`. Arabic locality names in `scripts/results-2022/names-ar.json` are our transliteration.
+
+### 20 Oct: daily polls, surplus agreements, analytics
+- A scheduled task fires into the thread session daily 06:52 Israel time, 21-27 Oct, to add new skarim.org polls to polls.ts and poll-history.json.
+- Surplus agreements (src/data/surplus.json, from news reports; CEC site unreachable) shown on /coalitions#surplus, with whether both lists pass on the poll average.
+- @vercel/analytics added in the root layout; Kfir must enable Web Analytics in the Vercel project.
