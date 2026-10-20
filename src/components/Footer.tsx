@@ -28,6 +28,9 @@ export default function Footer() {
           <Link href="/#polls" className="hover:text-white">
             הסקרים
           </Link>
+          <Link href="/results" className="hover:text-white">
+            תוצאות הבחירות
+          </Link>
           <Link href="/towns" className="hover:text-white">
             איך הצביעו ביישוב שלי
           </Link>

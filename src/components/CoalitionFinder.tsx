@@ -10,11 +10,12 @@ import { colorOnDark } from "@/lib/party-color";
 const party = (id: string) => parties.find((p) => p.id === id)!;
 const PAGE = 8;
 
-export default function CoalitionFinder() {
+/** Without `fixedSeats` it works from the polls, with a poll picker. */
+export default function CoalitionFinder({ fixedSeats }: { fixedSeats?: Record<string, number> }) {
   const [pollId, setPollId] = useState(AVERAGE_ID);
   const [onlyClean, setOnlyClean] = useState(false);
   const [limit, setLimit] = useState(PAGE);
-  const seats = seatsFor(pollId);
+  const seats = fixedSeats ?? seatsFor(pollId);
 
   const all = useMemo(
     () =>
@@ -36,26 +37,36 @@ export default function CoalitionFinder() {
   return (
     <div>
       <div className="flex flex-wrap items-center gap-3 text-sm">
-        <label className="flex items-center gap-2">
-          <span className="text-slate-400">לפי</span>
-          <select
-            value={pollId}
-            onChange={(e) => {
-              setPollId(e.target.value);
-              setLimit(PAGE);
-            }}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100"
-          >
-            <option value={AVERAGE_ID}>ממוצע כל הסקרים</option>
-            {polls.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.outlet}, {formatDate(p.date)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className={`flex items-center gap-2 ${clean.length ? "cursor-pointer text-slate-300" : "text-slate-600"}`}>
-          <input type="checkbox" disabled={clean.length === 0} checked={onlyClean && clean.length > 0} onChange={(e) => setOnlyClean(e.target.checked)} className="accent-sky-500" />
+        {!fixedSeats && (
+          <label className="flex items-center gap-2">
+            <span className="text-slate-400">לפי</span>
+            <select
+              value={pollId}
+              onChange={(e) => {
+                setPollId(e.target.value);
+                setLimit(PAGE);
+              }}
+              className="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-slate-100"
+            >
+              <option value={AVERAGE_ID}>ממוצע כל הסקרים</option>
+              {polls.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.outlet}, {formatDate(p.date)}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+        <label
+          className={`flex items-center gap-2 ${clean.length ? "cursor-pointer text-slate-300" : "text-slate-600"}`}
+        >
+          <input
+            type="checkbox"
+            disabled={clean.length === 0}
+            checked={onlyClean && clean.length > 0}
+            onChange={(e) => setOnlyClean(e.target.checked)}
+            className="accent-sky-500"
+          />
           רק צירופים שלא שוברים אף קו אדום
         </label>
       </div>
