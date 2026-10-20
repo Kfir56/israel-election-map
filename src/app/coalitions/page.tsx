@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CoalitionFinder from "@/components/CoalitionFinder";
+import SurplusAgreements from "@/components/SurplusAgreements";
 import { coalitionLines, type Sourced } from "@/data/coalitions";
 import { parties } from "@/data/parties";
 import { averageSeats, formatDate } from "@/data/polls";
@@ -41,6 +42,8 @@ export default function CoalitionsPage() {
           עמדות אחרי הבחירות, אז זו תמונה של מה שנאמר עד היום ולא תחזית.
         </p>
       </section>
+
+      <SurplusAgreements />
 
       <h2 className="mt-10 text-2xl font-bold">מה כל מפלגה אמרה</h2>
       <p className="mt-1 text-sm text-slate-400">את מי היא ממליצה להרכיב ממשלה, עם מי לא תשב, ומה התנאים שלה.</p>

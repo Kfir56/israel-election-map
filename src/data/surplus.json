@@ -1,0 +1,80 @@
+{
+  "deadline": {
+    "text": "הסכמי עודפים ניתן לחתום עד 11 יום לפני הבחירות, בכפוף לאישור ועדת הבחירות המרכזית; 16 באוקטובר היה המועד האחרון למסירת ההודעות לוועדה (פרפרזה).",
+    "source": "https://www.ynet.co.il/news/elections2026/article/skdhsmfsmx",
+    "date": "2026-10-16"
+  },
+  "rule": {
+    "text": "לפי חוק באדר-עופר, קולות שתי רשימות שחתמו על הסכם עודפים נספרים בחלוקת המנדטים העודפים כאילו רצו ברשימה אחת. ההסכם תקף רק אם שתי הרשימות עוברות את אחוז החסימה (3.25%).",
+    "source": "https://www.ynet.co.il/news/elections2026/article/skdhsmfsmx"
+  },
+  "agreements": [
+    {
+      "a": "together",
+      "b": "yb",
+      "text": "בנט וליברמן הודיעו ראשונים על הסכם העודפים.",
+      "source": "https://www.jpost.com/israel-election-2026/article-908296",
+      "date": "2026-09-10"
+    },
+    {
+      "a": "yashar",
+      "b": "dems",
+      "text": "איזנקוט ויאיר גולן חתמו על הסכם עודפים.",
+      "source": "https://www.jpost.com/israel-election-2026/article-908296",
+      "date": "2026-09-10"
+    },
+    {
+      "a": "joint",
+      "b": "raam",
+      "text": "הרשימה המשותפת ורע\"מ חתמו על הסכם עודפים והתחייבו לקמפיין נקי.",
+      "source": "https://www.jpost.com/israel-election-2026/article-908431",
+      "date": "2026-09-11"
+    },
+    {
+      "a": "likud",
+      "b": "rzp",
+      "text": "הליכוד הודיע על חתימת הסכם עודפים עם הציונות הדתית (וזהות).",
+      "source": "https://www.kikar.co.il/political-news/likud-surplus-agreement-religious-zionism-identity",
+      "date": "2026-10-06"
+    },
+    {
+      "a": "shas",
+      "b": "utj",
+      "text": "דרעי ואשר הודיעו במשותף על חתימת הסכם עודפים.",
+      "source": "https://www.timesofisrael.com/liveblog_entry/shas-utj-sign-surplus-vote-agreement-ahead-of-election/",
+      "date": "2026-10-11"
+    }
+  ],
+  "unsigned": [
+    {
+      "party": "otzma",
+      "text": "עוצמה יהודית מסרה שהליכוד סירב לחתום עמה, ובן גביר הודיע שלא יחתום עם עמך ישראל של וינטר; נותרה ללא הסכם.",
+      "source": "https://www.ynet.co.il/news/elections2026/article/hjextlj2gl",
+      "date": "2026-10-16"
+    },
+    {
+      "party": "amcha",
+      "text": "עמך ישראל לא חתמה על הסכם עודפים; הכחישה שפנתה למילואימניקים (\"ספין שקרי\").",
+      "source": "https://www.ynet.co.il/news/article/byybkvyngx",
+      "date": "2026-10-16"
+    },
+    {
+      "party": "reservists",
+      "text": "המילואימניקים והכלכלית הודיעו שלא יחתמו עם וינטר כל עוד לא יתחייב לשבת רק בממשלה ציונית; נותרו ללא הסכם.",
+      "source": "https://www.ynet.co.il/news/article/hjn1uuj2zg",
+      "date": "2026-10-16"
+    },
+    {
+      "party": "bw",
+      "text": "כחול לבן הודיעה שאינה חותמת עם אף מפלגה המשתייכת לאחד הגושים; נותרה ללא הסכם.",
+      "source": "https://www.kikar.co.il/political-news/surplus-agreements-elections-hendel-winter-ben-gvi",
+      "date": "2026-10-16"
+    }
+  ],
+  "notes": [
+    "בסך הכול דווחו חמישה הסכמי עודפים עד המועד האחרון (16.10.2026): ליכוד–הציונות הדתית, ש\"ס–יהדות התורה, ישר!–הדמוקרטים, ביחד–ישראל ביתנו, רע\"מ–הרשימה המשותפת (אמס, 16.10.2026: https://www.emess.co.il/radio/1945293).",
+    "לא נמצא דיווח על הסכם עודפים בין רשימות קטנות; עוצמה יהודית, עמך ישראל, המילואימניקים והכלכלית וכחול לבן נותרו ללא הסכם.",
+    "כחול לבן פרשה מהמרוץ ב-19.10, לאחר המועד האחרון; ממילא לא היה לה הסכם.",
+    "על פי כיכר השבת, ההסכם של הליכוד נחתם עם 'הציונות הדתית וזהות' (פרפרזה)."
+  ]
+}
