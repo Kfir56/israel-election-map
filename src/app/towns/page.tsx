@@ -1,6 +1,8 @@
 import TownResults from "@/components/TownResults";
+import { ogImage } from "@/lib/site";
 
 export const metadata = {
+  openGraph: { images: [ogImage("איך הצביעו ביישוב שלי?", "תוצאות 2022 בכל עיר ויישוב")] },
   title: "איך הצביעו ביישוב שלי · המפה הפוליטית 2026",
   description: "תוצאות הבחירות לכנסת ה־25 (2022) בכל עיר ויישוב, ומה כל רשימה היא היום.",
 };

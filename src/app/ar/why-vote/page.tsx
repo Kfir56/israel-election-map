@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalendarButtons from "@/components/CalendarButtons";
 import { ar, fill } from "@/data/ar";
 
 const t = ar.whyVote;
@@ -112,6 +113,7 @@ export default function ArabicWhyVote() {
             {t.dayBullet4After}
           </li>
         </ul>
+        <CalendarButtons ar />
       </section>
 
       <p className="mt-8 text-xs text-slate-500">

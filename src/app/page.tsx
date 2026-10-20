@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalendarButtons from "@/components/CalendarButtons";
 import Explorer from "@/components/Explorer";
 import { MAJORITY, parties } from "@/data/parties";
 import { averageSeats, polls } from "@/data/polls";
@@ -70,6 +71,15 @@ export default function Home() {
           <Link href="/compare" className="rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800">
             להשוות שתי מפלגות
           </Link>
+        </div>
+        <div className="mt-4 max-w-3xl rounded-xl border border-amber-400/30 bg-amber-400/5 p-3 text-sm text-slate-300">
+          <b className="text-amber-200">יום הבחירות: שלישי, 27 באוקטובר.</b> הקלפיות פתוחות 07:00–22:00, וזה יום שבתון. מביאים
+          תעודה מזהה עם תמונה ומצביעים רק בקלפי שלכם (בודקים אותה ב
+          <a href="https://www.bechirot.gov.il/" target="_blank" rel="noreferrer" className="text-sky-400 underline">
+            אתר ועדת הבחירות
+          </a>
+          ).
+          <CalendarButtons />
         </div>
       </header>
 

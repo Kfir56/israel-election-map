@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { SITE_URL } from "@/lib/site";
 import { parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
 
@@ -91,6 +92,7 @@ export default function Quiz() {
 
   const me = position(answers);
   const ranked = parties
+    .filter((p) => !p.withdrawn)
     .map((p) => {
       const d = Math.hypot(p.spectrum.right - me.right, p.spectrum.religious - me.religious);
       return { p, match: Math.round((1 - d / Math.SQRT2) * 100) };
@@ -140,6 +142,8 @@ export default function Quiz() {
           </li>
         ))}
       </ul>
+
+      <ShareResult partyId={ranked[0].p.id} name={ranked[0].p.name} match={ranked[0].match} />
 
       <div className="mt-6 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
         זה כלי להתחלת מחשבה, לא המלצה למי להצביע. ההתאמה מחושבת רק על שני צירים (ימין-שמאל ודתי-חילוני), לפי המיקום המשוער שלנו
@@ -205,5 +209,40 @@ function Plot({ me, top }: { me: { right: number; religious: number }; top: stri
         אתם
       </text>
     </svg>
+  );
+}
+
+function ShareResult({ partyId, name, match }: { partyId: string; name: string; match: number }) {
+  const [copied, setCopied] = useState(false);
+  const url = `${SITE_URL}/quiz/r?p=${partyId}&m=${match}`;
+  const text = `יצא לי ש${name} הכי קרובה אליי (${match}% התאמה). ומה יוצא לכם?`;
+  return (
+    <div className="mt-6 rounded-2xl border border-sky-500/30 bg-sky-500/5 p-4">
+      <div className="font-semibold">לשתף את התוצאה</div>
+      <p className="mt-1 text-sm text-slate-400">הקישור מראה רק את המפלגה הראשונה ואת אחוז ההתאמה, בלי התשובות שלכם.</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(`${text}\n${url}`)}`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400"
+        >
+          וואטסאפ
+        </a>
+        <button
+          onClick={async () => {
+            if (navigator.share) {
+              await navigator.share({ text, url }).catch(() => {});
+              return;
+            }
+            await navigator.clipboard.writeText(`${text} ${url}`);
+            setCopied(true);
+          }}
+          className="rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-800"
+        >
+          {copied ? "הקישור הועתק ✓" : "שיתוף או העתקת קישור"}
+        </button>
+      </div>
+    </div>
   );
 }

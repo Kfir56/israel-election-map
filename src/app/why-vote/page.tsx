@@ -1,6 +1,9 @@
 import Link from "next/link";
+import CalendarButtons from "@/components/CalendarButtons";
+import { ogImage } from "@/lib/site";
 
 export const metadata = {
+  openGraph: { images: [ogImage("למה בכלל להצביע?", "מה קורה לקול שלך, ומה קורה לפתק לבן")] },
   title: "למה להצביע · המפה הפוליטית 2026",
   description: "מה קורה לקול שלך, מה קורה לפתק לבן, וכמה קולות הכריעו בפעם הקודמת.",
 };
@@ -143,6 +146,7 @@ export default function WhyVotePage() {
             .
           </li>
         </ul>
+        <CalendarButtons />
         <Link href="/guide" className="mt-3 inline-block text-sm text-sky-400 hover:underline">
           מה קורה אחרי שסוגרים את הקלפיות ←
         </Link>

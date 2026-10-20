@@ -7,6 +7,7 @@ import { partyHistory } from "@/data/party-history";
 import { bioFor, personHref, partyHref } from "@/data/people";
 import { averageSeats, formatDate, partyRange, polls } from "@/data/polls";
 import { topicHref } from "@/data/topics";
+import { ogImage } from "@/lib/site";
 
 const link = "text-sky-400 underline";
 const INCUMBENT = /כנסת ה־25|ממשלה ה־37/;
@@ -18,7 +19,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const party = parties.find((p) => p.id === id);
-  return { title: party ? `${party.name} · המפה הפוליטית 2026` : "המפה הפוליטית 2026" };
+  if (!party) return { title: "המפה הפוליטית 2026" };
+  const sub = `בראשות ${party.leader} · ${averageSeats[party.id] ? `${averageSeats[party.id]} מנדטים בסקרים` : "מתחת לחסימה בסקרים"}`;
+  return {
+    title: `${party.name} · המפה הפוליטית 2026`,
+    description: `העמדות, המועמדים והסקרים של ${party.name}.`,
+    openGraph: { images: [ogImage(party.name, sub)] },
+  };
 }
 
 export default async function PartyPage({ params }: { params: Promise<{ id: string }> }) {

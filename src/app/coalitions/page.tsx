@@ -5,8 +5,10 @@ import { coalitionLines, type Sourced } from "@/data/coalitions";
 import { parties } from "@/data/parties";
 import { averageSeats, formatDate } from "@/data/polls";
 import { colorOnDark } from "@/lib/party-color";
+import { ogImage } from "@/lib/site";
 
 export const metadata = {
+  openGraph: { images: [ogImage("מי יכול להקים ממשלה?", "הצירופים שמגיעים ל־61, והקווים האדומים")] },
   title: "קואליציות אפשריות · המפה הפוליטית 2026",
   description: "אילו צירופי מפלגות מגיעים ל־61 לפי הסקרים, ועם מי כל מפלגה אמרה שלא תשב.",
 };

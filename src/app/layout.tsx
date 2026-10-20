@@ -5,6 +5,7 @@ import { AuthProvider } from "@/components/auth/AuthProvider";
 import Footer from "@/components/Footer";
 import HebrewOnly from "@/components/HebrewOnly";
 import NavBar from "@/components/NavBar";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const heebo = Heebo({
@@ -15,6 +16,9 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   title: "המפה הפוליטית 2026",
   description: "מפה תלת־ממדית של המפלגות, העמדות והמועמדים בבחירות לכנסת ה־26",
+  metadataBase: new URL(SITE_URL),
+  openGraph: { images: ["/og"], locale: "he_IL", type: "website", siteName: "המפה הפוליטית 2026" },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
