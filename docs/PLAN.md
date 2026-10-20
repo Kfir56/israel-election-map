@@ -216,3 +216,10 @@ Vercel Cron on the free Hobby plan only runs once a day, which is not enough on 
 - Party lists: dashed "cutoff by poll average" line; candidate pages show whether the slot gets in by all polls / the average / some / none.
 - Glossary: `src/data/glossary.ts` + `<Term>` pop-ups on guide, why-vote, minor lists, surplus agreements and party pages; full list at /guide#term-…
 - Friends and dashboard links moved from the top nav into the account menu.
+
+## 20 Oct (night): quiz method
+- Topic importance is now a ranking (tap topics in order), turned into rank-sum weights (5..1 over 15; unranked topics share what's left). The per-question ⭐ and the 0.5/1/2 importance buttons are gone.
+- Scoring: per-topic mean agreement (1 − |you − party| / 4); a question the party has no known stance on counts as 50%; overall = topic scores weighted by your ranking. A party is ranked only with ≥3 compared answers and ≥50% weighted coverage.
+- Balanced keying: e1, r2, r6, j4 reworded to the opposite direction and their stance values negated (in quiz-stances.json and scripts/quiz/*), so 11 of 27 statements are keyed right/religious.
+- "איך מחושבת ההתאמה?" section on the results page explains all of this.
+

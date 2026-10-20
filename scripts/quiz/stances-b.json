@@ -156,25 +156,25 @@
  },
  "r2": {
   "yashar": {
-   "v": 1,
+   "v": -1,
    "why": "המצע מציע מיסוד זוגיות אזרחית לכל זוג, אך אינו מזכיר נישואים אזרחיים במפורש.",
    "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
    "date": "2026-07-19"
   },
   "together": {
-   "v": 1,
+   "v": -1,
    "why": "מסלול אזרחי מלא לרישום זוגיות במשרד הפנים, בלי לקרוא לו נישואים אזרחיים.",
    "source": "https://be-yahad.org.il/plans/religionandstate/",
    "date": "2026-09-23"
   },
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "המפלגה תומכת ב\"קידום נישואים אזרחיים\".",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19"
   },
   "yb": {
-   "v": 2,
+   "v": -2,
    "why": "המצע תומך בנישואים ובגירושים אזרחיים.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"
@@ -257,13 +257,13 @@
   "yashar": null,
   "together": null,
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "תומכת בשינוי חוק הלאום ברוח מגילת העצמאות.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19"
   },
   "yb": {
-   "v": 1,
+   "v": -1,
    "why": "המצע מציע לתקן את חוק הלאום ברוח מגילת העצמאות.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"
@@ -273,27 +273,27 @@
  "e1": {
   "yashar": null,
   "together": {
-   "v": -1,
+   "v": 1,
    "why": "\"לא נדרשות עוד ועדות, עוד פיקוח\"; מוריד מחירים דרך תחרות ופירוק מונופולים.",
    "source": "https://be-yahad.org.il/plans/yokermichya/",
    "date": "2026-09-23"
   },
   "dems": {
-   "v": 1,
+   "v": -1,
    "why": "המפלגה מדגישה מאבק ביוקר המחיה ושיפור שירותי הרווחה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19",
    "inferred": true
   },
   "yb": {
-   "v": -1,
+   "v": 1,
    "why": "המצע מעדיף הפחתת רגולציה ופירוק מונופולים, ולא פיקוח ישיר על מחירים.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10",
    "inferred": true
   },
   "reservists": {
-   "v": -1,
+   "v": 1,
    "why": "המצע מבוסס על \"עידוד תחרות ושוק חופשי\" ופירוק גופים דומיננטיים.",
    "source": "https://www.themiluimnikim.org.il/platform/",
    "date": "2026-03",
@@ -412,13 +412,13 @@
   "yashar": null,
   "together": null,
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "גולן: מי שעומד נגדו כתב אישום לא יכול לכהן כראש ממשלה או כשר.",
    "source": "https://www.jpost.com/israel-election-2026/article-910100",
    "date": "2026-10-01"
   },
   "yb": {
-   "v": 2,
+   "v": -2,
    "why": "מי שעומד נגדו כתב אישום לא יוכל להתמודד לנשיאות או להרכיב ממשלה.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"

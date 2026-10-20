@@ -121,7 +121,7 @@ export default function WhyVotePage() {
       <section className="mt-10">
         <h2 className="text-2xl font-bold">אין לי למי להצביע. מאיפה מתחילים?</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
-          <Card href="/quiz" title="שאלון קצר" text="10 שאלות, ותראו איזו מפלגה הכי קרובה לעמדות שלכם." />
+          <Card href="/quiz" title="שאלון קצר" text="משפטים קצרים, ותראו איזו מפלגה הכי קרובה לעמדות שלכם." />
           <Card href="/topics" title="הנושאים" text="מה כל מפלגה אומרת על ביטחון, כלכלה, דת, גיוס ומשפט." />
           <Card href="/compare" title="השוואה" text="שתי מפלגות זו לצד זו, נושא אחרי נושא." />
         </div>

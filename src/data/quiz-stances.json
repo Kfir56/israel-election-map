@@ -383,21 +383,21 @@
   "likud": null,
   "otzma": null,
   "rzp": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה, כולל בדיני אישות.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": -2,
+   "v": 2,
    "why": "מפלגה חרדית שמבקשת לשמר את האופי הדתי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
    "date": "2026-10-19",
    "inferred": true
   },
   "utj": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לשמר את האופי הדתי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
    "date": "2026-10-19",
@@ -405,32 +405,32 @@
   },
   "amcha": null,
   "yashar": {
-   "v": 1,
+   "v": -1,
    "why": "המצע מציע מיסוד זוגיות אזרחית לכל זוג, אך אינו מזכיר נישואים אזרחיים במפורש.",
    "source": "https://yasharwitheisenkot.com/principles/lgbtqia/",
    "date": "2026-07-19"
   },
   "together": {
-   "v": 1,
+   "v": -1,
    "why": "מסלול אזרחי מלא לרישום זוגיות במשרד הפנים, בלי לקרוא לו נישואים אזרחיים.",
    "source": "https://be-yahad.org.il/plans/religionandstate/",
    "date": "2026-09-23"
   },
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "המפלגה תומכת ב\"קידום נישואים אזרחיים\".",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19"
   },
   "yb": {
-   "v": 2,
+   "v": -2,
    "why": "המצע תומך בנישואים ובגירושים אזרחיים.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"
   },
   "reservists": null,
   "joint": {
-   "v": 2,
+   "v": -2,
    "why": "המצע דורש הפרדת הדת מהמדינה וחופש מצפון, שמשמעם אפשרות לנישואים אזרחיים.",
    "source": "https://jointlist.org.il/he/platform/",
    "date": "2026-10-19",
@@ -600,35 +600,35 @@
  },
  "r6": {
   "likud": {
-   "v": -2,
+   "v": 2,
    "why": "הליכוד יזם את חוק הלאום, והקואליציה הצביעה נגד הוספת עקרון השוויון אליו.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
    "inferred": true
   },
   "otzma": {
-   "v": -2,
+   "v": 2,
    "why": "תומכת בחיזוק האופי היהודי והלאומי של המדינה.",
    "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
    "date": "2026-09-22",
    "inferred": true
   },
   "rzp": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": -1,
+   "v": 1,
    "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
    "inferred": true
   },
   "utj": {
-   "v": -1,
+   "v": 1,
    "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
@@ -638,26 +638,26 @@
   "yashar": null,
   "together": null,
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "תומכת בשינוי חוק הלאום ברוח מגילת העצמאות.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19"
   },
   "yb": {
-   "v": 1,
+   "v": -1,
    "why": "המצע מציע לתקן את חוק הלאום ברוח מגילת העצמאות.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"
   },
   "reservists": null,
   "joint": {
-   "v": 2,
+   "v": -2,
    "why": "המצע דורש לבטל את חוק הלאום ולעגן חוקתית אזרחות שווה לכל האזרחים.",
    "source": "https://jointlist.org.il/he/platform/",
    "date": "2026-10-19"
   },
   "raam": {
-   "v": 2,
+   "v": -2,
    "why": "״תומכים בתיקון חוק יסוד הלאום כך שיעוגן בו במפורש עיקרון השוויון לכל אזרחי המדינה״.",
    "source": "https://www.ynet.co.il/news/elections2026/article/yokra14920395",
    "date": "2026-10-08"
@@ -665,7 +665,7 @@
  },
  "e1": {
   "likud": {
-   "v": -1,
+   "v": 1,
    "why": "דוגלת במשק חופשי ובצמצום מעורבות הממשלה במשק.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
    "date": "2026-10-19",
@@ -673,14 +673,14 @@
   },
   "otzma": null,
   "rzp": {
-   "v": -1,
+   "v": 1,
    "why": "דוגלת בהרחבת השוק החופשי ובעידוד יוזמה פרטית.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": 1,
+   "v": -1,
    "why": "שמה במרכז את \"קידום הצדק החברתי\".",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
    "date": "2026-10-19",
@@ -688,7 +688,7 @@
   },
   "utj": null,
   "amcha": {
-   "v": -1,
+   "v": 1,
    "why": "מציעה להוזיל את יוקר המחיה בפירוק מונופולים ובתחרות, לא בפיקוח.",
    "source": "https://amchaisrael.co.il/foundations",
    "date": "2026-10-19",
@@ -696,34 +696,34 @@
   },
   "yashar": null,
   "together": {
-   "v": -1,
+   "v": 1,
    "why": "\"לא נדרשות עוד ועדות, עוד פיקוח\"; מוריד מחירים דרך תחרות ופירוק מונופולים.",
    "source": "https://be-yahad.org.il/plans/yokermichya/",
    "date": "2026-09-23"
   },
   "dems": {
-   "v": 1,
+   "v": -1,
    "why": "המפלגה מדגישה מאבק ביוקר המחיה ושיפור שירותי הרווחה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/democrats/",
    "date": "2026-10-19",
    "inferred": true
   },
   "yb": {
-   "v": -1,
+   "v": 1,
    "why": "המצע מעדיף הפחתת רגולציה ופירוק מונופולים, ולא פיקוח ישיר על מחירים.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10",
    "inferred": true
   },
   "reservists": {
-   "v": -1,
+   "v": 1,
    "why": "המצע מבוסס על \"עידוד תחרות ושוק חופשי\" ופירוק גופים דומיננטיים.",
    "source": "https://www.themiluimnikim.org.il/platform/",
    "date": "2026-03",
    "inferred": true
   },
   "joint": {
-   "v": 2,
+   "v": -2,
    "why": "המצע דורש פיקוח הדוק על מחירי מזון, תרופות, חשמל ומים, וחשיפת עלויות ורווחי חברות.",
    "source": "https://jointlist.org.il/he/platform/",
    "date": "2026-10-19"
@@ -1097,28 +1097,28 @@
  },
  "j4": {
   "likud": {
-   "v": -2,
+   "v": 2,
    "why": "יו\"ר הליכוד נתניהו מכהן כראש ממשלה ורץ שוב, בזמן שמשפטו הפלילי מתנהל.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "otzma": {
-   "v": -1,
+   "v": 1,
    "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "rzp": {
-   "v": -1,
+   "v": 1,
    "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "shas": {
-   "v": -2,
+   "v": 2,
    "why": "התנתה את הצטרפותה לממשלה ב־2022 בחקיקה שתאפשר לדרעי, שהורשע, לכהן כשר.",
    "source": "https://www.ynetnews.com/article/ryc2o22uo",
    "date": "2022-12-18",
@@ -1129,13 +1129,13 @@
   "yashar": null,
   "together": null,
   "dems": {
-   "v": 2,
+   "v": -2,
    "why": "גולן: מי שעומד נגדו כתב אישום לא יכול לכהן כראש ממשלה או כשר.",
    "source": "https://www.jpost.com/israel-election-2026/article-910100",
    "date": "2026-10-01"
   },
   "yb": {
-   "v": 2,
+   "v": -2,
    "why": "מי שעומד נגדו כתב אישום לא יוכל להתמודד לנשיאות או להרכיב ממשלה.",
    "source": "https://beytenu.org.il/party-platform/",
    "date": "2026-10"

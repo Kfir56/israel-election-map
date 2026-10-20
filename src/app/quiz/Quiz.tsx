@@ -6,15 +6,18 @@ import { categories, type CategoryId, parties } from "@/data/parties";
 import { partyHref } from "@/data/people";
 import {
   type Answer,
+  agreement,
   answerLabel,
   answerOptions,
+  enoughData,
   lengths,
   type Question,
   questionsFor,
+  rankWeights,
   score,
   stances,
   type Tier,
-  type TopicWeights,
+  type TopicResult,
 } from "@/data/quiz";
 import { colorOnDark } from "@/lib/party-color";
 import { SITE_URL } from "@/lib/site";
@@ -24,20 +27,16 @@ const running = parties.filter((p) => !p.withdrawn);
 const party = (id: string) => parties.find((p) => p.id === id)!;
 const btn = "rounded-xl border border-slate-700 px-5 py-2.5 font-semibold hover:bg-slate-800";
 
-const importance = [
-  { value: 0.5, label: "פחות חשוב לי" },
-  { value: 1, label: "חשוב" },
-  { value: 2, label: "חשוב לי מאוד" },
-];
+const topicIds = categories.map((c) => c.id);
 
-type Stage = "pick" | "questions" | "weights" | "results";
+type Stage = "pick" | "questions" | "rank" | "results";
 
 export default function Quiz() {
   const [stage, setStage] = useState<Stage>("pick");
   const [tier, setTier] = useState<Tier>("regular");
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
-  const [weights, setWeights] = useState<TopicWeights>({});
+  const [ranking, setRanking] = useState<CategoryId[]>([]);
   const asked = useMemo(() => questionsFor(tier), [tier]);
 
   // Moving to a longer version keeps your answers and starts at the first new question.
@@ -52,11 +51,11 @@ export default function Quiz() {
 
   if (stage === "questions") {
     const q = asked[step];
-    const a = answers[q.id] ?? { v: null, star: false };
+    const a = answers[q.id] ?? { v: null };
     const next = (v: number | null) => {
-      setAnswers((all) => ({ ...all, [q.id]: { ...a, v } }));
+      setAnswers((all) => ({ ...all, [q.id]: { v } }));
       if (step + 1 < asked.length) setStep(step + 1);
-      else setStage(tier === "quick" ? "results" : "weights");
+      else setStage("rank");
     };
     return (
       <main className="mx-auto max-w-2xl px-4 py-6 sm:px-6">
@@ -88,17 +87,6 @@ export default function Quiz() {
               </button>
             ))}
           </div>
-          {tier !== "quick" && (
-            <label className="mt-4 flex cursor-pointer items-center gap-2 text-sm text-slate-300">
-              <input
-                type="checkbox"
-                checked={a.star}
-                onChange={(e) => setAnswers((all) => ({ ...all, [q.id]: { ...a, star: e.target.checked } }))}
-                className="accent-amber-400"
-              />
-              ⭐ הנושא הזה חשוב לי במיוחד (נספר כפול)
-            </label>
-          )}
           <div className="mt-4 flex justify-between text-sm">
             <button
               disabled={step === 0}
@@ -116,62 +104,29 @@ export default function Quiz() {
     );
   }
 
-  if (stage === "weights") {
+  if (stage === "rank")
     return (
-      <main className="mx-auto max-w-2xl px-4 py-6 sm:px-6">
-        <h1 className="text-2xl font-extrabold">כמה חשוב לכם כל נושא?</h1>
-        <p className="mt-1 text-slate-400">נושא שחשוב לכם מאוד ישפיע על התוצאה פי ארבעה מנושא שפחות חשוב לכם. אפשר גם לדלג.</p>
-        <div className="mt-5 space-y-3">
-          {categories.map((c) => (
-            <div key={c.id} className="rounded-xl border border-slate-800 bg-slate-900/50 p-4">
-              <div className="font-semibold">{c.label}</div>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {importance.map((o) => {
-                  const on = (weights[c.id] ?? 1) === o.value;
-                  return (
-                    <button
-                      key={o.value}
-                      onClick={() => setWeights((w) => ({ ...w, [c.id]: o.value }))}
-                      aria-pressed={on}
-                      className={`rounded-full border px-3 py-1.5 text-sm ${
-                        on ? "border-sky-400 bg-sky-400/15 text-sky-200" : "border-slate-700 text-slate-300 hover:border-slate-500"
-                      }`}
-                    >
-                      {o.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-6 flex gap-2">
-          <button onClick={() => setStage("results")} className="rounded-xl bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400">
-            לתוצאות ←
-          </button>
-          <button
-            onClick={() => {
-              setStep(asked.length - 1);
-              setStage("questions");
-            }}
-            className={btn}
-          >
-            → חזרה לשאלות
-          </button>
-        </div>
-      </main>
+      <Rank
+        ranking={ranking}
+        setRanking={setRanking}
+        onDone={() => setStage("results")}
+        onBack={() => {
+          setStep(asked.length - 1);
+          setStage("questions");
+        }}
+      />
     );
-  }
 
   return (
     <Results
       tier={tier}
       asked={asked}
       answers={answers}
-      weights={weights}
+      ranking={ranking}
+      onRank={() => setStage("rank")}
       onRestart={() => {
         setAnswers({});
-        setWeights({});
+        setRanking([]);
         setStage("pick");
       }}
       onLonger={(t) => start(t)}
@@ -211,28 +166,144 @@ function Pick({ onPick }: { onPick: (t: Tier) => void }) {
   );
 }
 
+// Ranking is easier and more reliable than rating each topic on its own
+// scale: people rate almost everything "important", while an order forces
+// the trade-off that actually tells topics apart.
+function Rank({
+  ranking,
+  setRanking,
+  onDone,
+  onBack,
+}: {
+  ranking: CategoryId[];
+  setRanking: (r: CategoryId[]) => void;
+  onDone: () => void;
+  onBack: () => void;
+}) {
+  const weights = rankWeights(ranking, topicIds);
+  const rest = topicIds.filter((t) => !ranking.includes(t));
+  const move = (i: number, d: number) => {
+    const r = [...ranking];
+    [r[i], r[i + d]] = [r[i + d], r[i]];
+    setRanking(r);
+  };
+  const pct = (t: CategoryId) => `${Math.round(weights[t]! * 100)}%`;
+  return (
+    <main className="mx-auto max-w-2xl px-4 py-6 sm:px-6">
+      <h1 className="text-2xl font-extrabold">מה הכי חשוב לכם?</h1>
+      <p className="mt-1 text-slate-400">
+        לחצו על הנושאים לפי הסדר, מהחשוב ביותר ומטה. לא חייבים לסדר את כולם: נושאים שלא תבחרו יחלקו ביניהם בשווה את
+        המשקל שנשאר.
+      </p>
+
+      {ranking.length > 0 && (
+        <ol className="mt-5 space-y-2">
+          {ranking.map((t, i) => (
+            <li key={t} className="flex items-center gap-3 rounded-xl border border-sky-500/50 bg-sky-500/10 px-3 py-2.5">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-500 font-bold text-slate-950">
+                {i + 1}
+              </span>
+              <span className="flex-1 font-semibold">{topicLabel(t)}</span>
+              <span className="text-sm tabular-nums text-sky-200">{pct(t)}</span>
+              <span className="flex gap-1 text-slate-300">
+                <button
+                  onClick={() => move(i, -1)}
+                  disabled={i === 0}
+                  aria-label={`להעלות את ${topicLabel(t)}`}
+                  className="rounded px-1.5 hover:bg-slate-800 disabled:opacity-25"
+                >
+                  ▲
+                </button>
+                <button
+                  onClick={() => move(i, 1)}
+                  disabled={i === ranking.length - 1}
+                  aria-label={`להוריד את ${topicLabel(t)}`}
+                  className="rounded px-1.5 hover:bg-slate-800 disabled:opacity-25"
+                >
+                  ▼
+                </button>
+                <button
+                  onClick={() => setRanking(ranking.filter((x) => x !== t))}
+                  aria-label={`להוציא את ${topicLabel(t)} מהדירוג`}
+                  className="rounded px-1.5 hover:bg-slate-800"
+                >
+                  ✕
+                </button>
+              </span>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {rest.length > 0 && (
+        <>
+          <h2 className="mt-5 text-sm font-semibold text-slate-300">
+            {ranking.length === 0 ? "מה במקום הראשון?" : `מה במקום ה־${ranking.length + 1}?`}
+          </h2>
+          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+            {rest.map((t) => (
+              <button
+                key={t}
+                onClick={() => setRanking([...ranking, t])}
+                className="flex items-center justify-between rounded-xl border border-slate-700 px-4 py-3 text-right font-semibold hover:border-sky-400 hover:bg-sky-400/10"
+              >
+                {topicLabel(t)}
+                <span className="text-sm font-normal tabular-nums text-slate-500">{pct(t)}</span>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+
+      <p className="mt-4 text-xs text-slate-500">
+        האחוז הוא כמה הנושא משפיע על התוצאה. במקום הראשון 33%, ובמקום האחרון 7%, כך שגם נושא אחרון עדיין נספר.
+      </p>
+      <div className="mt-6 flex flex-wrap gap-2">
+        <button onClick={onDone} className="rounded-xl bg-sky-500 px-5 py-2.5 font-semibold text-slate-950 hover:bg-sky-400">
+          לתוצאות ←
+        </button>
+        {ranking.length > 0 ? (
+          <button onClick={() => setRanking([])} className={btn}>
+            לנקות את הסדר
+          </button>
+        ) : (
+          <button onClick={onDone} className={btn}>
+            הכל חשוב לי באותה מידה
+          </button>
+        )}
+        <button onClick={onBack} className="px-3 text-sm text-slate-400 hover:text-white">
+          → חזרה לשאלות
+        </button>
+      </div>
+    </main>
+  );
+}
+
 function Results({
   tier,
   asked,
   answers,
-  weights,
+  ranking,
+  onRank,
   onRestart,
   onLonger,
 }: {
   tier: Tier;
   asked: Question[];
   answers: Record<string, Answer>;
-  weights: TopicWeights;
+  ranking: CategoryId[];
+  onRank: () => void;
   onRestart: () => void;
   onLonger: (t: Tier) => void;
 }) {
   const [open, setOpen] = useState<string | null>(null);
   const answered = asked.filter((q) => answers[q.id]?.v !== null && answers[q.id]?.v !== undefined).length;
-  // A party we can compare on fewer than 3 of your answers is listed, but last.
+  const weights = rankWeights(ranking, topicIds);
+  // A party with known stances on too few of your answers is listed, but last.
   const ranked = score(asked, answers, weights, running.map((p) => p.id)).sort(
-    (a, b) => Number(b.compared >= 3) - Number(a.compared >= 3) || b.match - a.match,
+    (a, b) => Number(enoughData(b)) - Number(enoughData(a)) || b.match - a.match,
   );
-  const top = ranked.filter((r) => r.compared >= 3).slice(0, 3);
+  const top = ranked.filter(enoughData).slice(0, 3);
   const longer = tier === "quick" ? "regular" : tier === "regular" ? "full" : null;
 
   if (answered === 0)
@@ -253,7 +324,7 @@ function Results({
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
-        {top.map(({ partyId, match, compared }, i) => {
+        {top.map(({ partyId, match, compared, coverage }, i) => {
           const p = party(partyId);
           return (
             <button
@@ -268,7 +339,9 @@ function Results({
                 <div className="text-3xl font-extrabold" style={{ color: colorOnDark(p.id) }}>
                   {match}%<span className="text-sm font-normal text-slate-400"> התאמה</span>
                 </div>
-                <div className="text-xs text-slate-500">לפי {compared} שאלות · לפירוט ←</div>
+                <div className="text-xs text-slate-500">
+                  לפי {compared} שאלות ({coverage}% מהתשובות) · לפירוט ←
+                </div>
               </div>
             </button>
           );
@@ -284,12 +357,25 @@ function Results({
         </div>
       )}
 
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/40 p-3 text-sm text-slate-300">
+        <span className="font-semibold">משקל הנושאים לפי הסדר שלכם: </span>
+        {[...ranking, ...topicIds.filter((t) => !ranking.includes(t))].map((t, i) => (
+          <span key={t}>
+            {i > 0 && " · "}
+            {topicLabel(t)} {Math.round(weights[t]! * 100)}%
+          </span>
+        ))}{" "}
+        <button onClick={onRank} className="font-semibold text-sky-400 hover:underline">
+          לשנות את הסדר
+        </button>
+      </div>
+
       <h2 className="mt-8 text-xl font-bold">כל המפלגות</h2>
       <p className="text-sm text-slate-400">לחצו על מפלגה כדי לראות במה היא מסכימה איתכם ובמה לא.</p>
       <ul className="mt-3 space-y-1.5">
         {ranked.map((r) => {
           const p = party(r.partyId);
-          const few = r.compared < 3;
+          const few = !enoughData(r);
           return (
             <li key={p.id}>
               <button
@@ -305,7 +391,9 @@ function Results({
                   {few ? <span className="text-xs text-slate-500">אין מספיק מידע</span> : `${r.match}%`}
                 </span>
               </button>
-              {open === p.id && <Breakdown partyId={p.id} asked={asked} answers={answers} byTopic={r.byTopic} />}
+              {open === p.id && (
+                <Breakdown partyId={p.id} asked={asked} answers={answers} byTopic={r.byTopic} coverage={r.coverage} />
+              )}
             </li>
           );
         })}
@@ -313,9 +401,11 @@ function Results({
 
       {top[0] && <ShareResult partyId={top[0].partyId} name={party(top[0].partyId).name} match={top[0].match} />}
 
+      <Method />
+
       <div className="mt-6 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
         זה כלי להתחלת מחשבה, לא המלצה למי להצביע. הוא משווה רק את הנושאים שבשאלון, ולא דברים כמו מי עומד בראש הרשימה או
-        כמה אתם סומכים עליו. כשמפלגה לא אמרה דבר ברור על שאלה מסוימת, השאלה הזו לא נספרת אצלה. עמדות שמסומנות ״הסקה שלנו״
+        כמה אתם סומכים עליו. כשמפלגה לא אמרה דבר ברור על שאלה מסוימת, השאלה נספרת אצלה כ־50%. עמדות שמסומנות ״הסקה שלנו״
         נגזרו מהקו המוצהר של המפלגה ולא מהצהרה על הנושא עצמו.
       </div>
       <div className="mt-6 flex flex-wrap gap-2">
@@ -340,30 +430,50 @@ function Breakdown({
   asked,
   answers,
   byTopic,
+  coverage,
 }: {
   partyId: string;
   asked: Question[];
   answers: Record<string, Answer>;
-  byTopic: Partial<Record<CategoryId, number>>;
+  byTopic: Partial<Record<CategoryId, TopicResult>>;
+  coverage: number;
 }) {
   const rows = asked.filter((q) => answers[q.id]?.v !== null && answers[q.id]?.v !== undefined);
   return (
     <div className="mb-3 mr-2 mt-1 rounded-xl border border-slate-800 bg-slate-900/50 p-3 text-sm">
       <div className="flex flex-wrap gap-1.5">
         {categories
-          .filter((c) => byTopic[c.id] !== undefined)
-          .map((c) => (
-            <span key={c.id} className="rounded-full bg-slate-800 px-2.5 py-1 text-xs text-slate-300">
-              {c.label}: <b className="tabular-nums">{byTopic[c.id]}%</b>
-            </span>
-          ))}
+          .filter((c) => byTopic[c.id])
+          .map((c) => {
+            const t = byTopic[c.id]!;
+            return (
+              <span key={c.id} className="rounded-full bg-slate-800 px-2.5 py-1 text-xs text-slate-300">
+                {c.label}:{" "}
+                {t.compared ? (
+                  <b className="tabular-nums">{Math.round(t.agree * 100)}%</b>
+                ) : (
+                  <span className="text-slate-500">אין עמדה ידועה</span>
+                )}
+                {t.compared > 0 && t.compared < t.answered && (
+                  <span className="text-slate-500">
+                    {" "}
+                    ({t.compared}/{t.answered})
+                  </span>
+                )}
+              </span>
+            );
+          })}
       </div>
+      <p className="mt-2 text-xs text-slate-500">
+        יש לנו עמדה ידועה של המפלגה על {coverage}% מהתשובות שלכם (לפי משקל הנושאים). על השאר היא נספרת כ־50%.
+      </p>
       <ul className="mt-3 space-y-2.5">
         {rows.map((q) => {
           const mine = answers[q.id].v!;
           const st = stances[q.id]?.[partyId];
           const gap = st ? Math.abs(mine - st.v) : null;
           const mark = gap === null ? "–" : gap <= 1 ? "✓" : gap >= 3 ? "✕" : "≈";
+          const pts = st ? Math.round(agreement(mine, st.v) * 100) : null;
           const tone = gap === null ? "text-slate-500" : gap <= 1 ? "text-emerald-300" : gap >= 3 ? "text-rose-300" : "text-amber-300";
           return (
             <li key={q.id} className="flex gap-2">
@@ -375,14 +485,14 @@ function Breakdown({
                   {st ? (
                     <>
                       {" "}
-                      · המפלגה: {answerLabel(st.v)}. {st.why}{" "}
+                      · המפלגה: {answerLabel(st.v)} · <span className="tabular-nums">{pts}%</span>. {st.why}{" "}
                       {st.inferred && <span className="rounded bg-slate-800 px-1 text-[10px] text-slate-400">הסקה שלנו</span>}{" "}
                       <a href={st.source} target="_blank" rel="noreferrer" className="text-sky-400 hover:underline">
                         מקור
                       </a>
                     </>
                   ) : (
-                    " · לא מצאנו עמדה ברורה של המפלגה, אז השאלה לא נספרת."
+                    " · לא מצאנו עמדה ברורה של המפלגה, אז השאלה נספרת אצלה כ־50%."
                   )}
                 </div>
               </div>
@@ -394,6 +504,40 @@ function Breakdown({
         לעמוד המפלגה ←
       </Link>
     </div>
+  );
+}
+
+function Method() {
+  return (
+    <details className="mt-6 rounded-xl border border-slate-800 bg-slate-900/40 p-4 text-sm text-slate-300">
+      <summary className="cursor-pointer font-semibold text-slate-200">איך מחושבת ההתאמה?</summary>
+      <ol className="mt-3 list-decimal space-y-2 pr-5">
+        <li>
+          לכל משפט ולכל מפלגה קבענו עמדה על אותו סולם של חמש דרגות, לפי המצע, הצבעות והצהרות של המפלגה, עם קישור למקור.
+          במחלוקת או כשאין מידע, השארנו ריק במקום לנחש.
+        </li>
+        <li>
+          התאמה במשפט אחד: 100% כשאתם והמפלגה באותה דרגה, 75% בהפרש של דרגה אחת, וכך הלאה עד 0% בקצוות המנוגדים
+          (מרחק ״מנהטן״, השיטה של רוב כלי ההתאמה כמו Wahl-O-Mat ו־Kieskompas).
+        </li>
+        <li>
+          לכל נושא מחשבים ממוצע. משפט שאין לנו עליו עמדה של המפלגה נספר כ־50%, כדי שמפלגה עם מעט עמדות ידועות לא תקפוץ
+          לראש הרשימה במקרה.
+        </li>
+        <li>
+          הציון הסופי הוא ממוצע הנושאים לפי הסדר שבחרתם (שיטת rank-sum): עם חמישה נושאים, הראשון 5 נקודות והאחרון נקודה
+          אחת. כך נושא נספר לפי כמה שהוא חשוב לכם, ולא לפי כמה שאלות יש עליו.
+        </li>
+        <li>
+          מפלגה נכנסת לדירוג רק אם יש לה עמדה ידועה על לפחות 3 מהתשובות שלכם ועל חצי מהן לפי משקל. ״אין לי דעה״ לא נספר
+          בכלל.
+        </li>
+        <li>
+          חלק מהמשפטים מנוסחים בכיוון ימני או דתי וחלק בכיוון שמאלי או חילוני, כדי שנטייה להסכים עם כל משפט לא תטה את
+          התוצאה לצד אחד.
+        </li>
+      </ol>
+    </details>
   );
 }
 

@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Search 
   const title = `יצא לי: ${party.name}${match ? ` (${match}% התאמה)` : ""}`;
   return {
     title: `${title} · המפה הפוליטית 2026`,
-    description: "10 משפטים, ותראו איזו מפלגה הכי קרובה לעמדות שלכם.",
+    description: "משפטים על חמשת הנושאים הגדולים, ותראו איזו מפלגה הכי קרובה לעמדות שלכם.",
     openGraph: { title, images: [`/og?quiz=${party.id}${match ? `&m=${match}` : ""}`] },
   };
 }
@@ -40,7 +40,7 @@ export default async function SharedResult({ searchParams }: { searchParams: Sea
       >
         ומה יוצא לכם? לשאלון ←
       </Link>
-      <p className="mt-4 text-sm text-slate-500">10 משפטים, בערך שתי דקות. שום דבר לא נשמר.</p>
+      <p className="mt-4 text-sm text-slate-500">מדקה ועד שש דקות, לבחירתכם. שום דבר לא נשמר.</p>
     </main>
   );
 }

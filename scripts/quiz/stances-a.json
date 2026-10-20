@@ -181,21 +181,21 @@
   "likud": null,
   "otzma": null,
   "rzp": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה, כולל בדיני אישות.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": -2,
+   "v": 2,
    "why": "מפלגה חרדית שמבקשת לשמר את האופי הדתי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
    "date": "2026-10-19",
    "inferred": true
   },
   "utj": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לשמר את האופי הדתי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/yahadut-hatorah/",
    "date": "2026-10-19",
@@ -281,35 +281,35 @@
  },
  "r6": {
   "likud": {
-   "v": -2,
+   "v": 2,
    "why": "הליכוד יזם את חוק הלאום, והקואליציה הצביעה נגד הוספת עקרון השוויון אליו.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
    "inferred": true
   },
   "otzma": {
-   "v": -2,
+   "v": 2,
    "why": "תומכת בחיזוק האופי היהודי והלאומי של המדינה.",
    "source": "https://www.timesofisrael.com/ben-gvir-demands-role-of-defense-minister-in-next-government-gotliv-as-justice-minister/",
    "date": "2026-09-22",
    "inferred": true
   },
   "rzp": {
-   "v": -2,
+   "v": 2,
    "why": "מבקשת לחזק את הזהות והאופי היהודי של המדינה.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": -1,
+   "v": 1,
    "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
    "inferred": true
   },
   "utj": {
-   "v": -1,
+   "v": 1,
    "why": "הייתה בקואליציה שהצביעה נגד הוספת שוויון לחוק הלאום.",
    "source": "https://www.timesofisrael.com/knesset-votes-down-opposition-call-to-add-equality-to-nation-state-law/",
    "date": "2020-07-29",
@@ -319,7 +319,7 @@
  },
  "e1": {
   "likud": {
-   "v": -1,
+   "v": 1,
    "why": "דוגלת במשק חופשי ובצמצום מעורבות הממשלה במשק.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/likud/",
    "date": "2026-10-19",
@@ -327,14 +327,14 @@
   },
   "otzma": null,
   "rzp": {
-   "v": -1,
+   "v": 1,
    "why": "דוגלת בהרחבת השוק החופשי ובעידוד יוזמה פרטית.",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/the-religious-zionism/",
    "date": "2026-10-19",
    "inferred": true
   },
   "shas": {
-   "v": 1,
+   "v": -1,
    "why": "שמה במרכז את \"קידום הצדק החברתי\".",
    "source": "https://www.idi.org.il/policy/parties-and-elections/parties/shas/",
    "date": "2026-10-19",
@@ -342,7 +342,7 @@
   },
   "utj": null,
   "amcha": {
-   "v": -1,
+   "v": 1,
    "why": "מציעה להוזיל את יוקר המחיה בפירוק מונופולים ובתחרות, לא בפיקוח.",
    "source": "https://amchaisrael.co.il/foundations",
    "date": "2026-10-19",
@@ -564,28 +564,28 @@
  },
  "j4": {
   "likud": {
-   "v": -2,
+   "v": 2,
    "why": "יו\"ר הליכוד נתניהו מכהן כראש ממשלה ורץ שוב, בזמן שמשפטו הפלילי מתנהל.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "otzma": {
-   "v": -1,
+   "v": 1,
    "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "rzp": {
-   "v": -1,
+   "v": 1,
    "why": "תומכת בכהונת נתניהו כראש ממשלה בזמן משפטו.",
    "source": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu",
    "date": "2026-10",
    "inferred": true
   },
   "shas": {
-   "v": -2,
+   "v": 2,
    "why": "התנתה את הצטרפותה לממשלה ב־2022 בחקיקה שתאפשר לדרעי, שהורשע, לכהן כשר.",
    "source": "https://www.ynetnews.com/article/ryc2o22uo",
    "date": "2022-12-18",
