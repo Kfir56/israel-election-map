@@ -16,6 +16,38 @@ export type Poll = {
 
 export const polls: Poll[] = [
   {
+    id: "i24-2026-10-20",
+    date: "2026-10-20",
+    outlet: "i24NEWS",
+    pollster: "דיירקט פולס (צוריאל שרון)",
+    source: "https://www.skarim.org/polls/i24news-2026-10-20",
+    seats: { likud: 26, yashar: 20, together: 12, dems: 9, otzma: 9, joint: 8, shas: 8, utj: 8, yb: 7, rzp: 7, raam: 6 },
+  },
+  {
+    id: "ch16-2026-10-20",
+    date: "2026-10-20",
+    outlet: "ערוץ 16",
+    pollster: "יצחק כ״ץ",
+    source: "https://www.skarim.org/polls/channel-16-2026-10-20",
+    seats: { yashar: 21, likud: 18, together: 15, dems: 9, otzma: 9, joint: 9, yb: 7, utj: 7, shas: 6, rzp: 6, raam: 5, reservists: 4, amcha: 4 },
+  },
+  {
+    id: "ch14-2026-10-20",
+    date: "2026-10-20",
+    outlet: "ערוץ 14",
+    pollster: "NEXT DATA (שלמה פילבר)",
+    source: "https://www.skarim.org/polls/channel-14-2026-10-20",
+    seats: { likud: 30, yashar: 20, together: 9, dems: 9, shas: 9, otzma: 8, joint: 8, utj: 8, rzp: 7, yb: 6, raam: 6 },
+  },
+  {
+    id: "walla-2026-10-20",
+    date: "2026-10-20",
+    outlet: "וואלה",
+    pollster: "מנחם לזר",
+    source: "https://www.skarim.org/polls/walla-2026-10-20",
+    seats: { yashar: 23, likud: 19, together: 14, dems: 9, yb: 8, otzma: 8, joint: 8, shas: 8, utj: 7, raam: 6, rzp: 6, reservists: 4 },
+  },
+  {
     id: "ch12-2026-10-19",
     date: "2026-10-19",
     outlet: "חדשות 12",
