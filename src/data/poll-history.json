@@ -1429,5 +1429,47 @@
       "raam": 6,
       "reservists": 4
     }
+  },
+  {
+    "id": "zman-2026-10-22",
+    "date": "2026-10-22",
+    "outlet": "זמן ישראל",
+    "pollster": "יוסי טאטיקה",
+    "source": "https://www.skarim.org/polls/zman-israel-2026-10-22",
+    "seats": {
+      "yashar": 23,
+      "likud": 21,
+      "together": 11,
+      "yb": 9,
+      "joint": 9,
+      "dems": 8,
+      "otzma": 8,
+      "shas": 8,
+      "utj": 8,
+      "rzp": 6,
+      "raam": 5,
+      "reservists": 4
+    }
+  },
+  {
+    "id": "ih-2026-10-22",
+    "date": "2026-10-22",
+    "outlet": "ישראל היום",
+    "pollster": "דודי חסיד",
+    "source": "https://www.skarim.org/polls/israel-hayom-2026-10-22",
+    "seats": {
+      "yashar": 23,
+      "likud": 21,
+      "together": 14,
+      "joint": 9,
+      "dems": 8,
+      "otzma": 8,
+      "shas": 8,
+      "yb": 7,
+      "utj": 7,
+      "rzp": 6,
+      "raam": 5,
+      "reservists": 4
+    }
   }
 ]
