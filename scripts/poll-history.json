@@ -1471,5 +1471,68 @@
       "raam": 5,
       "reservists": 4
     }
+  },
+  {
+    "id": "ch14-2026-10-22",
+    "date": "2026-10-22",
+    "outlet": "ערוץ 14",
+    "pollster": "NEXT DATA (שלמה פילבר)",
+    "source": "https://www.skarim.org/polls/channel-14-2026-10-22",
+    "seats": {
+      "likud": 30,
+      "yashar": 20,
+      "together": 11,
+      "shas": 9,
+      "dems": 8,
+      "otzma": 8,
+      "joint": 8,
+      "utj": 8,
+      "rzp": 7,
+      "raam": 6,
+      "yb": 5
+    }
+  },
+  {
+    "id": "ch16-2026-10-22",
+    "date": "2026-10-22",
+    "outlet": "ערוץ 16",
+    "pollster": "יצחק כ״ץ",
+    "source": "https://www.skarim.org/polls/channel-16-2026-10-22",
+    "seats": {
+      "yashar": 20,
+      "likud": 17,
+      "together": 14,
+      "dems": 9,
+      "otzma": 9,
+      "joint": 9,
+      "utj": 8,
+      "yb": 7,
+      "shas": 7,
+      "rzp": 7,
+      "raam": 5,
+      "reservists": 4,
+      "amcha": 4
+    }
+  },
+  {
+    "id": "maariv-2026-10-23",
+    "date": "2026-10-23",
+    "outlet": "מעריב",
+    "pollster": "מנחם לזר",
+    "source": "https://www.skarim.org/polls/maariv-2026-10-23",
+    "seats": {
+      "yashar": 21,
+      "likud": 19,
+      "together": 15,
+      "dems": 10,
+      "joint": 9,
+      "yb": 8,
+      "shas": 8,
+      "otzma": 7,
+      "utj": 7,
+      "rzp": 7,
+      "raam": 5,
+      "reservists": 4
+    }
   }
 ]
