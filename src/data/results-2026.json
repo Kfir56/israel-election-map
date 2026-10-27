@@ -1,6 +1,79 @@
 {
- "status": "before",
- "updated": null,
- "exitPolls": [],
+ "status": "exit",
+ "updated": "27.10, 22:15",
+ "exitPolls": [
+  {
+   "outlet": "כאן 11",
+   "time": "22:00",
+   "source": "https://www.ynet.co.il/news/article/syw3p0002gl",
+   "seats": {
+    "likud": 25,
+    "yashar": 21,
+    "together": 14,
+    "joint": 10,
+    "dems": 10,
+    "yb": 8,
+    "raam": 7,
+    "otzma": 7,
+    "shas": 6,
+    "rzp": 6,
+    "utj": 6
+   }
+  },
+  {
+   "outlet": "חדשות 12",
+   "time": "22:00",
+   "source": "https://www.israelhayom.co.il/news/politics/article/21720077",
+   "seats": {
+    "likud": 24,
+    "yashar": 22,
+    "together": 12,
+    "joint": 11,
+    "dems": 9,
+    "yb": 9,
+    "shas": 8,
+    "raam": 7,
+    "utj": 6,
+    "rzp": 6,
+    "otzma": 6
+   }
+  },
+  {
+   "outlet": "חדשות 13",
+   "time": "22:00",
+   "source": "https://13tv.co.il/item/news/politics/politics/midgam-905425191/",
+   "seats": {
+    "likud": 25,
+    "yashar": 23,
+    "together": 14,
+    "joint": 10,
+    "dems": 9,
+    "yb": 7,
+    "utj": 7,
+    "raam": 7,
+    "shas": 6,
+    "otzma": 6,
+    "rzp": 6
+   }
+  },
+  {
+   "outlet": "ערוץ 14",
+   "time": "22:00",
+   "source": "https://www.okn.co.il/politics/73633/",
+   "seats": {
+    "likud": 30,
+    "yashar": 19,
+    "together": 11,
+    "joint": 10,
+    "shas": 9,
+    "dems": 9,
+    "raam": 7,
+    "rzp": 7,
+    "utj": 7,
+    "otzma": 7,
+    "yb": 4
+   }
+  }
+ ],
  "count": null
 }
