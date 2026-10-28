@@ -1,6 +1,6 @@
 {
  "status": "counting",
- "updated": "28.10, 08:55",
+ "updated": "28.10, 13:55",
  "exitPolls": [
   {
    "outlet": "כאן 11",
@@ -76,21 +76,21 @@
   }
  ],
  "count": {
-  "percentCounted": 48.4,
-  "time": "28.10, בוקר",
-  "source": "https://www.ynet.co.il/news/blogs/article/hjvyjpc2fe",
+  "percentCounted": 77.6,
+  "time": "28.10",
+  "source": "https://www.ynet.co.il/news/blogs/article/bkiwzbj6mg",
   "seats": {
    "likud": 27,
    "yashar": 22,
-   "together": 11,
+   "together": 12,
    "joint": 11,
-   "dems": 9,
-   "utj": 8,
-   "yb": 8,
+   "dems": 8,
+   "yb": 7,
+   "utj": 7,
    "shas": 7,
    "otzma": 7,
    "rzp": 6,
-   "raam": 4
+   "raam": 6
   }
  }
 }
