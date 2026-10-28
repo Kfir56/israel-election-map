@@ -1,6 +1,6 @@
 {
- "status": "exit",
- "updated": "27.10, 22:15",
+ "status": "counting",
+ "updated": "28.10, 08:55",
  "exitPolls": [
   {
    "outlet": "כאן 11",
@@ -75,5 +75,22 @@
    }
   }
  ],
- "count": null
+ "count": {
+  "percentCounted": 48.4,
+  "time": "28.10, בוקר",
+  "source": "https://www.ynet.co.il/news/blogs/article/hjvyjpc2fe",
+  "seats": {
+   "likud": 27,
+   "yashar": 22,
+   "together": 11,
+   "joint": 11,
+   "dems": 9,
+   "utj": 8,
+   "yb": 8,
+   "shas": 7,
+   "otzma": 7,
+   "rzp": 6,
+   "raam": 4
+  }
+ }
 }
