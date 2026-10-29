@@ -1,6 +1,6 @@
 {
  "status": "counting",
- "updated": "29.10, 08:00",
+ "updated": "29.10, 14:00",
  "exitPolls": [
   {
    "outlet": "כאן 11",
@@ -76,9 +76,9 @@
   }
  ],
  "count": {
-  "percentCounted": 91,
-  "time": "29.10, 06:10, בלי המעטפות הכפולות",
-  "source": "https://www.globes.co.il/news/article.aspx?did=1001561230",
+  "percentCounted": 93.8,
+  "time": "29.10, 10:20, כולל חלק מהמעטפות הכפולות",
+  "source": "https://www.calcalist.co.il/updates_news/article/b1m9lfrhme",
   "seats": {
    "likud": 26,
    "yashar": 21,
