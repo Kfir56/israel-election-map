@@ -1,6 +1,6 @@
 {
  "status": "counting",
- "updated": "29.10, 14:00",
+ "updated": "29.10, 20:00",
  "exitPolls": [
   {
    "outlet": "כאן 11",
@@ -76,19 +76,19 @@
   }
  ],
  "count": {
-  "percentCounted": 93.8,
-  "time": "29.10, 10:20, כולל חלק מהמעטפות הכפולות",
-  "source": "https://www.calcalist.co.il/updates_news/article/b1m9lfrhme",
+  "percentCounted": 99.7,
+  "time": "29.10, כולל המעטפות הכפולות",
+  "source": "https://www.ynet.co.il/news/blogs/article/sj60fvepze",
   "seats": {
-   "likud": 26,
+   "likud": 27,
    "yashar": 21,
    "together": 12,
    "joint": 11,
-   "dems": 8,
-   "yb": 7,
    "raam": 8,
+   "dems": 8,
    "utj": 7,
-   "shas": 7,
+   "yb": 7,
+   "shas": 6,
    "otzma": 7,
    "rzp": 6
   }
